@@ -2,7 +2,7 @@
 layout: post
 title:  "Prosperity for the neglected, ignored and forgotten"
 date:   2015-10-21 13:34:14
-categories: future finance
+categories: future
 ---
 
 ![Alt text](/assets/seeds-growing.jpeg)
