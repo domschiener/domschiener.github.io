@@ -1,0 +1,12 @@
+# Site settings
+title: Dominik Schiener
+email: dom@schiener.me
+description: > # this means to ignore newlines until "baseurl:"
+  Personal Blog of Dominik Schiener. Mostly about Entrepreneurship, Technology and Research I'm working on.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://schiener.me" # the base hostname & protocol for your site
+twitter_username: domschiener
+github_username:  domschiener
+
+# Build settings
+markdown: kramdown
