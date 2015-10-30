@@ -10,3 +10,5 @@ github_username:  domschiener
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM

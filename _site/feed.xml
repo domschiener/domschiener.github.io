@@ -6,8 +6,8 @@
 </description>
     <link>http://schiener.me/</link>
     <atom:link href="http://schiener.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Oct 2015 00:53:53 +0200</pubDate>
-    <lastBuildDate>Sun, 25 Oct 2015 00:53:53 +0200</lastBuildDate>
+    <pubDate>Thu, 29 Oct 2015 11:04:11 +0100</pubDate>
+    <lastBuildDate>Thu, 29 Oct 2015 11:04:11 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -45,11 +45,10 @@
 
 &lt;p&gt;Apache is the most used web server software that helps server our HTTP requests. The setup for Apache is pretty straight forward:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-$ sudo apt-get install apache2
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get install apache2
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;If it isn’t running already, type in
+&lt;p&gt;If it isn’t running already, type in&lt;br /&gt;
 &lt;code&gt;
 $ sudo service apache2 start
 &lt;/code&gt;&lt;/p&gt;
@@ -62,95 +61,94 @@ $ sudo service apache2 start
 
 &lt;p&gt;As Python is already fully installed on your Raspberry Pi, you have to install the &lt;code&gt;python-setuptools helper package&lt;/code&gt; and the &lt;code&gt;mod-wsgi&lt;/code&gt; Apache module to enable us to run Python applications on our Apache server.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-$ sudo apt-get install python-setuptools libapache2-mod-wsgi
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get install python-setuptools libapache2-mod-wsgi
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Now we need to edit the config file, so that the Apache server actually executes our .py files.
-Type in:
-&lt;code&gt;
-$ sudo nano /etc/apache2/sites-available/default
-&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now we need to edit the config file, so that the Apache server actually executes our .py files.&lt;br /&gt;
+Type in:&lt;/p&gt;
 
-&lt;p&gt;Then change the current &lt;em&gt;&amp;lt;Directory /var/www/&amp;gt;&lt;/em&gt; to:
-```
-&amp;lt;Directory /var/www/&amp;gt;
+&lt;pre&gt;&lt;code&gt;$ sudo nano /etc/apache2/sites-available/default
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then change the current &lt;em&gt;&amp;lt;Directory /var/www/&amp;gt;&lt;/em&gt; to:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;&amp;lt;Directory /var/www/&amp;gt;
 	Options ExecCGI Indexes FollowSymLinks MultiViews
 	AllowOverride None
 	Order allow, deny
 	allow from all
-	AddHandler cgi-script.py&lt;/p&gt;
-&lt;directory&gt;
-```
-Now save and close the file. Then restart the server
-```
-$ sudo service apache2 restart
-```
+	AddHandler cgi-script.py
+&amp;lt;Directory&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
-Now our Apache server should be able to run Python scripts. Lets make a small test just to be sure.
-```
-$ cd /var/www/
+&lt;p&gt;Now save and close the file. Then restart the server&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo service apache2 restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now our Apache server should be able to run Python scripts. Lets make a small test just to be sure.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd /var/www/
 $ sudo nano testpython.py
-```
+&lt;/code&gt;&lt;/pre&gt;
 
-Then type in the following test code:
-```python
+&lt;p&gt;Then type in the following test code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;
 #!/usr/bin/python
 
 print &quot;Content-type:text/html\r\n\r\n&quot;
-print “&lt;html&gt;”
-print “&lt;body&gt;”
-print “&lt;h1&gt;Lets see if our Python works!&lt;/h1&gt;”
-print “&lt;br /&gt;”
+print “&amp;lt;html&amp;gt;”
+print “&amp;lt;body&amp;gt;”
+print “&amp;lt;h1&amp;gt;Lets see if our Python works!&amp;lt;/h1&amp;gt;”
+print “&amp;lt;br&amp;gt;”
 for i in range(6):
-    print “&lt;h3&gt;
+    print “&amp;lt;h3&amp;gt;
     print “Test: “ + str(i)
-    print “&lt;/h3&gt;”
-print “&lt;/body&gt;”
-print “&lt;/html&gt;”
-```
+    print “&amp;lt;/h3&amp;gt;”
+print “&amp;lt;/body&amp;gt;”
+print “&amp;lt;/html&amp;gt;”
+&lt;/code&gt;&lt;/pre&gt;
 
-If all is well, you should see the following page, all working well and displaying the code as intended.
+&lt;p&gt;If all is well, you should see the following page, all working well and displaying the code as intended.&lt;/p&gt;
 
-### Storing Data with CSV
+&lt;h3 id=&quot;storing-data-with-csv&quot;&gt;Storing Data with CSV&lt;/h3&gt;
 
-Now some of you may wonder why we are not completing the full LAMP setup by using MySQL to store the Data. The reason for that is because of D3.js, which we are using for visualizing the data. Since D3.js works with CSV, TSV or JSON formatted data, if we were to choose MySQL we would first have to enter the data into our MySQL table and then later convert the data into CSV/TSV/JSON, which is a cumbersome process and makes things complicated.
+&lt;p&gt;Now some of you may wonder why we are not completing the full LAMP setup by using MySQL to store the Data. The reason for that is because of D3.js, which we are using for visualizing the data. Since D3.js works with CSV, TSV or JSON formatted data, if we were to choose MySQL we would first have to enter the data into our MySQL table and then later convert the data into CSV/TSV/JSON, which is a cumbersome process and makes things complicated.&lt;/p&gt;
 
-That’s why we instead write to a CSV file directly and retrieve the data later when we visualize it on the website (3 steps turned into 2). As for the reason why we chose CSV, this is mainly because with JSON we cannot append data to the existing file. We would first have to load the entire data into a local array, append our data to it and then save it back into our JSON file. Such a process will certainly slow down our program as we accumulate more data from our plant. That’s why we choose a CSV, where we can append the data at the end of the file without having to load the entire data in first.
+&lt;p&gt;That’s why we instead write to a CSV file directly and retrieve the data later when we visualize it on the website (3 steps turned into 2). As for the reason why we chose CSV, this is mainly because with JSON we cannot append data to the existing file. We would first have to load the entire data into a local array, append our data to it and then save it back into our JSON file. Such a process will certainly slow down our program as we accumulate more data from our plant. That’s why we choose a CSV, where we can append the data at the end of the file without having to load the entire data in first.&lt;/p&gt;
 
-For this you now simply have to create a data.csv file with the following header:
-`moisture,perc,date,time,weekday`
+&lt;p&gt;For this you now simply have to create a data.csv file with the following header:&lt;br /&gt;
+&lt;code&gt;moisture,perc,date,time,weekday&lt;/code&gt;&lt;/p&gt;
 
-This is the description of the data we are retrieving and will make it possible for us to later make use of them in Javascript.
+&lt;p&gt;This is the description of the data we are retrieving and will make it possible for us to later make use of them in Javascript.&lt;/p&gt;
 
+&lt;h3 id=&quot;installing-spidev-and-python-dev&quot;&gt;Installing SpiDev and Python-Dev&lt;/h3&gt;
 
-### Installing SpiDev and Python-Dev
+&lt;p&gt;Since we are using the SPI (Serial Peripheral Interface) bus for this tutorial, we are going to use the SpiDev wrapper in order to interact with our sensor. Python-dev is another library we require.&lt;/p&gt;
 
-Since we are using the SPI (Serial Peripheral Interface) bus for this tutorial, we are going to use the SpiDev wrapper in order to interact with our sensor. Python-dev is another library we require.
-
-Run the following command:
-```
+&lt;p&gt;Run the following command:&lt;br /&gt;
+&lt;code&gt;
 $ sudo apt-get install python-dev
-```
+&lt;/code&gt;&lt;/p&gt;
 
-Now we need to enable the SPI communication on our Raspberry Pi, which is pretty straight forward. Just head to the following link and follow its steps: http://www.raspberrypi-spy.co.uk/2014/08/enabling-the-spi-interface-on-the-raspberry-pi/
+&lt;p&gt;Now we need to enable the SPI communication on our Raspberry Pi, which is pretty straight forward. Just head to the following link and follow its steps: http://www.raspberrypi-spy.co.uk/2014/08/enabling-the-spi-interface-on-the-raspberry-pi/&lt;/p&gt;
 
-Afterwards you have successfully restarted, type in:
-```
+&lt;p&gt;Afterwards you have successfully restarted, type in:&lt;br /&gt;
+&lt;code&gt;
 $ cd ~
 $ git clone https://github.com/Gadgetoid/py-spidev
 $ cd py-spidev/
 $ sudo python setup.py install
-```
+&lt;/code&gt;&lt;/p&gt;
 
-With this in hand we should be read to go and can now finally test our sensor on a plant! Congratz on making it so far, you can be sure that your plant will appreciate it.
+&lt;p&gt;With this in hand we should be read to go and can now finally test our sensor on a plant! Congratz on making it so far, you can be sure that your plant will appreciate it.&lt;/p&gt;
 
-## Step 3: Coding
+&lt;h2 id=&quot;step-3-coding&quot;&gt;Step 3: Coding&lt;/h2&gt;
 
-Now the simplest program for us is to display the data into the terminal window. This program is great for testing if all the wiring is correct and your sensor is actually getting, converting and displaying the right data. This code was written by seempie from Instructables.com and it works as a base for us to add features as we proceed.
+&lt;p&gt;Now the simplest program for us is to display the data into the terminal window. This program is great for testing if all the wiring is correct and your sensor is actually getting, converting and displaying the right data. This code was written by seempie from Instructables.com and it works as a base for us to add features as we proceed.&lt;/p&gt;
 
-```python
-#! /usr/bin/python
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;#! /usr/bin/python
 # python program to communicate with an MCP3008.
 # Base Code written by seempie from instructables.com
 
@@ -181,71 +179,64 @@ def getAdc(channel):
 
 if __name__ == &#39;__main__&#39;:
     getAdc(0)
-```
+&lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;This should display the moisture of our plant and the percentage of it relative to the maxium (which happens to be 1024). Now before we actually get to more coding, we need to start collecting more data to be able to better understand it.&lt;/p&gt;
 
+&lt;h3 id=&quot;preparing-the-data&quot;&gt;Preparing the Data&lt;/h3&gt;
 
-This should display the moisture of our plant and the percentage of it relative to the maxium (which happens to be 1024). Now before we actually get to more coding, we need to start collecting more data to be able to better understand it.
+&lt;p&gt;Now the data here will vary depending on which sensor you have. What I highly suggest is that you run a few tests and determine what the upper bound and lower bound of the data is, meaning when the plant is completely wet or completely dry and what the average is. This way we can more better determine what the data should be and how we should properly visualize it on our website later on.&lt;/p&gt;
 
-### Preparing the Data
+&lt;p&gt;For determining the upper bound, meaning when the plant is completely dry, we simply place the sensor outside (not in the plant) and then run a few tests. In my case, the upper bound limit happens to be 1024.&lt;br /&gt;
+The lower bound is determined by placing the sensor in a glass of water, where I got around 300. For detecting the average we simply place the sensor in the plant when we think it is in a “normal” state (normal defined that it wasn’t watered just recently and is also not too dry). Here the data can vary quite dramatically, and I have gotten between 600 - 850 depending on where in the pot I inserted the sensor.&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/FkEJxza.jpg&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
 
-Now the data here will vary depending on which sensor you have. What I highly suggest is that you run a few tests and determine what the upper bound and lower bound of the data is, meaning when the plant is completely wet or completely dry and what the average is. This way we can more better determine what the data should be and how we should properly visualize it on our website later on.
+&lt;p&gt;With the data we gathered we can now more easily characterize the data we got and actually understand what it means.&lt;/p&gt;
 
-For determining the upper bound, meaning when the plant is completely dry, we simply place the sensor outside (not in the plant) and then run a few tests. In my case, the upper bound limit happens to be 1024.
-The lower bound is determined by placing the sensor in a glass of water, where I got around 300. For detecting the average we simply place the sensor in the plant when we think it is in a “normal” state (normal defined that it wasn’t watered just recently and is also not too dry). Here the data can vary quite dramatically, and I have gotten between 600 - 850 depending on where in the pot I inserted the sensor.
+&lt;h3 id=&quot;fixing-permissions&quot;&gt;Fixing Permissions&lt;/h3&gt;
 
-![alt tag](http://i.imgur.com/FkEJxza.jpg)
+&lt;p&gt;Now we need to fix the permissions so that we have access from our /www folder directly to the SPI:&lt;/p&gt;
 
-With the data we gathered we can now more easily characterize the data we got and actually understand what it means.
-
-
-### Fixing Permissions
-
-Now we need to fix the permissions so that we have access from our /www folder directly to the SPI:
-
-```
-sudo adduser www-data spi
-sudo adduser &lt;username&gt; www-data
+&lt;pre&gt;&lt;code&gt;sudo adduser www-data spi
+sudo adduser &amp;lt;username&amp;gt; www-data
 sudo chown -R :www-data /var/www
 sudo chmod -R g+rw /var/www
-```
+&lt;/code&gt;&lt;/pre&gt;
 
-Replace &lt;username&gt; with your username.
+&lt;p&gt;Replace &lt;username&gt; with your username.&lt;/username&gt;&lt;/p&gt;
 
-## Enabling automated Twitter messaging
-Now that we have our Raspberry setup with a nice looking panel, it’s time to enable Twitter communication, so that our plant can tell us when it needs to be watered and we can ask it about status reports.
+&lt;h2 id=&quot;enabling-automated-twitter-messaging&quot;&gt;Enabling automated Twitter messaging&lt;/h2&gt;
+&lt;p&gt;Now that we have our Raspberry setup with a nice looking panel, it’s time to enable Twitter communication, so that our plant can tell us when it needs to be watered and we can ask it about status reports.&lt;/p&gt;
 
-What we are going to code here right now is an automated messaging (or lets say tweeting) system that enables the plant to send out tweets if its running dry and needs to be watered. We can additionally send a tweet directly to the plant and get a status about its moisture and if everythings ok. Lets get started!
+&lt;p&gt;What we are going to code here right now is an automated messaging (or lets say tweeting) system that enables the plant to send out tweets if its running dry and needs to be watered. We can additionally send a tweet directly to the plant and get a status about its moisture and if everythings ok. Lets get started!&lt;/p&gt;
 
-Creating a Twitter Application and Installing Tweepy
+&lt;p&gt;Creating a Twitter Application and Installing Tweepy&lt;/p&gt;
 
-First of all we will need to create a new Twitter account for our plant. Since you actually care about your plant (else you wouldn’t follow this tutorial), take a profile picture for it as well and add some details (you can check out my plant over here: https://twitter.com/domsplant).
+&lt;p&gt;First of all we will need to create a new Twitter account for our plant. Since you actually care about your plant (else you wouldn’t follow this tutorial), take a profile picture for it as well and add some details (you can check out my plant over here: https://twitter.com/domsplant).&lt;/p&gt;
 
-Once that is done, we will need to setup an application so that our plant (or rather the Raspberry Pi) can login to the Twitter account and communicate through it with OAuth.
-```
+&lt;p&gt;Once that is done, we will need to setup an application so that our plant (or rather the Raspberry Pi) can login to the Twitter account and communicate through it with OAuth.&lt;br /&gt;
+&lt;code&gt;
 $ git clone https://github.com/tweepy/tweepy.git
 $ cd tweepy
 $ python setup.py install
-```
+&lt;/code&gt;&lt;/p&gt;
 
-If you see an SSL error,
-```
+&lt;p&gt;If you see an SSL error,&lt;br /&gt;
+&lt;code&gt;
 $ sudo pip install requests[security]
-```
+&lt;/code&gt;&lt;/p&gt;
 
-Now you need to go to the *twitter.py* file and add your consumer key, consumer secret, as well as access token and access token secret which was provided to you by Twitter.
+&lt;p&gt;Now you need to go to the &lt;em&gt;twitter.py&lt;/em&gt; file and add your consumer key, consumer secret, as well as access token and access token secret which was provided to you by Twitter.&lt;/p&gt;
 
+&lt;h1 id=&quot;running-the-application&quot;&gt;Running the Application&lt;/h1&gt;
 
-# Running the Application
-
-Now everything should be ready to function and we can start testing it all. Simply run:
-```
+&lt;p&gt;Now everything should be ready to function and we can start testing it all. Simply run:&lt;br /&gt;
+&lt;code&gt;
 $ sudo python main.py
-```
+&lt;/code&gt;&lt;/p&gt;
 
-This in turn will run twitter.py and getdata.py in the background. You can now go to *http://localhost* and everything should be operational :)
-&lt;/username&gt;&lt;/username&gt;&lt;/directory&gt;
+&lt;p&gt;This in turn will run twitter.py and getdata.py in the background. You can now go to &lt;em&gt;http://localhost&lt;/em&gt; and everything should be operational :)&lt;/p&gt;
 </description>
         <pubDate>Wed, 21 Oct 2015 20:34:14 +0200</pubDate>
         <link>http://schiener.me/projects/2015/10/21/raspberry-pi-smart-plant.html</link>
@@ -270,11 +261,11 @@ This in turn will run twitter.py and getdata.py in the background. You can now g
 
 &lt;p&gt;Even though the numbers of the poor are still absurdly high - they have actually been on a consistent decline for the past few decades. The poor are better off today than they were ever before - all thanks to the great flattening forces.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;the-history-and-effects-of-flattening&quot;&gt;The History and Effects of Flattening&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
 Barriers shut off light that is vital for growth, progress and prosperity. They drastically restrict us in nearly every aspect and only serve to protect the pride, intentions and the privileged positions of a few who are in power. Humans have been building and eradicating barriers for millennias - and sadly, we are sometimes diligently building.&lt;/p&gt;
 
 &lt;p&gt;The two most important paradigm shifts of our society were our progress from hunter and gatherer to agricultural to industrial societies and the invention of money. The former enabled creativity by freeing up human resources; the latter allowed us to trade, invest and save - thus, create wealth. Both of these developments progressed our distinction from animals, but far more important: they made specialization (division of labor) possible.&lt;/p&gt;
@@ -295,11 +286,11 @@ Barriers shut off light that is vital for growth, progress and prosperity. They 
 
 &lt;p&gt;In short, a flat world enables people to create and accumulate wealth, it opens many new more opportunities in countries that have never had such before and it helps in creating a more equal and interconnected world.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;the-next-step-in-flattening-the-world&quot;&gt;The next Step in Flattening the World&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
 The gap between rich and poor, privileged and disadvantaged and the educated and uneducated has been greatly reduced on a global scale (though in some cases, the gap sadly increased). In the past few decades we have seen the flattening of education, of communication and connectivity, of work and collaboration and most importantly, of innovation. Even though we have made huge leaps forward in the century, we do still have barriers to eradicate in order to achieve that one true goal of an equal and fair environment for everyone.&lt;/p&gt;
 
 &lt;p&gt;The one sector that is long overdue to innovational progress is the finance sector. No sector has more importance on human development, yet is so reluctant to innovation, than our finance sector. The sad truth is that most of our finance behemoths are too busy playing the zero-sum game of trading with ever increasing (both in quantity and complexity) financial instruments against themselves, and those they are supposed to serve.&lt;/p&gt;

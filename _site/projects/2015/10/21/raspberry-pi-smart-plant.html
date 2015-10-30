@@ -9,7 +9,7 @@
   <title>[Raspberry Pi] Smarter Plants Tutorial</title>
   <meta name="description" content="This is a small side project I’ve been working on in my free time. The main reason why I started working on this was to learn more Python and Javascript, but...">
 
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://schiener.me/projects/2015/10/21/raspberry-pi-smart-plant.html">
   <link rel="alternate" type="application/rss+xml" title="Dominik Schiener" href="http://schiener.me/feed.xml" />
 </head>
@@ -95,11 +95,10 @@
 
 <p>Apache is the most used web server software that helps server our HTTP requests. The setup for Apache is pretty straight forward:</p>
 
-<p><code>
-$ sudo apt-get install apache2
-</code></p>
+<pre><code>$ sudo apt-get install apache2
+</code></pre>
 
-<p>If it isn’t running already, type in
+<p>If it isn’t running already, type in<br />
 <code>
 $ sudo service apache2 start
 </code></p>
@@ -112,95 +111,94 @@ $ sudo service apache2 start
 
 <p>As Python is already fully installed on your Raspberry Pi, you have to install the <code>python-setuptools helper package</code> and the <code>mod-wsgi</code> Apache module to enable us to run Python applications on our Apache server.</p>
 
-<p><code>
-$ sudo apt-get install python-setuptools libapache2-mod-wsgi
-</code></p>
+<pre><code>$ sudo apt-get install python-setuptools libapache2-mod-wsgi
+</code></pre>
 
-<p>Now we need to edit the config file, so that the Apache server actually executes our .py files.
-Type in:
-<code>
-$ sudo nano /etc/apache2/sites-available/default
-</code></p>
+<p>Now we need to edit the config file, so that the Apache server actually executes our .py files.<br />
+Type in:</p>
 
-<p>Then change the current <em>&lt;Directory /var/www/&gt;</em> to:
-```
-&lt;Directory /var/www/&gt;
+<pre><code>$ sudo nano /etc/apache2/sites-available/default
+</code></pre>
+
+<p>Then change the current <em>&lt;Directory /var/www/&gt;</em> to:</p>
+
+<pre><code class="language-javascript">&lt;Directory /var/www/&gt;
 	Options ExecCGI Indexes FollowSymLinks MultiViews
 	AllowOverride None
 	Order allow, deny
 	allow from all
-	AddHandler cgi-script.py</p>
-<directory>
-```
-Now save and close the file. Then restart the server
-```
-$ sudo service apache2 restart
-```
+	AddHandler cgi-script.py
+&lt;Directory&gt;
+</code></pre>
 
-Now our Apache server should be able to run Python scripts. Lets make a small test just to be sure.
-```
-$ cd /var/www/
+<p>Now save and close the file. Then restart the server</p>
+
+<pre><code>$ sudo service apache2 restart
+</code></pre>
+
+<p>Now our Apache server should be able to run Python scripts. Lets make a small test just to be sure.</p>
+
+<pre><code>$ cd /var/www/
 $ sudo nano testpython.py
-```
+</code></pre>
 
-Then type in the following test code:
-```python
+<p>Then type in the following test code:</p>
+
+<pre><code class="language-python">
 #!/usr/bin/python
 
 print "Content-type:text/html\r\n\r\n"
-print “<html>”
-print “<body>”
-print “<h1>Lets see if our Python works!</h1>”
-print “<br />”
+print “&lt;html&gt;”
+print “&lt;body&gt;”
+print “&lt;h1&gt;Lets see if our Python works!&lt;/h1&gt;”
+print “&lt;br&gt;”
 for i in range(6):
-    print “<h3>
+    print “&lt;h3&gt;
     print “Test: “ + str(i)
-    print “</h3>”
-print “</body>”
-print “</html>”
-```
+    print “&lt;/h3&gt;”
+print “&lt;/body&gt;”
+print “&lt;/html&gt;”
+</code></pre>
 
-If all is well, you should see the following page, all working well and displaying the code as intended.
+<p>If all is well, you should see the following page, all working well and displaying the code as intended.</p>
 
-### Storing Data with CSV
+<h3 id="storing-data-with-csv">Storing Data with CSV</h3>
 
-Now some of you may wonder why we are not completing the full LAMP setup by using MySQL to store the Data. The reason for that is because of D3.js, which we are using for visualizing the data. Since D3.js works with CSV, TSV or JSON formatted data, if we were to choose MySQL we would first have to enter the data into our MySQL table and then later convert the data into CSV/TSV/JSON, which is a cumbersome process and makes things complicated.
+<p>Now some of you may wonder why we are not completing the full LAMP setup by using MySQL to store the Data. The reason for that is because of D3.js, which we are using for visualizing the data. Since D3.js works with CSV, TSV or JSON formatted data, if we were to choose MySQL we would first have to enter the data into our MySQL table and then later convert the data into CSV/TSV/JSON, which is a cumbersome process and makes things complicated.</p>
 
-That’s why we instead write to a CSV file directly and retrieve the data later when we visualize it on the website (3 steps turned into 2). As for the reason why we chose CSV, this is mainly because with JSON we cannot append data to the existing file. We would first have to load the entire data into a local array, append our data to it and then save it back into our JSON file. Such a process will certainly slow down our program as we accumulate more data from our plant. That’s why we choose a CSV, where we can append the data at the end of the file without having to load the entire data in first.
+<p>That’s why we instead write to a CSV file directly and retrieve the data later when we visualize it on the website (3 steps turned into 2). As for the reason why we chose CSV, this is mainly because with JSON we cannot append data to the existing file. We would first have to load the entire data into a local array, append our data to it and then save it back into our JSON file. Such a process will certainly slow down our program as we accumulate more data from our plant. That’s why we choose a CSV, where we can append the data at the end of the file without having to load the entire data in first.</p>
 
-For this you now simply have to create a data.csv file with the following header:
-`moisture,perc,date,time,weekday`
+<p>For this you now simply have to create a data.csv file with the following header:<br />
+<code>moisture,perc,date,time,weekday</code></p>
 
-This is the description of the data we are retrieving and will make it possible for us to later make use of them in Javascript.
+<p>This is the description of the data we are retrieving and will make it possible for us to later make use of them in Javascript.</p>
 
+<h3 id="installing-spidev-and-python-dev">Installing SpiDev and Python-Dev</h3>
 
-### Installing SpiDev and Python-Dev
+<p>Since we are using the SPI (Serial Peripheral Interface) bus for this tutorial, we are going to use the SpiDev wrapper in order to interact with our sensor. Python-dev is another library we require.</p>
 
-Since we are using the SPI (Serial Peripheral Interface) bus for this tutorial, we are going to use the SpiDev wrapper in order to interact with our sensor. Python-dev is another library we require.
-
-Run the following command:
-```
+<p>Run the following command:<br />
+<code>
 $ sudo apt-get install python-dev
-```
+</code></p>
 
-Now we need to enable the SPI communication on our Raspberry Pi, which is pretty straight forward. Just head to the following link and follow its steps: http://www.raspberrypi-spy.co.uk/2014/08/enabling-the-spi-interface-on-the-raspberry-pi/
+<p>Now we need to enable the SPI communication on our Raspberry Pi, which is pretty straight forward. Just head to the following link and follow its steps: http://www.raspberrypi-spy.co.uk/2014/08/enabling-the-spi-interface-on-the-raspberry-pi/</p>
 
-Afterwards you have successfully restarted, type in:
-```
+<p>Afterwards you have successfully restarted, type in:<br />
+<code>
 $ cd ~
 $ git clone https://github.com/Gadgetoid/py-spidev
 $ cd py-spidev/
 $ sudo python setup.py install
-```
+</code></p>
 
-With this in hand we should be read to go and can now finally test our sensor on a plant! Congratz on making it so far, you can be sure that your plant will appreciate it.
+<p>With this in hand we should be read to go and can now finally test our sensor on a plant! Congratz on making it so far, you can be sure that your plant will appreciate it.</p>
 
-## Step 3: Coding
+<h2 id="step-3-coding">Step 3: Coding</h2>
 
-Now the simplest program for us is to display the data into the terminal window. This program is great for testing if all the wiring is correct and your sensor is actually getting, converting and displaying the right data. This code was written by seempie from Instructables.com and it works as a base for us to add features as we proceed.
+<p>Now the simplest program for us is to display the data into the terminal window. This program is great for testing if all the wiring is correct and your sensor is actually getting, converting and displaying the right data. This code was written by seempie from Instructables.com and it works as a base for us to add features as we proceed.</p>
 
-```python
-#! /usr/bin/python
+<pre><code class="language-python">#! /usr/bin/python
 # python program to communicate with an MCP3008.
 # Base Code written by seempie from instructables.com
 
@@ -231,71 +229,64 @@ def getAdc(channel):
 
 if __name__ == '__main__':
     getAdc(0)
-```
+</code></pre>
 
+<p>This should display the moisture of our plant and the percentage of it relative to the maxium (which happens to be 1024). Now before we actually get to more coding, we need to start collecting more data to be able to better understand it.</p>
 
+<h3 id="preparing-the-data">Preparing the Data</h3>
 
-This should display the moisture of our plant and the percentage of it relative to the maxium (which happens to be 1024). Now before we actually get to more coding, we need to start collecting more data to be able to better understand it.
+<p>Now the data here will vary depending on which sensor you have. What I highly suggest is that you run a few tests and determine what the upper bound and lower bound of the data is, meaning when the plant is completely wet or completely dry and what the average is. This way we can more better determine what the data should be and how we should properly visualize it on our website later on.</p>
 
-### Preparing the Data
+<p>For determining the upper bound, meaning when the plant is completely dry, we simply place the sensor outside (not in the plant) and then run a few tests. In my case, the upper bound limit happens to be 1024.<br />
+The lower bound is determined by placing the sensor in a glass of water, where I got around 300. For detecting the average we simply place the sensor in the plant when we think it is in a “normal” state (normal defined that it wasn’t watered just recently and is also not too dry). Here the data can vary quite dramatically, and I have gotten between 600 - 850 depending on where in the pot I inserted the sensor.</p>
 
+<p><img src="http://i.imgur.com/FkEJxza.jpg" alt="alt tag" /></p>
 
-Now the data here will vary depending on which sensor you have. What I highly suggest is that you run a few tests and determine what the upper bound and lower bound of the data is, meaning when the plant is completely wet or completely dry and what the average is. This way we can more better determine what the data should be and how we should properly visualize it on our website later on.
+<p>With the data we gathered we can now more easily characterize the data we got and actually understand what it means.</p>
 
-For determining the upper bound, meaning when the plant is completely dry, we simply place the sensor outside (not in the plant) and then run a few tests. In my case, the upper bound limit happens to be 1024.
-The lower bound is determined by placing the sensor in a glass of water, where I got around 300. For detecting the average we simply place the sensor in the plant when we think it is in a “normal” state (normal defined that it wasn’t watered just recently and is also not too dry). Here the data can vary quite dramatically, and I have gotten between 600 - 850 depending on where in the pot I inserted the sensor.
+<h3 id="fixing-permissions">Fixing Permissions</h3>
 
-![alt tag](http://i.imgur.com/FkEJxza.jpg)
+<p>Now we need to fix the permissions so that we have access from our /www folder directly to the SPI:</p>
 
-With the data we gathered we can now more easily characterize the data we got and actually understand what it means.
-
-
-### Fixing Permissions
-
-Now we need to fix the permissions so that we have access from our /www folder directly to the SPI:
-
-```
-sudo adduser www-data spi
-sudo adduser <username> www-data
+<pre><code>sudo adduser www-data spi
+sudo adduser &lt;username&gt; www-data
 sudo chown -R :www-data /var/www
 sudo chmod -R g+rw /var/www
-```
+</code></pre>
 
-Replace <username> with your username.
+<p>Replace <username> with your username.</username></p>
 
-## Enabling automated Twitter messaging
-Now that we have our Raspberry setup with a nice looking panel, it’s time to enable Twitter communication, so that our plant can tell us when it needs to be watered and we can ask it about status reports.
+<h2 id="enabling-automated-twitter-messaging">Enabling automated Twitter messaging</h2>
+<p>Now that we have our Raspberry setup with a nice looking panel, it’s time to enable Twitter communication, so that our plant can tell us when it needs to be watered and we can ask it about status reports.</p>
 
-What we are going to code here right now is an automated messaging (or lets say tweeting) system that enables the plant to send out tweets if its running dry and needs to be watered. We can additionally send a tweet directly to the plant and get a status about its moisture and if everythings ok. Lets get started!
+<p>What we are going to code here right now is an automated messaging (or lets say tweeting) system that enables the plant to send out tweets if its running dry and needs to be watered. We can additionally send a tweet directly to the plant and get a status about its moisture and if everythings ok. Lets get started!</p>
 
-Creating a Twitter Application and Installing Tweepy
+<p>Creating a Twitter Application and Installing Tweepy</p>
 
-First of all we will need to create a new Twitter account for our plant. Since you actually care about your plant (else you wouldn’t follow this tutorial), take a profile picture for it as well and add some details (you can check out my plant over here: https://twitter.com/domsplant).
+<p>First of all we will need to create a new Twitter account for our plant. Since you actually care about your plant (else you wouldn’t follow this tutorial), take a profile picture for it as well and add some details (you can check out my plant over here: https://twitter.com/domsplant).</p>
 
-Once that is done, we will need to setup an application so that our plant (or rather the Raspberry Pi) can login to the Twitter account and communicate through it with OAuth.
-```
+<p>Once that is done, we will need to setup an application so that our plant (or rather the Raspberry Pi) can login to the Twitter account and communicate through it with OAuth.<br />
+<code>
 $ git clone https://github.com/tweepy/tweepy.git
 $ cd tweepy
 $ python setup.py install
-```
+</code></p>
 
-If you see an SSL error,
-```
+<p>If you see an SSL error,<br />
+<code>
 $ sudo pip install requests[security]
-```
+</code></p>
 
-Now you need to go to the *twitter.py* file and add your consumer key, consumer secret, as well as access token and access token secret which was provided to you by Twitter.
+<p>Now you need to go to the <em>twitter.py</em> file and add your consumer key, consumer secret, as well as access token and access token secret which was provided to you by Twitter.</p>
 
+<h1 id="running-the-application">Running the Application</h1>
 
-# Running the Application
-
-Now everything should be ready to function and we can start testing it all. Simply run:
-```
+<p>Now everything should be ready to function and we can start testing it all. Simply run:<br />
+<code>
 $ sudo python main.py
-```
+</code></p>
 
-This in turn will run twitter.py and getdata.py in the background. You can now go to *http://localhost* and everything should be operational :)
-</username></username></directory>
+<p>This in turn will run twitter.py and getdata.py in the background. You can now go to <em>http://localhost</em> and everything should be operational :)</p>
 
   </article>
 

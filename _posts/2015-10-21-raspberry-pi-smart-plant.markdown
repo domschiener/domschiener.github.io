@@ -60,12 +60,14 @@ $ sudo apt-get install python-setuptools libapache2-mod-wsgi
 
 Now we need to edit the config file, so that the Apache server actually executes our .py files.
 Type in:
+
 ```
 $ sudo nano /etc/apache2/sites-available/default
 ```
 
 Then change the current *<Directory /var/www/>* to:
-```
+
+```javascript
 <Directory /var/www/>
 	Options ExecCGI Indexes FollowSymLinks MultiViews
 	AllowOverride None
@@ -74,19 +76,24 @@ Then change the current *<Directory /var/www/>* to:
 	AddHandler cgi-script.py
 <Directory>
 ```
+
 Now save and close the file. Then restart the server
+
 ```
 $ sudo service apache2 restart
 ```
 
 Now our Apache server should be able to run Python scripts. Lets make a small test just to be sure.
+
 ```
 $ cd /var/www/
 $ sudo nano testpython.py
 ```
 
 Then type in the following test code:
+
 ```python
+
 #!/usr/bin/python
 
 print "Content-type:text/html\r\n\r\n"
