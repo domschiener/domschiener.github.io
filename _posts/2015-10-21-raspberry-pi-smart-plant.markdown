@@ -13,27 +13,58 @@ Overall, this project is work in progress and I intend to add more features to i
 
 I’m mostly still a beginner with Raspberry Pi related development, so I did take help from people that have already created similar projects and I would like to publicly acknowledge some of them here: Jeremy Blythe with his amazing tutorial on setting up the Pi with the moistures sensors, seempie who wrote a similar tutorial and the people who created some amazing D3.js visualizations (named later). This tutorial takes pieces from all of these tutorials and combines them with new ones to create a perfect tutorial for beginners to get started.
 
-Lets get started!
 
 # Overview
 
 This tutorial is divided into 5 sections. First we are going to get the Pi’s GPIO properly wired up with the sensor on a breadboard, then we are going to write the Python script that takes the data and stores it in our CSV file, following with actually enabling the Pi to act as a Server (LAMP), then we will display the data on our website and visualize it through D3.js and lastly, we will add some tweaks through the Twitter integration.
 
+This is what the final product will look like:
+
+![alt tag](http://i.imgur.com/c60yPD5.png)
+
+
 ### What you will need
 
 In total, this setup has cost around $20 without the actual Raspberry Pi. You will obviously need all the prerequisites, which are a working Raspberry Pi, with a keyboard, mouse and a monitor. Here is a list of the other things you will need:
 
-* Soil Moisture Sensor: $4.50. I recommend getting this one from elecfreaks (http://www.elecfreaks.com/store/octopus-soil-moisture-sensor-brick-p-422.html). As they doesn’t ship globally, I’ve had to use a different Moisture Sensor (http://www.play-zone.ch/de/erd-feuchtigkeitssensor-mit-digital-und-analogausgang.html), but it works the same.
-* MCP3008: $3.75 http://www.adafruit.com/products/856
+* Soil Moisture Sensor: $4.50. I recommend getting this one from elecfreaks [http://www.elecfreaks.com/store/octopus-soil-moisture-sensor-brick-p-422.html](http://www.elecfreaks.com/store/octopus-soil-moisture-sensor-brick-p-422.html). As they doesn’t ship globally, I’ve had to use a different Moisture Sensor [http://www.play-zone.ch/de/erd-feuchtigkeitssensor-mit-digital-und-analogausgang.html](http://www.play-zone.ch/de/erd-feuchtigkeitssensor-mit-digital-und-analogausgang.html), but it works the same.
+* MCP3008: $3.75 [http://www.adafruit.com/products/856](http://www.adafruit.com/products/856) This one is required to convert the analog signal to digital.
 * Breadboard: $5
 * Breakout Cable or around six female-to-male jumper wires. Cost: $5
 
 
 ## Step 1: Wiring the Sensor
 
-//TODO
+In order to interact with our sensor, we need to connect it to the Raspberry Pi's GPIO (General Purpose Input Output). Here is a scheme that displays what each of the pins is used forward
 
-### Installing Apache Web Server
+![alt tag](/assets/rpi-smart-plant/Raspberry-Pi-GPIO-pinouts.png)
+
+First we will connect the respective GPIO pins to the breadboard. Connect Pin 1 (which is 3.3V) to the Power Rail and Pin 6 (Ground) to the Ground Rail. Then place the MCP3008 chip in the middle of the breadboard.
+
+![alt tag](/assets/rpi-smart-plant/mcp3008.gif)
+
+Now we need to connect the pins to the MCP3008.
+
+* MCP3008 VDD -> 3.3V (red)
+* MCP3008 VREF -> 3.3V (red)
+* MCP3008 AGND -> GND (black)
+* MCP3008 CLK -> pin 23 (orange)
+* MCP3008 DOUT -> pin 21(yellow)
+* MCP3008 DIN -> pin 19 (blue)
+* MCP3008 CS -> pin 24 (violet)
+* MCP3008 DGND -> GND (black)
+
+In the end, it should look like this.
+
+![alt tag](/assets/rpi-smart-plant/20150804_181411.jpg)
+![alt tag](/assets/rpi-smart-plant/20150804_181543.jpg)
+
+Now the only thing missing is to connect the actual moisture sensor to the MCP3008. Connect the analog output of the sensor (yellow jumper cable in my case) to `CH5` on the MCP3008, then connect VCC (which is power) to the Power Rail and GND (which is Ground) to the Ground Rail. If all is fine, you should be ready to go! This is what it should look like:
+
+![alt tag](/assets/rpi-smart-plant/20150804_171514.jpg)
+![alt tag](/assets/rpi-smart-plant/20150804_171350.jpg)
+
+## Step 2: Installing Apache Web Server
 
 Apache is the most used web server software that helps server our HTTP requests. The setup for Apache is pretty straight forward:
 
@@ -110,6 +141,8 @@ print “</html>”
 ```
 
 If all is well, you should see the following page, all working well and displaying the code as intended.
+![alt tag](http://i.imgur.com/1xHUtm7.png)
+
 
 ### Storing Data with CSV
 
@@ -212,33 +245,46 @@ sudo chmod -R g+rw /var/www
 
 Replace <username> with your username.
 
-## Enabling automated Twitter messaging
-Now that we have our Raspberry setup with a nice looking panel, it’s time to enable Twitter communication, so that our plant can tell us when it needs to be watered and we can ask it about status reports.
 
-What we are going to code here right now is an automated messaging (or lets say tweeting) system that enables the plant to send out tweets if its running dry and needs to be watered. We can additionally send a tweet directly to the plant and get a status about its moisture and if everythings ok. Lets get started!
+### Getting the Code
 
-Creating a Twitter Application and Installing Tweepy
 
-First of all we will need to create a new Twitter account for our plant. Since you actually care about your plant (else you wouldn’t follow this tutorial), take a profile picture for it as well and add some details (you can check out my plant over here: https://twitter.com/domsplant).
+For this tutorial I have prepared all the code already for you. You can check out the repo here: [https://github.com/domschiener/smart-plant-raspberry](https://github.com/domschiener/smart-plant-raspberry) So all you have to do is clone the repo and change a few settings to be fully operational.
+
+```
+$ git clone https://github.com/domschiener/smart-plant-raspberry.git
+$ cd smart-plant-raspberry
+```
+
+Feel free to look around and learn more how everything's works together!
+
+
+## Final Step: Enabling automated Twitter messaging
+
+
+First of all we will need to create a new Twitter account for our plant. Since you actually care about your plant (else you wouldn’t follow this tutorial), take a profile picture for it as well and add some details (you can check out my plant over here: [https://twitter.com/domsplant](https://twitter.com/domsplant).
 
 Once that is done, we will need to setup an application so that our plant (or rather the Raspberry Pi) can login to the Twitter account and communicate through it with OAuth.
+
 ```
 $ git clone https://github.com/tweepy/tweepy.git
 $ cd tweepy
 $ python setup.py install
 ```
 
-If you see an SSL error,
+If you see an SSL error, run
 ```
 $ sudo pip install requests[security]
 ```
 
-Now you need to go to the *twitter.py* file and add your consumer key, consumer secret, as well as access token and access token secret which was provided to you by Twitter.
+Now you need to go to the **twitter.py** file and add your consumer key, consumer secret, as well as access token and access token secret which was provided to you by Twitter.
 
 
 # Running the Application
 
+
 Now everything should be ready to function and we can start testing it all. Simply run:
+
 ```
 $ sudo python main.py
 ```

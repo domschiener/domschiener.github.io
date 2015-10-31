@@ -6,8 +6,8 @@
 </description>
     <link>http://schiener.me/</link>
     <atom:link href="http://schiener.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 29 Oct 2015 11:04:11 +0100</pubDate>
-    <lastBuildDate>Thu, 29 Oct 2015 11:04:11 +0100</lastBuildDate>
+    <pubDate>Sat, 31 Oct 2015 18:46:51 +0100</pubDate>
+    <lastBuildDate>Sat, 31 Oct 2015 18:46:51 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -20,28 +20,59 @@
 
 &lt;p&gt;I’m mostly still a beginner with Raspberry Pi related development, so I did take help from people that have already created similar projects and I would like to publicly acknowledge some of them here: Jeremy Blythe with his amazing tutorial on setting up the Pi with the moistures sensors, seempie who wrote a similar tutorial and the people who created some amazing D3.js visualizations (named later). This tutorial takes pieces from all of these tutorials and combines them with new ones to create a perfect tutorial for beginners to get started.&lt;/p&gt;
 
-&lt;p&gt;Lets get started!&lt;/p&gt;
-
 &lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
 
 &lt;p&gt;This tutorial is divided into 5 sections. First we are going to get the Pi’s GPIO properly wired up with the sensor on a breadboard, then we are going to write the Python script that takes the data and stores it in our CSV file, following with actually enabling the Pi to act as a Server (LAMP), then we will display the data on our website and visualize it through D3.js and lastly, we will add some tweaks through the Twitter integration.&lt;/p&gt;
+
+&lt;p&gt;This is what the final product will look like:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/c60yPD5.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;what-you-will-need&quot;&gt;What you will need&lt;/h3&gt;
 
 &lt;p&gt;In total, this setup has cost around $20 without the actual Raspberry Pi. You will obviously need all the prerequisites, which are a working Raspberry Pi, with a keyboard, mouse and a monitor. Here is a list of the other things you will need:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Soil Moisture Sensor: $4.50. I recommend getting this one from elecfreaks (http://www.elecfreaks.com/store/octopus-soil-moisture-sensor-brick-p-422.html). As they doesn’t ship globally, I’ve had to use a different Moisture Sensor (http://www.play-zone.ch/de/erd-feuchtigkeitssensor-mit-digital-und-analogausgang.html), but it works the same.&lt;/li&gt;
-  &lt;li&gt;MCP3008: $3.75 http://www.adafruit.com/products/856&lt;/li&gt;
+  &lt;li&gt;Soil Moisture Sensor: $4.50. I recommend getting this one from elecfreaks &lt;a href=&quot;http://www.elecfreaks.com/store/octopus-soil-moisture-sensor-brick-p-422.html&quot;&gt;http://www.elecfreaks.com/store/octopus-soil-moisture-sensor-brick-p-422.html&lt;/a&gt;. As they doesn’t ship globally, I’ve had to use a different Moisture Sensor &lt;a href=&quot;http://www.play-zone.ch/de/erd-feuchtigkeitssensor-mit-digital-und-analogausgang.html&quot;&gt;http://www.play-zone.ch/de/erd-feuchtigkeitssensor-mit-digital-und-analogausgang.html&lt;/a&gt;, but it works the same.&lt;/li&gt;
+  &lt;li&gt;MCP3008: $3.75 &lt;a href=&quot;http://www.adafruit.com/products/856&quot;&gt;http://www.adafruit.com/products/856&lt;/a&gt; This one is required to convert the analog signal to digital.&lt;/li&gt;
   &lt;li&gt;Breadboard: $5&lt;/li&gt;
   &lt;li&gt;Breakout Cable or around six female-to-male jumper wires. Cost: $5&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;step-1-wiring-the-sensor&quot;&gt;Step 1: Wiring the Sensor&lt;/h2&gt;
 
-&lt;p&gt;//TODO&lt;/p&gt;
+&lt;p&gt;In order to interact with our sensor, we need to connect it to the Raspberry Pi’s GPIO (General Purpose Input Output). Here is a scheme that displays what each of the pins is used forward&lt;/p&gt;
 
-&lt;h3 id=&quot;installing-apache-web-server&quot;&gt;Installing Apache Web Server&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/rpi-smart-plant/Raspberry-Pi-GPIO-pinouts.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;First we will connect the respective GPIO pins to the breadboard. Connect Pin 1 (which is 3.3V) to the Power Rail and Pin 6 (Ground) to the Ground Rail. Then place the MCP3008 chip in the middle of the breadboard.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/rpi-smart-plant/mcp3008.gif&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now we need to connect the pins to the MCP3008.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;MCP3008 VDD -&amp;gt; 3.3V (red)&lt;/li&gt;
+  &lt;li&gt;MCP3008 VREF -&amp;gt; 3.3V (red)&lt;/li&gt;
+  &lt;li&gt;MCP3008 AGND -&amp;gt; GND (black)&lt;/li&gt;
+  &lt;li&gt;MCP3008 CLK -&amp;gt; pin 23 (orange)&lt;/li&gt;
+  &lt;li&gt;MCP3008 DOUT -&amp;gt; pin 21(yellow)&lt;/li&gt;
+  &lt;li&gt;MCP3008 DIN -&amp;gt; pin 19 (blue)&lt;/li&gt;
+  &lt;li&gt;MCP3008 CS -&amp;gt; pin 24 (violet)&lt;/li&gt;
+  &lt;li&gt;MCP3008 DGND -&amp;gt; GND (black)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the end, it should look like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/rpi-smart-plant/20150804_181411.jpg&quot; alt=&quot;alt tag&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/rpi-smart-plant/20150804_181543.jpg&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now the only thing missing is to connect the actual moisture sensor to the MCP3008. Connect the analog output of the sensor (yellow jumper cable in my case) to &lt;code&gt;CH5&lt;/code&gt; on the MCP3008, then connect VCC (which is power) to the Power Rail and GND (which is Ground) to the Ground Rail. If all is fine, you should be ready to go! This is what it should look like:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/rpi-smart-plant/20150804_171514.jpg&quot; alt=&quot;alt tag&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/rpi-smart-plant/20150804_171350.jpg&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-2-installing-apache-web-server&quot;&gt;Step 2: Installing Apache Web Server&lt;/h2&gt;
 
 &lt;p&gt;Apache is the most used web server software that helps server our HTTP requests. The setup for Apache is pretty straight forward:&lt;/p&gt;
 
@@ -110,7 +141,8 @@ print “&amp;lt;/body&amp;gt;”
 print “&amp;lt;/html&amp;gt;”
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;If all is well, you should see the following page, all working well and displaying the code as intended.&lt;/p&gt;
+&lt;p&gt;If all is well, you should see the following page, all working well and displaying the code as intended.&lt;br /&gt;
+&lt;img src=&quot;http://i.imgur.com/1xHUtm7.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;storing-data-with-csv&quot;&gt;Storing Data with CSV&lt;/h3&gt;
 
@@ -206,35 +238,40 @@ sudo chmod -R g+rw /var/www
 
 &lt;p&gt;Replace &lt;username&gt; with your username.&lt;/username&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;enabling-automated-twitter-messaging&quot;&gt;Enabling automated Twitter messaging&lt;/h2&gt;
-&lt;p&gt;Now that we have our Raspberry setup with a nice looking panel, it’s time to enable Twitter communication, so that our plant can tell us when it needs to be watered and we can ask it about status reports.&lt;/p&gt;
+&lt;h3 id=&quot;getting-the-code&quot;&gt;Getting the Code&lt;/h3&gt;
 
-&lt;p&gt;What we are going to code here right now is an automated messaging (or lets say tweeting) system that enables the plant to send out tweets if its running dry and needs to be watered. We can additionally send a tweet directly to the plant and get a status about its moisture and if everythings ok. Lets get started!&lt;/p&gt;
+&lt;p&gt;For this tutorial I have prepared all the code already for you. You can check out the repo here: &lt;a href=&quot;https://github.com/domschiener/smart-plant-raspberry&quot;&gt;https://github.com/domschiener/smart-plant-raspberry&lt;/a&gt; So all you have to do is clone the repo and change a few settings to be fully operational.&lt;/p&gt;
 
-&lt;p&gt;Creating a Twitter Application and Installing Tweepy&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/domschiener/smart-plant-raspberry.git
+$ cd smart-plant-raspberry
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;First of all we will need to create a new Twitter account for our plant. Since you actually care about your plant (else you wouldn’t follow this tutorial), take a profile picture for it as well and add some details (you can check out my plant over here: https://twitter.com/domsplant).&lt;/p&gt;
+&lt;p&gt;Feel free to look around and learn more how everything’s works together!&lt;/p&gt;
 
-&lt;p&gt;Once that is done, we will need to setup an application so that our plant (or rather the Raspberry Pi) can login to the Twitter account and communicate through it with OAuth.&lt;br /&gt;
-&lt;code&gt;
-$ git clone https://github.com/tweepy/tweepy.git
+&lt;h2 id=&quot;final-step-enabling-automated-twitter-messaging&quot;&gt;Final Step: Enabling automated Twitter messaging&lt;/h2&gt;
+
+&lt;p&gt;First of all we will need to create a new Twitter account for our plant. Since you actually care about your plant (else you wouldn’t follow this tutorial), take a profile picture for it as well and add some details (you can check out my plant over here: &lt;a href=&quot;https://twitter.com/domsplant&quot;&gt;https://twitter.com/domsplant&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Once that is done, we will need to setup an application so that our plant (or rather the Raspberry Pi) can login to the Twitter account and communicate through it with OAuth.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/tweepy/tweepy.git
 $ cd tweepy
 $ python setup.py install
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;If you see an SSL error,&lt;br /&gt;
+&lt;p&gt;If you see an SSL error, run&lt;br /&gt;
 &lt;code&gt;
 $ sudo pip install requests[security]
 &lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Now you need to go to the &lt;em&gt;twitter.py&lt;/em&gt; file and add your consumer key, consumer secret, as well as access token and access token secret which was provided to you by Twitter.&lt;/p&gt;
+&lt;p&gt;Now you need to go to the &lt;strong&gt;twitter.py&lt;/strong&gt; file and add your consumer key, consumer secret, as well as access token and access token secret which was provided to you by Twitter.&lt;/p&gt;
 
 &lt;h1 id=&quot;running-the-application&quot;&gt;Running the Application&lt;/h1&gt;
 
-&lt;p&gt;Now everything should be ready to function and we can start testing it all. Simply run:&lt;br /&gt;
-&lt;code&gt;
-$ sudo python main.py
-&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now everything should be ready to function and we can start testing it all. Simply run:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo python main.py
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This in turn will run twitter.py and getdata.py in the background. You can now go to &lt;em&gt;http://localhost&lt;/em&gt; and everything should be operational :)&lt;/p&gt;
 </description>
