@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Reposium: The future of Wikipedia as a DCO"
-date:   2015-10-21 18:34:14
+date:   2015-10-31 18:34:14
 categories: projects
 ---
 
