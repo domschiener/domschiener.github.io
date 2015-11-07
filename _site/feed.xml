@@ -6,8 +6,8 @@
 </description>
     <link>http://schiener.me/</link>
     <atom:link href="http://schiener.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 07 Nov 2015 12:31:14 +0100</pubDate>
-    <lastBuildDate>Sat, 07 Nov 2015 12:31:14 +0100</lastBuildDate>
+    <pubDate>Sat, 07 Nov 2015 14:10:19 +0100</pubDate>
+    <lastBuildDate>Sat, 07 Nov 2015 14:10:19 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -153,7 +153,7 @@
 
 &lt;p&gt;With this hypothetical scenario we can now calculate how much it would (hypothetically) cost to hold an election. To create the poll, some 520000 in gas will be required at a cost of 75 Shannon, that is 0.039 Ether or $0.1365. At a gas used of 35000 and a price of 75 Shannon per gas, the total transaction cost in Ether will be 0.002625. In USD terms that is $0.0091875. In sum, the entire election would cost $0.1365 + $0.0091875 * 29,991,471 = &lt;strong&gt;$275,546.776&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;To compare, the current voting system is &lt;strong&gt;at least 462% more expensive than a Blockchain based voting system&lt;/strong&gt;. Casting a vote in the current system costs &lt;strong&gt;$4.24, compared to $0.0091875&lt;/strong&gt; on the Ethereum based voting system.&lt;/p&gt;
+&lt;p&gt;To compare, the current voting system is &lt;strong&gt;at least 46205% more expensive than a Blockchain based voting system&lt;/strong&gt;. Casting a vote in the current system costs &lt;strong&gt;$4.24, compared to $0.0091875&lt;/strong&gt; on the Ethereum based voting system.&lt;/p&gt;
 
 &lt;p&gt;Most importantly though apart from price, a Blockchain-based voting system would get rid off all of the issues which current systems have[5]. Issues such as not being able to vote due to technical difficulties is not acceptable in a democracy, where supposedly “every vote counts”.&lt;/p&gt;
 
