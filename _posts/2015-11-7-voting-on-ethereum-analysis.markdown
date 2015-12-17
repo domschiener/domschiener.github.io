@@ -21,7 +21,6 @@ That is what PublicVotes essentially is: a voting system that utilizes the Ether
 
 Obviously this requires computer power, because after all, this network ensures the integrity of the Blockchain by securing it so that no adversary can alter entries. These computers need to be incentivized to do all of this incredibly important work, which leads us back to the question of this paragraph *“What actually costs money?”*. So now you should know what costs money: whenever you create a poll or you vote, you are sending Ether to the Ethereum network that collectively verifies your vote/poll and inserts it into this globally shared Blockchain.
 
-* * *
 ___
 <br>
 
@@ -50,12 +49,12 @@ Creating a poll on PublicVotes means deploying a smart contract to the Ethereum 
 
 As you can see, we do quite a lot when we start a poll and this comes at a cost. On average, it cost about **$0.024399**. The highest cost for just creating a poll was **$0.0295448**. In the following diagram you can see that the cost for creating a poll vary a lot and are dependant on the respective Ether price.
 
-![alt tag](/assets/eth_analysis/1.png)
+![alt tag](/assets/images/eth_analysis/1.png)
 
 
 Speaking strictly in Ether terms, the gas which the contracts required for deployment also fluctuated a lot. The most expensive contract (**590955 gas** was required) costing about 20% more than the least expensive (**491295 gas** was required) one. At a price of 50 shannon (which was the same for all contracts that were deployed), we can see the cost difference here.
 
-![alt tag](/assets/eth_analysis/2.png)
+![alt tag](/assets/images/eth_analysis/2.png)
 
 As you can see, the creation of a polls varies quite a bit. But this is to be expected since the information which a poll stores into the contracts storage can differ greatly in size.
 <br>
@@ -64,7 +63,7 @@ As you can see, the creation of a polls varies quite a bit. But this is to be ex
 
 As you may realize by now, the cost for starting a poll is not only dependant on the size of what gets stored, but also on the price of Ether at the time of the contract’s deployment. Therefore, the higher the Ether price, the more expensive it is to actually create a poll. The below diagram shows this in more detail. It clearly shows how the price of Ether dictates the cost for deploying a contract.
 
-![alt tag](/assets/eth_analysis/3.png)
+![alt tag](/assets/images/eth_analysis/3.png)
 
 ___
 <br>
@@ -77,17 +76,17 @@ What is mostly important about the costs when someone votes is that we do **very
 
 To jump right in, overall, it cost about **$2.05 to cast 1350 votes**. On average it cost **$0.001519**, with a high of **$0.00261** and a low of **$0.001049**, to cast votes. As you can see, these numbers differ a lot. To visualize this, here is the diagram:
 
-![alt tag](/assets/eth_analysis/4.png)
+![alt tag](/assets/images/eth_analysis/4.png)
 
 To put the price in perspective:
 
-![alt tag](/assets/eth_analysis/5.png)
+![alt tag](/assets/images/eth_analysis/5.png)
 
 As you can see, there is a clear correlation between the Ether price and the cost of voting (who would have thought?). To get a better picture as to how much voting actually costs, we need to leave the Ether<->USD market out of the picture and instead focus on gas usage and price.
 
 On average, voting requires **30000 gas**, with a **high of 45485 gas and a low of 21000**. What is interesting is that the price of gas fluctuated during the time the data was collected. Usually the price of gas is at a constant of **50 Shannon**, but it reached a **max of 57 Shannon** on one instance. This is because the demand of computation increased, thus the computational power itself became scarcer, which meant that the price of the gas increased. Market dynamics at its best. If we multiply the gas used with the gas price, we get the following diagram:
 
-![alt tag](/assets/eth_analysis/6.png)
+![alt tag](/assets/images/eth_analysis/6.png)
 
 As you can see, overall the costs were relatively stable, only on few instances the costs were abnormally high or low. This is a combination of high gas costs, high gas spending and mostly because it was the first vote in a poll (which is more expensive, which we are going to discuss soon).
 
@@ -100,17 +99,16 @@ There were some interesting insights that were revealed while collecting all of 
 
 ### Here are some interesting polls:
 
-![alt tag](/assets/eth_analysis/7.png)
-![alt tag](/assets/eth_analysis/8.png)
-![alt tag](/assets/eth_analysis/9.png)
-![alt tag](/assets/eth_analysis/10.png)
-![alt tag](/assets/eth_analysis/11.png)
-![alt tag](/assets/eth_analysis/12.png)
+![alt tag](/assets/images/eth_analysis/7.png)
+![alt tag](/assets/images/eth_analysis/8.png)
+![alt tag](/assets/images/eth_analysis/9.png)
+![alt tag](/assets/images/eth_analysis/10.png)
+![alt tag](/assets/images/eth_analysis/11.png)
+![alt tag](/assets/images/eth_analysis/12.png)
 <br>
 
 As you can see, the recent sudden increase of the Ether price had a major impact in the overall costs of voting.
 
-* * *
 * * *
 <br>
 
@@ -151,7 +149,6 @@ To compare, the current voting system is **at least 46205% more expensive than a
 Most importantly though apart from price, a Blockchain-based voting system would get rid off all of the issues which current systems have[5]. Issues such as not being able to vote due to technical difficulties is not acceptable in a democracy, where supposedly “every vote counts”.
 
 * * *
-* * *
 <br>
 
 ## Conclusion
@@ -163,7 +160,11 @@ I will continue to work on more applications that offer different usecases for v
 
 # Sources
 [1] http://www.theguardian.com/technology/2009/sep/30/electronic-vote-counting
+
 [2] https://en.wikipedia.org/wiki/United_Kingdom_general_election,_2010
+
 [3] http://www.idea.int/vt/countryview.cfm?CountryCode=GB
+
 [4] http://www.bbc.com/news/uk-politics-24842147
+
 [5] https://en.wikipedia.org/wiki/United_Kingdom_general_election,_2010#Voting_problems

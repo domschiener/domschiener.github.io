@@ -16,7 +16,7 @@ Through the emergence of new decentralization and automation-enabling technologi
 
 Unlike traditional organizations where a strict hierarchical structure is used for management and organization, in a DCO the organization itself is controlled and owned by those contributing to it. That means that participants have control and decisional voting power to influence the way the organization is run, and they have a clear incentive to further contribute to the organization.
 
-![alt tag](/assets/wikipedia-dco/org-vs-dco.png)
+![alt tag](/assets/images/wikipedia-dco/org-vs-dco.png)
 
 
 ## 1. Knowledge of the Crowd
@@ -28,7 +28,7 @@ This crowd of people is a powerful mechanism to create and spread knowledge, whi
 
 ## 2. The Reposium Concept
 
-![alt tag](/assets/wikipedia-dco/reposium-conept.png)
+![alt tag](/assets/images/wikipedia-dco/reposium-conept.png)
 
 The goal of Reposium is it to create a self-governing, decentralized organization that provides the right incentives for contributors to create and manage a completely decentralized database of knowledge. The Reposium DCO itself will consist of independent and autonomous Decentralized Collaborative Communities for important subjects and categories.
 
@@ -37,7 +37,7 @@ These goals of decentralization and self-governance of communities will be achie
 
 ### 2.1. DCC’s inside the DCO
 
-![alt tag](/assets/wikipedia-dco/reposium-dco.png)
+![alt tag](/assets/images/wikipedia-dco/reposium-dco.png)
 
 The Reposium concept revolves around the notion that active contributors in a community know best how to run that specific community. Because of this, we give each community (also called a DCC — Decentralized Collaborative Community) the full autonomy to design, develop, manage and promote their community independently.
 
@@ -46,7 +46,7 @@ What this means concretely is that there is one main DAO which is concerned abou
 The number of DCC’s is determined by the popularity of a specific subject and its respective pages. A DCC will only be created if a subject is increasing in popularity and more visitors are starting to visit the subjects related pages. The reason for this is that it enables DCC’s to be created if certain pages or categories become more popular than others, so that these categories get a more dedicated structure and allocation of resources. For example, there is a Science DCC consisting of all science related pages, including philosophy (because it is not so popular yet). As more content is added to philosophy and more visitors start appreciating the content, a new and independent DCC will spun out of the Science DCC, called Philosophy DCC. Now the Philosophy DCC gains more voting power and the full authority to determine how the philosophy related pages should be run.
 The perfect analogy for this concept is cell division in an organism. Cells grow and after reaching a certain size initiate a cell division process where the DNA is being replicated so that two identical cells can be created out of one. This is similar in a DCC, which grows in popularity and after some of its pages reach a certain popularity score the DCC will start a division process, creating a completely new DCC.
 
-![alt tag](/assets/wikipedia-dco/cell-division.gif)
+![alt tag](/assets/images/wikipedia-dco/cell-division.gif)
 
 
 ## 3. Contributors
@@ -54,7 +54,7 @@ The perfect analogy for this concept is cell division in an organism. Cells grow
 
 Contributors are the driving force of the DCO. They not only control the DCO and the independent DCC’s through a democratic decision making and management process, but they are also responsible for the creation, modification and validation of content for the decentralized knowledge base (DKB), whose purpose it is to attract visitors with specific information inquiries.
 
-![alt tag](/assets/wikipedia-dco/dco-tasks.png)
+![alt tag](/assets/images/wikipedia-dco/dco-tasks.png)
 
 Overall, contributors perform 6 basic tasks that assure that the organization is run properly and that content in the DKB is created, improved and validated.
 
@@ -83,7 +83,7 @@ A contribution tree consists of a root (the originator of the content) and branc
 
 As pages are edited, the contribution trees are updated, which means that the “importance score” for each node in the tree is also changing, depending on how important and how appreciated the new content additions are. An example is a page describing Quantum Computing which was initiated by user XYZ and improved by several other independent contributors. After a while the page is slowly updating, but with a new breakthrough in Quantum Computing user ABC is able to add plenty of new content to the Quantum Computing page. With this user ABC has made an important contribution to the Quantum Computing community and should be rewarded accordingly by receiving a higher importance score in the contribution tree.
 
-![alt tag](/assets/wikipedia-dco/contribution-tree.png)
+![alt tag](/assets/images/wikipedia-dco/contribution-tree.png)
 
 These contribution trees play an important role in dividing reputation and donations of contributors on a page. If a user appreciates the content of a specific page and donates money to the creators of the content, this sign of appreciation is turned into reputation for the contributors in the contribution tree, and the money is distributed among the nodes in the contribution tree in relation to their importance score. The higher the importance of a node in the tree, the more reputation and the higher payout that node will receive.
 
@@ -92,7 +92,7 @@ These contribution trees play an important role in dividing reputation and donat
 
 Attracting new and retaining existing contributors ensures that the DCO will grow and the content of the DKB increasing and improving. That’s why Reposium needs a good incentivization mechanism that provides a clear way to reward contributors through reputation scores and monetary compensations.
 
-![alt tag](/assets/wikipedia-dco/incentives.png)
+![alt tag](/assets/images/wikipedia-dco/incentives.png)
 
 Monetary compensations make it possible to reward dedicated and active contributors of the DCO. These will largely consist of donations and tips (microtransactions) given by visitors of the platform that appreciate content. Donations can be sent to a single page, a DCC or the overall DCO. If money is sent to a single page, it is distributed among the nodes in the contribution tree. If the donation is sent to the DCC the money is distributed proportionally among the most important pages and most important contributors in that community. If the money is sent to the overall DCO, it will be sent to a reserve waiting for the DCO contributors to vote what the money should be used for. In most cases, money sent to the DCO will be used for general maintenance, but it can also be distributed among the most active contributors of the entire platform. Tips are another way to create a unique way for visitors to appreciate content by directly tipping the content creators. These microtransactions can be easily faciliated by integrating an existing third-party service to Reposium.
 
@@ -106,7 +106,7 @@ The most important part of the DCO is the decentralized knowledge base (DKB) whi
 
 The goal of the platform is it to create a useful product that provides complementary information to the existing, detailed description of subjects delivered by Wikipedia. Through this the platform is able to leverage the existing knowledge base from Wikipedia and is able to add unique content on top of it, which creates a new system for users to contribute to the platform.
 
-![alt tag](/assets/wikipedia-dco/platform.png)
+![alt tag](/assets/images/wikipedia-dco/platform.png)
 
 Initially users will be limited to only create short and concise summaries of the detailed descriptions of a subject (provided by Wikipedia) and Factoids about a subject. The reason for this limitation is it to determine the correct structure of the DCO, but our goal is it to allow users to create “soft-forks” of full-page content provided by Wikipedia, creating a newer, more accurate and informative knowledge base.
 
@@ -139,7 +139,7 @@ An important aspect of the Reposium reputation system is that reputation can not
 
 A democratic voting process ensures that the DCO is managed with the full consent of its users. Although it should be noted that our voting system is not designed to be fully democratic where 1 vote equals 1 contributor. In the DCO voting power is directly correlated with the reputation score of a user. This means that the most active contributors, whose content is appreciated the most by the community, have higher influence in the management of the DCC’s and the DCO.
 
-![alt tag](/assets/wikipedia-dco/voting.png)
+![alt tag](/assets/images/wikipedia-dco/voting.png)
 
 The rationale behind this is that a high reputation means that the community appreciates the contributors content, which in turn means that the contributor (most likely) has a much better overview and insight into how the DCC and the DCO should be managed. Additionally, in such a system, users with no reputation have no influence and cannot change the outcome of a vote, thus making it impossible to spam or attack the voting system.
 

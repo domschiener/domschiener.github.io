@@ -39,7 +39,7 @@ This is in contrast with direct democracy, where participants are required to pe
 
 The diagram below shows a comparison between the 3 different voting systems (sorry for the bad graphic, I will get a better infographic made soon).
 
-![alt tag](/assets/liquid-democracy/democracies_diagram.png)
+![alt tag](/assets/images/liquid-democracy/democracies_diagram.png)
 
 
 In the direct democracy model all voters vote directly on issues. In the representative democracy model voters first vote for and elect representatives who then vote on their behalf. The interesting take from the diagram is of course the Liquid Democracy model. Here voters can either vote directly on issues (like the two independent voters did on the left and right border), or they can delegate their vote to representatives who have more specialized knowledge about the issue, or simply more time to stay informed.
@@ -54,7 +54,7 @@ The categorization of issues is up to the entire community to decide, but a very
 
 To provide you with another example, let’s take a political party that is using liquid democracy for its internal decision making. The categories that would make a lot of sense for such a community would be: Finances, Marketing & Outreach, Political Program and Administrative decisions. Decisions that needs to be made will be categorized into these 4 categories. Members of the political party can then either vote directly on these decisions, or they can delegate their voting power on people with more specialized knowledge that is required to form an educated opinion.
 
-![alt tag](/assets/liquid-democracy/liquid_overview.png)
+![alt tag](/assets/images/liquid-democracy/liquid_overview.png)
 
 Let me explain the diagram in more detail, it might seem a bit confusing at first sight. Let’s explain the Government related diagram, the political party diagram is very similar. In total there are 6 voters, 3 of whom who have taken on the responsibility of being a delegate. As mentioned before, there are 3 types of issues (and thus, 3 areas of domain expertise): Fiscal Policies, Monetary Policies and Environment & Climate Policies.
 
@@ -99,4 +99,5 @@ I am confident that over the coming years many of the questions that I and other
 #### Sources
 
 [1] http://homepage.cs.uiowa.edu/~jones/voting/pictures/
+
 [2] http://www.civicyouth.org/2014-youth-turnout-and-youth-registration-rates-lowest-ever-recorded-changes-essential-in-2016/

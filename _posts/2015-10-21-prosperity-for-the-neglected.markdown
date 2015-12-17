@@ -5,7 +5,7 @@ date:   2015-10-21 13:34:14
 categories: future
 ---
 
-![Alt text](/assets/seeds-growing.jpeg)
+![Alt text](/assets/images/seeds-growing.jpeg)
 
 The World is Flat. Pythagoras assumption that the world is spherical is erroneous, Eratosthenes calculation of the Earth’s circumference is based on a methodological fallacy and Magellan’s trip around the globe was orchestrated by the Spanish crown in order to retain its upper hand over the archrival Portugal
 

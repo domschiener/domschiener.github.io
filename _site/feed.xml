@@ -1,859 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>Dominik Schiener</title>
-    <description>Personal Blog of Dominik Schiener. Mostly about Entrepreneurship, Technology and Research I&#39;m working on.
+    <title>Dominik Schiener - Personal Blog</title>
+    <description>Pesonal Blog discussing Entrepreneurship, Blockchain and Collective Intelligence</description>
+    <link>http://schiener.me</link>
+    <atom:link href="http://schiener.me/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Treatise on Identity: Problems with the Status Quo</title>
+        
+        
+          <description>&lt;p&gt;Who are you? You are a member of a nation, a community and a family. You are a son or a daughter, perhaps a father or a mother. You are a professional, the fuel for the economic combustion engine. You engage in social activities with friends and family, perhaps you are part of a club or organization that shares similar interests. You like sharing, blogging and tweeting, you express your thoughts and share your most precious moments on social media with those closest to you. In this very moment you represent a 32-bit IP address in a huge cluster of other global identifiers.&lt;/p&gt;
 </description>
-    <link>http://schiener.me/</link>
-    <atom:link href="http://schiener.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 23 Nov 2015 22:40:59 +0100</pubDate>
-    <lastBuildDate>Mon, 23 Nov 2015 22:40:59 +0100</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+        
+        <pubDate>Thu, 17 Dec 2015 11:01:14 +0100</pubDate>
+        <link>http://schiener.me/2015/treatise-on-identity/</link>
+        <guid isPermaLink="true">http://schiener.me/2015/treatise-on-identity/</guid>
+      </item>
     
       <item>
         <title>Liquid Democracy: True Democracy for the 21st Century</title>
-        <description>&lt;p&gt;Liquid Democracy, also called Delegative Democracy, is a powerful voting model for collective decision making in large communities. Liquid Democracy combines the advantages of Direct Democracy and Representative Democracy and creates a truly democratic voting system that empowers voters to either vote on issues directly, or to delegate ones voting power to a trusted party.&lt;/p&gt;
-
-&lt;p&gt;Through delegation, people with domain-specific knowledge are able to better influence the outcome of decisions, which in turn leads to an overall better governance of the state. Because of this, Liquid Democracy naturally evolves into a Meritocracy, where decisions are mainly made by those who have the kind of knowledge and experience required to make well-informed decisions on issues.&lt;/p&gt;
-
-&lt;p&gt;Overall, Liquid Democracy holds a lot of potential to not only be the foundation of decision making in virtual communities, but also local communities and entire governments. This blog post intends to give the reader an overview of what Liquid Democracy is and the advantages it offers to its participants. More related blog posts will follow soon.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-wrong-with-democracy-today&quot;&gt;What is wrong with Democracy Today?&lt;/h2&gt;
-
-&lt;p&gt;Even though there are many different forms of democracy, the only two which are in use today are Direct Democracy and Representative Democracy (and a hybrid between the two). Therefore, to describe the different forms:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Direct Democracy:&lt;/strong&gt; voters are directly involved in the decision making of the state. Voters express their opinions by continuously voting on issues. Direct Democracies offer citizens full control, accountability and equality. Sadly, direct democracies do not scale, mainly because of rational ignorance and disenfranchisement, due to an ever increasing list of issues that require the voters attention as the community grows. It becomes simply impractical for voters to be informed about all issues as they either do not have the time, the desire or the expertise. This in turn leads to low voter turnout and low overall satisfaction of voters in the community.  Direct democracies in its purest form are simply not feasible for larger communities.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Representative Democracy:&lt;/strong&gt; The most widely used form of democracy involves handing over one’s voting right to representatives who act on one’s behalf for making decisions. Representatives are usually (or lets say, hopefully) experts in a domain that are willing to serve and represent the community’s interest in a government body (e.g. parliament). Representative democracies scale well, but they fail to best serve citizens best interest. The issues with representative democracies are many, but to summarize 3 of the main problems:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;First of all, citizens are limited to vote representatives of a restricted set of candidates who often do not share one’s ideological views or interests. Most of the time voters are forced to give up their personal preference and instead have to vote for the candidate with the highest prospects of being elected. This specifically leaves out minorities, who lose the ability to have a representative represent their opinions and point of views inside the government. Additionally, this is one of the main reasons why the younger generation today[2] is so disinterested in politics. If you are young and nobody shares your views, the only other option is to protest and not vote at all. Only 20% of the US youth voting in the 2014 election is a very strong sign of this.&lt;/li&gt;
-  &lt;li&gt;Secondly, representatives are only loosely held accountable for their actions during their term in the office. Promises that were made during the election period don’t have to be fulfilled and are mostly nothing more than bait to deceive voters. This leads to “election cycle politics”, where elected representatives try to convince voters before an upcoming election of one’s competence by either introducing new proposals that are favored by the community (but most likely won’t be introduced), or by handing out expensive “Wahlgeschenke” (pre-election presents).&lt;/li&gt;
-  &lt;li&gt;And lastly, representative democracies can lead to corruption due to a concentration of power. Considering that the United States is seen as an oligarchy is enough proof that representative democracies are fertile ground for corruption and conflicts of interest. With no sense of responsibility and no accountability towards voters, acting in the interest of the highest bidder becomes easier than acting in the best interest of the population.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Apart from these obvious flaws in direct and representative democracies, a less obvious flaw is the fact that the election and voting process that are in use today are completely outdated and not in line with the technology available. Instead of making it possible to cast votes securely and conveniently via the Internet, voters have to drive to distant physical voting booths, only to fill out a paper ballot [1]. This puts unnecessary burden on voters, which can lead to voters simply not taking the effort to cast their vote.&lt;/p&gt;
-
-&lt;p&gt;Ironically, this is exactly what democracy tries to prevent. Everyone’s opinion counts and should be included in the collective decision making process. But the voting barriers that are still standing today are preventing this from happening.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-liquid-democracy&quot;&gt;What is Liquid Democracy?&lt;/h2&gt;
-
-&lt;p&gt;Liquid Democracy is a new form for collective decision making that gives voters full decisional control. Voters can either vote directly on issues, or they can delegate their voting power to delegates (i.e. representatives) who vote on their behalf. Delegation can be domain specific, which means that voters can delegate their voting power to different experts in different domains.&lt;/p&gt;
-
-&lt;p&gt;This is in contrast with direct democracy, where participants are required to personally vote on all issues; and in contrast with representative democracy, where participants vote for representatives once in a certain election cycle and then never worry about voting anymore.&lt;/p&gt;
-
-&lt;p&gt;The diagram below shows a comparison between the 3 different voting systems (sorry for the bad graphic, I will get a better infographic made soon).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/liquid-democracy/democracies_diagram.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In the direct democracy model all voters vote directly on issues. In the representative democracy model voters first vote for and elect representatives who then vote on their behalf. The interesting take from the diagram is of course the Liquid Democracy model. Here voters can either vote directly on issues (like the two independent voters did on the left and right border), or they can delegate their vote to representatives who have more specialized knowledge about the issue, or simply more time to stay informed.&lt;/p&gt;
-
-&lt;p&gt;Delegation is a &lt;strong&gt;sign of trust.&lt;/strong&gt; A voter trusts a delegate to represent her on certain decisions. If this trust is broken (by for example increasing ideological differences or corruption of the delegate), the voter can simply revoke the delegation and either vote personally, or delegate someone else. As we will see later, exactly this notion of provisional trust is important to create a sense of responsibility and accountability for delegates.&lt;/p&gt;
-
-&lt;p&gt;A very important property of Liquid Democracy is &lt;strong&gt;transitivity.&lt;/strong&gt; Delegation can not only happen through single hop, but it is completely transitive. This means that delegates can even delegate other delegates to vote on their behalf and all the previous voters (who themselves have delegated their vote) linked in the chain. This transitivity ensures that experts can delegate the trust they’ve accumulated to other delegates on certain issues on which they have less knowledge and insight about.&lt;/p&gt;
-
-&lt;p&gt;What is missing from the above diagram is &lt;strong&gt;domain-specific delegation.&lt;/strong&gt; A voter cannot only delegate her vote to a single delegate, but delegation can be made to a variety of different delegates that vote on behalf of the voter on domain-specific issues. Through such a system, it is more likely that experts can positively influence the outcome of problems and lead to an overall better result.&lt;/p&gt;
-
-&lt;p&gt;The categorization of issues is up to the entire community to decide, but a very simple categorization for decisions inside a government could be: Fiscal Policy, Monetary Policy, Environment and Climate Policy.&lt;/p&gt;
-
-&lt;p&gt;To provide you with another example, let’s take a political party that is using liquid democracy for its internal decision making. The categories that would make a lot of sense for such a community would be: Finances, Marketing &amp;amp; Outreach, Political Program and Administrative decisions. Decisions that needs to be made will be categorized into these 4 categories. Members of the political party can then either vote directly on these decisions, or they can delegate their voting power on people with more specialized knowledge that is required to form an educated opinion.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/liquid-democracy/liquid_overview.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Let me explain the diagram in more detail, it might seem a bit confusing at first sight. Let’s explain the Government related diagram, the political party diagram is very similar. In total there are 6 voters, 3 of whom who have taken on the responsibility of being a delegate. As mentioned before, there are 3 types of issues (and thus, 3 areas of domain expertise): Fiscal Policies, Monetary Policies and Environment &amp;amp; Climate Policies.&lt;/p&gt;
-
-&lt;p&gt;As you can see, nearly each of the 6 voters has delegated their vote in one way or another, except for the top delegate, who voted independently on all issues (must be a true expert). Voter B has delegated every vote, either she is too busy, disinterested or does not have enough knowledge about the specific topics.&lt;/p&gt;
-
-&lt;p&gt;Overall, Liquid Democracy is only slightly more complex than direct or representative democracy. But the advantages it offers far outweigh this initial learning barrier. Let’s get into details about the advantages.&lt;/p&gt;
-
-&lt;h2 id=&quot;liquid-democracy-why&quot;&gt;Liquid Democracy: Why?&lt;/h2&gt;
-
-&lt;p&gt;Now that we have a better understanding about the problems of democracy today, and have a good overview of how Liquid Democracy works, we can get into details about the big “Why?”. Most importantly, we need to provide a solid case as to why Liquid Democracy is a much greater solution than the status quo. I hope that we will achieve this with a list of Liquid Democracy’s greatest features and advantages over direct and representative democracy.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Liquid Democracy is a truly democratic.&lt;/strong&gt; Voters have the choice to either vote personally or delegate someone else. This is in stark contrast to the democracies in use today, where users are limited to either constantly vote for themselves, or vote for a representative once every few years. In these two models, voters are either overwhelmed with the kind of work that is required to participate, or they are completely underwhelmed and not included enough in the government’s decision making. Liquid Democracy gives voters the freedom to decide their level of involvement, while being able to change it at any time. This means that the decision making of a country is directly in the hands of the entire population.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Liquid Democracy has a low entry barrier.&lt;/strong&gt; The minimum requirement for becoming a delegate is another person’s trust. Nearly anyone, willing to take on this responsibility, can become a delegate. No political parties are required to win over voters. Instead of outrageous marketing campaigns where voters are purposefully deceived, only a person’s ability and knowledge about a subject counts in winning over delegates. By making the entry barrier as low as possible the overall decision-making process, which includes collection of ideas, comment and debate, will be much more vivid and filled with a diversity of ideas and point of views. Through that, the outcome of decisions will much more likely satisfy a large portion of the population and lead to an overall better governance of the country.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Liquid Democracy is cooperation, instead of competition.&lt;/strong&gt; In representative democracies today the competition during the political race is dominated by lavish and unnecessary campaign spending, attempts at exposing political competitors and purposeful lies to win over voters. Often times, many candidates put more effort in crafting political campaigns to win the competition, instead of actually focusing on the supposed political program and the “how?”’s of leading a country. If making sure that voters vote for you is more important than the actual governance of the country, we can be assured that there is an inherent systemic flaw. Win all and become elected, or lose everything. That is the motto of democracy today. In Liquid Democracy this competition of becoming a representative is set aside. Instead, delegates merely compete on the basis of earning voters trust, which can only be achieved through continuous efforts and proof of one’s abilities. Voters cannot be deceived (at least not in the long run) and a person’s merit, willingness and ability to improve the country mean everything.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Liquid Democracy creates responsibility.&lt;/strong&gt; Delegation is a sign of trust. If this trust is broken, a voter is able to immediately find another delegate or vote for herself. This provisional trust creates a sense of responsibility and accountability for delegates, because they could lose their delegated voting power at any time. Through this, delegates are more likely to act honest and are willing to vote in favor of the community instead of their own selfish desires.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Liquid Democracy means direct representation of minorities.&lt;/strong&gt; By having a low entry barrier, minorities have it much easier to be represented in the government. This means that no extra laws, that require a minimum of representatives to come from a certain ethnicity or race, have to be implemented. Instead, Liquid Democracy is a direct representation of the society’s structure and makes it possible for minorities and ethnic groups of any size to have a say in the decision making and governance of the country.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Liquid Democracy leads to better decisions.&lt;/strong&gt; By evolving into a network of exports that make well-informed, domain-specific decisions, Liquid Democracy leads to overall better decisions. Liquid Democracy eventually evolves into a meritocracy where the most skilled, knowledgeable and experienced voters make decisions in their area of expertise.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Liquid Democracy is scalable.&lt;/strong&gt; In today’s time, people are far too busy to stay constantly updated on issues concerning the governance of the state. Decisions that need to be made are ever-increasing, while time is a precious good that many simply don’t want to spend on decision-making for the government. Additionally, we are a society of specialization, and very few are well-informed in different domains. Therefore, through delegation, decision-making is placed in the hands of well-informed experts who are willing to dedicate their time and knowledge to better the overall governance of the state.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-state-of-liquid-democracy-today&quot;&gt;The State of Liquid Democracy Today&lt;/h2&gt;
-
-&lt;p&gt;The main reason why Liquid Democracy has not been used in practice until the last decade is because of the implementation barriers. Liquid democracies, same as direct democracies, require an underlying technical infrastructure that makes it possible for participants to constantly cast or delegate votes. Only through the Internet and advances in cryptography has this been possible during the last few decades.&lt;/p&gt;
-
-&lt;p&gt;Apart from the technical barriers, a much larger barrier today is the educational one. As this &lt;a href=&quot;http://publicvotes.org/vote/ec94wL7Sw37iZtRwf&quot;&gt;survey has shown&lt;/a&gt; only a small number of people have even heard of Liquid Democracy. Therefore, to really implement Liquid Democracy in large communities, a lot more effort needs to be placed on educating citizens about the advantages and the new democratic possibilities offered. The only real solution for that is to create interesting use case that display to people inside and outside the community what Liquid Democracy really means and the advantages it offers.&lt;/p&gt;
-
-&lt;p&gt;A great effort is being done by Pirate Parties across Europe which are using software like &lt;a href=&quot;http://liquidfeedback.org/&quot;&gt;LiquidFeedback&lt;/a&gt; for certain decisions and even elections. Apart from this, Google has recently &lt;a href=&quot;http://www.tdcommons.org/cgi/viewcontent.cgi?article=1092&amp;amp;context=dpubs_series&quot;&gt;published&lt;/a&gt;  their results of an internal experiment with Liquid Democracy. We will see a lot more developments in this area and I think that Liquid Democracy will progress well with new initiatives that take place. I will personally work on an implementation of Liquid Democracy on Ethereum and also collaborate with a few existing voting solutions to create new use cases.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Liquid Democracy is the democracy model fit for today’s society. The technology is ready, the only thing missing is more effort into working on concrete implementations that research this area in more detail. Most importantly, we need to determine which models are applicable for the actual governance (directive or administrative) of a country.&lt;/p&gt;
-
-&lt;p&gt;I am confident that over the coming years many of the questions that I and others have will be answered. Who knows, perhaps we will see a small city, or even just a village, adopt Liquid Democracy in a decade or two? That is certainly possible.&lt;/p&gt;
-
-&lt;h4 id=&quot;sources&quot;&gt;Sources&lt;/h4&gt;
-
-&lt;p&gt;[1] http://homepage.cs.uiowa.edu/~jones/voting/pictures/&lt;br /&gt;
-[2] http://www.civicyouth.org/2014-youth-turnout-and-youth-registration-rates-lowest-ever-recorded-changes-essential-in-2016/&lt;/p&gt;
+        
+        
+          <description>&lt;p&gt;Liquid Democracy, also called Delegative Democracy, is a powerful voting model for collective decision making in large communities. Liquid Democracy combines the advantages of Direct Democracy and Representative Democracy and creates a truly democratic voting system that empowers voters to either vote on issues directly, or to delegate ones voting power to a trusted party.&lt;/p&gt;
 </description>
+        
         <pubDate>Mon, 23 Nov 2015 23:34:14 +0100</pubDate>
-        <link>http://schiener.me/governance/2015/11/23/liquid-democracy.html</link>
-        <guid isPermaLink="true">http://schiener.me/governance/2015/11/23/liquid-democracy.html</guid>
-        
-        
-        <category>governance</category>
-        
+        <link>http://schiener.me/2015/liquid-democracy/</link>
+        <guid isPermaLink="true">http://schiener.me/2015/liquid-democracy/</guid>
       </item>
     
       <item>
         <title>Voting on the Ethereum Blockchain: An Analysis</title>
-        <description>&lt;p&gt;The main reason why I’ve created &lt;a href=&quot;http://publicvotes.org&quot;&gt;PublicVotes&lt;/a&gt; (apart from the intellectual challenge) is to determine the feasibility of utilizing Ethereum as a decision making tool for organizations. After a little under 2 weeks of operation I have acquired some data to draw early conclusions and answer the questions I had prior to this experiment. This will be an attempt at offering a more in-depth analysis so that current and future voting applications that utilize Ethereum or other Blockchains can benefit from it.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; Using Ethereum as a decision making tool costs money and all entries are public. I do not think that Ethereum should be used as a platform (or rather a tool) for the constant decision-making inside organizations, mainly because the advantages offered are not what organizations require. BUT, for decision-making that requires trust and a publicly verifiable and transparent system (such as elections of any kind), using Ethereum makes a lot of sense.  The 2010 General Election in the UK cost some $127Million. In a hypothetical scenario on Ethereum, it would cost $275,546.776 to register the same amount of votes. At the present time, on PublicVotes it costs about $2.4 to cast some 1368 votes (including polls). On average, it costs $0.0015 to cast a vote and $0.024 to create a poll.&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;what-actually-costs-money&quot;&gt;What actually costs money?&lt;/h1&gt;
-
-&lt;p&gt;For many outsiders that have not used or heard of Ethereum before (this poll shows it’s quite a few &lt;a href=&quot;http://publicvotes.org/vote/PuwexrCddeyTWh2Q2&quot;&gt;“Have you heard of Ethereum?”&lt;/a&gt;), the question of &lt;em&gt;“Why charge money for voting online?”&lt;/em&gt; comes up quite quickly. After all, voting is simply adding a new field into a database, that doesn’t cost money right? Therefore the only reason why PublicVotes costs money is because Dominik is a greedy developer.&lt;/p&gt;
-
-&lt;p&gt;Well not quite (I’m not that greedy). To understand what PublicVotes is actually doing, we need to move away from this notion of having a single computer holding a database and entering new entries, to an entire Peer-to-Peer Network of computers collectively holding a database and validating the entries that are written to it.&lt;/p&gt;
-
-&lt;p&gt;That is what PublicVotes essentially is: a voting system that utilizes the Ethereum network that holds a database (a Blockchain to be more specific) that validates new entries (votes in our case) written to that Blockchain.&lt;/p&gt;
-
-&lt;p&gt;Obviously this requires computer power, because after all, this network ensures the integrity of the Blockchain by securing it so that no adversary can alter entries. These computers need to be incentivized to do all of this incredibly important work, which leads us back to the question of this paragraph &lt;em&gt;“What actually costs money?”&lt;/em&gt;. So now you should know what costs money: whenever you create a poll or you vote, you are sending Ether to the Ethereum network that collectively verifies your vote/poll and inserts it into this globally shared Blockchain.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;the-analysis&quot;&gt;The Analysis&lt;/h2&gt;
-
-&lt;p&gt;The two major processes to analyse with PublicVotes are for one the &lt;em&gt;poll creation&lt;/em&gt; and for another the actual &lt;em&gt;voting&lt;/em&gt; on a poll. Both of these processes cost money since we are writing directly to the Blockchain.&lt;/p&gt;
-
-&lt;p&gt;For those interested, here is the smart contract that shows exactly what happens when we create a poll and vote. The contract, developed in Solidity, is super simple and should give you a good feel what one can do with Ethereum: &lt;a href=&quot;https://github.com/domschiener/publicvotes/blob/master/contracts/contract.sol&quot;&gt;Smart Contract&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Since this analysis involves getting quite a lot of data, I wrote a simple program in Python that contacts several API’s from service providers to get the required data (such as specific transaction details, total transaction cost, Ethereum USD price and so on). You can check out the program here &lt;a href=&quot;https://github.com/domschiener/ethereum-tx-details&quot;&gt;Github Link&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Lastly, I have published all of the data on Google Drive as Spreadsheets. Therefore, feel free to create your own analysis with the data :) &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1NLhTspcIsfIcKJpfJcvrbDZs3809q_o8VuiP58YUVAs/edit?usp=sharing&quot;&gt;Link to individual poll analysis&lt;/a&gt; and &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1ig_4-Xkuf2hAM7gXE84Br-6r4e4oZwmIDEF2s3wSo_8/edit?usp=sharing&quot;&gt;Link to general analysis&lt;/a&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;poll-creation-cost-specifics&quot;&gt;Poll Creation: Cost Specifics&lt;/h2&gt;
-
-&lt;p&gt;Creating a poll on PublicVotes means deploying a smart contract to the Ethereum network and writing information (provided by the client) about the poll to the contracts internal storage. More specifically, we are storing the following information to a public variable p of type Poll (basically a struct):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;p.owner.&lt;/strong&gt; This is the address (20 bytes) of the creator of the poll&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;p.options.&lt;/strong&gt; This is all of the poll options concatenated to a single string. The maximum length here is 200 chars&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;p.title&lt;/strong&gt; The title of the poll, stored as a string with max length of 48chars&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;p.votelimit&lt;/strong&gt; The vote limit stored as an unsigned integer.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;p.deadline&lt;/strong&gt; This is the deadline of the poll, which is a UNIX formatted date, also stored as an unsigned integer.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;p.status&lt;/strong&gt; Simple boolean value of the poll, on instantiation it is set to true.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;p.numVotes&lt;/strong&gt; And lastly, we set the number of votes to 0&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As you can see, we do quite a lot when we start a poll and this comes at a cost. On average, it cost about &lt;strong&gt;$0.024399&lt;/strong&gt;. The highest cost for just creating a poll was &lt;strong&gt;$0.0295448&lt;/strong&gt;. In the following diagram you can see that the cost for creating a poll vary a lot and are dependant on the respective Ether price.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/eth_analysis/1.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Speaking strictly in Ether terms, the gas which the contracts required for deployment also fluctuated a lot. The most expensive contract (&lt;strong&gt;590955 gas&lt;/strong&gt; was required) costing about 20% more than the least expensive (&lt;strong&gt;491295 gas&lt;/strong&gt; was required) one. At a price of 50 shannon (which was the same for all contracts that were deployed), we can see the cost difference here.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/eth_analysis/2.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As you can see, the creation of a polls varies quite a bit. But this is to be expected since the information which a poll stores into the contracts storage can differ greatly in size.&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;ether-price-development-vs-poll-creation&quot;&gt;Ether Price Development vs. Poll Creation&lt;/h1&gt;
-
-&lt;p&gt;As you may realize by now, the cost for starting a poll is not only dependant on the size of what gets stored, but also on the price of Ether at the time of the contract’s deployment. Therefore, the higher the Ether price, the more expensive it is to actually create a poll. The below diagram shows this in more detail. It clearly shows how the price of Ether dictates the cost for deploying a contract.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/eth_analysis/3.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;voting-cost-specifics&quot;&gt;Voting: Cost Specifics&lt;/h2&gt;
-
-&lt;p&gt;Now as for voting costs, we no longer need to actually deploy the contract to the network. Instead when someone votes we do two things: For one, we actually &lt;em&gt;write to the contracts storage&lt;/em&gt; by increasing p.numVotes by 1. And for another, &lt;em&gt;we create an event&lt;/em&gt;, which is basically storing information into the Blockchains client log and making it available for the outside world to read (which is exactly what we need for voting). We also have some logic implemented, namely checking if the sender is the owner and if a votecount is equal than the votelimit, but for this analysis this is not relevant.&lt;/p&gt;
-
-&lt;p&gt;What is mostly important about the costs when someone votes is that we do &lt;strong&gt;very little writing to the contracts storage&lt;/strong&gt;. If we were to store additional information in the contract, such as storing all of the votes in a public array, thus making it possible for other contracts to access this storage, I think it would cost at least twice to three times as much as voting currently costs. Therefore, keep in mind that the contract currently is very lightweight with the intention of keeping costs at a minimum.&lt;/p&gt;
-
-&lt;p&gt;To jump right in, overall, it cost about &lt;strong&gt;$2.05 to cast 1350 votes&lt;/strong&gt;. On average it cost &lt;strong&gt;$0.001519&lt;/strong&gt;, with a high of &lt;strong&gt;$0.00261&lt;/strong&gt; and a low of &lt;strong&gt;$0.001049&lt;/strong&gt;, to cast votes. As you can see, these numbers differ a lot. To visualize this, here is the diagram:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/eth_analysis/4.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;To put the price in perspective:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/eth_analysis/5.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As you can see, there is a clear correlation between the Ether price and the cost of voting (who would have thought?). To get a better picture as to how much voting actually costs, we need to leave the Ether&amp;lt;-&amp;gt;USD market out of the picture and instead focus on gas usage and price.&lt;/p&gt;
-
-&lt;p&gt;On average, voting requires &lt;strong&gt;30000 gas&lt;/strong&gt;, with a &lt;strong&gt;high of 45485 gas and a low of 21000&lt;/strong&gt;. What is interesting is that the price of gas fluctuated during the time the data was collected. Usually the price of gas is at a constant of &lt;strong&gt;50 Shannon&lt;/strong&gt;, but it reached a &lt;strong&gt;max of 57 Shannon&lt;/strong&gt; on one instance. This is because the demand of computation increased, thus the computational power itself became scarcer, which meant that the price of the gas increased. Market dynamics at its best. If we multiply the gas used with the gas price, we get the following diagram:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/eth_analysis/6.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As you can see, overall the costs were relatively stable, only on few instances the costs were abnormally high or low. This is a combination of high gas costs, high gas spending and mostly because it was the first vote in a poll (which is more expensive, which we are going to discuss soon).&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;interesting-insights-into-specific-polls&quot;&gt;Interesting Insights into specific polls&lt;/h2&gt;
-
-&lt;p&gt;There were some interesting insights that were revealed while collecting all of the data from PublicVotes. First of all, it is very interesting that the first vote that is being cast is nearly always in the range of 45000 gas spent, which is a lot more than all subsequent votes. This is  unexpected behavior and there is no  good explanation yet as to why the first vote that is being cast is more expensive than the others. So if someone reading this can explain this in more detail, please let me know.&lt;/p&gt;
-
-&lt;h3 id=&quot;here-are-some-interesting-polls&quot;&gt;Here are some interesting polls:&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/eth_analysis/7.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/eth_analysis/8.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/eth_analysis/9.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/eth_analysis/10.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/eth_analysis/11.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/eth_analysis/12.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;As you can see, the recent sudden increase of the Ether price had a major impact in the overall costs of voting.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;ethereum-based-voting-for-decision-making&quot;&gt;Ethereum-based Voting for Decision-Making?&lt;/h2&gt;
-
-&lt;p&gt;As the intention of this analysis was to offer to the reader a definitive answer to the question whether Ethereum should be used for decision-making inside organizations, here is the definitive answer: &lt;strong&gt;yes and no&lt;/strong&gt;. (exactly the definitive answer you wanted)&lt;/p&gt;
-
-&lt;p&gt;Organizations of any type, whether small or large, have to make constant decisions on virtually anything, including which pizza to order for the team. Therefore I do not think that it makes sense to use such an Ethereum-based (or Blockchain-based for that matter) voting application that publicly records and verifies all votes that had been cast. &lt;strong&gt;Organizations want to keep the information about polls and votes private and hidden from the public, therefore recording it into an immutable public ledger is not acceptable.&lt;/strong&gt; The costs and advantages offered by a blockchain-based voting system do not meet the requirements of today’s organizations.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;BUT,&lt;/strong&gt; I do think for decisions, that require trust and a publicly verifiable system, that Ethereum-based voting is very powerful. It basically ensures the integrity of the poll (nobody can alter votes once they have been cast), it is incorruptible, publicly verifiable and transparent (everyone can see all votes on the Blockchain) and a voter can be ensured that her/his vote has been counted. This means that such a voting system is &lt;strong&gt;perfect for elections inside organizations, but also for governments, where trust is of utmost importance.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Since this is a such a huge topic, let’s dive deeper into a cost comparison with current voting systems for elections.&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;comparison-with-current-voting-systems-for-elections&quot;&gt;Comparison with current voting systems for elections&lt;/h2&gt;
-
-&lt;p&gt;To compare Ethereum-based voting systems to the current voting system that is used for national and state elections, we first need to describe how this voting system even works. For this specific example I’m using the UK as an example since they had published some useful numbers to base our comparison on.&lt;/p&gt;
-
-&lt;p&gt;As you may have guessed, &lt;strong&gt;holding elections today is expensive, tedious and slow&lt;/strong&gt;. The system is still based off of physical booths, paper ballots and requiring humans to count the ballots. (in some cases there are machines counting the ballots, but these machines are even more expensive than humans on a per voter cost basis.[1])&lt;/p&gt;
-
-&lt;p&gt;For the &lt;em&gt;2010 General Elections in the UK&lt;/em&gt;[2], the vote turnout was at 65.1%. Out of 45,597,461 registered voters, some 29,991,471 actually voted[3]. Mark Harper, the Cabinet Office minister, estimated the costs of the general election to be &lt;strong&gt;£113,255,271&lt;/strong&gt;[4]. This figure consists of £28,655,271 for the cost of distributing candidates’ mailings and a further £84.6 million for the conduct of the poll. That means on average, &lt;strong&gt;it cost about £3.77 to register and count a vote&lt;/strong&gt;. If we only take the costs for conducting the poll (£84.6 million), it would cost £2.82 to cast a single vote.&lt;/p&gt;
-
-&lt;p&gt;To draw a comparison with Ethereum based voting, remember that on average, &lt;strong&gt;it costs $0.0015 to cast a vote&lt;/strong&gt; and &lt;strong&gt;$0.024 to create a poll&lt;/strong&gt;. Therefore, for holding the 2010 General Election on the Blockchain it would cost $0.024 (to create the poll) and $0.0015 * 29,991,471 = &lt;strong&gt;$44,987.23&lt;/strong&gt;. Now this number is not completely correct, because it presumes that the price of Ether will stay the same (around $0.90) and the price of Gas will also stay at 50 Shannon. To get a more exact figure, we need to more accurately describe a hypothetical scenario in the future where a government holds elections on the Ethereum Blockchain.&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;creating-a-hypothetical-scenario&quot;&gt;Creating a hypothetical scenario&lt;/h2&gt;
-
-&lt;p&gt;First of all, the most important assumption of all is that the Ethereum network can even handle the amount of transaction volume an election will bring. At the current gas limit of 3,141,592, at the cost of 30000 gas per vote, we could only register some &lt;strong&gt;104 votes every 12 seconds&lt;/strong&gt;. That is about 748800 in a day. Therefore, holding the General Elections on the Ethereum Blockchain would take some &lt;strong&gt;40 days&lt;/strong&gt; until it’s finished. That of course is not acceptable. We therefore assume that the Ethereum Network has no such gas limit at the time the election is being held.&lt;/p&gt;
-
-&lt;p&gt;Secondly, we assume that the price of Ether will increase to at least &lt;strong&gt;$3.50&lt;/strong&gt;. A government holding elections on the Blockchain is a huge deal and speculators love something like that. Because of that, we can safely assume that $3.50 is a good price of Ether (and I actually think it is on the lower end of the spectrum, as the price could definitely increase much more).&lt;/p&gt;
-
-&lt;p&gt;Lastly, we need to more accurately predict the gas price. Right now the Gas price is stable at about 50 Shannon. With a government holding elections and potentially some 29,991,471 votes being registered on the Blockchain, the price of gas would certainly increase. Since predicting market behavior is impossible, we simply assume that the gas price will increase 50% to &lt;strong&gt;75 Shannon&lt;/strong&gt;. (let’s assume that the demand created by the government makes more miners want to participate, since it’s quite lucrative).&lt;/p&gt;
-
-&lt;p&gt;With this hypothetical scenario we can now calculate how much it would (hypothetically) cost to hold an election. To create the poll, some 520000 in gas will be required at a cost of 75 Shannon, that is 0.039 Ether or $0.1365. At a gas used of 35000 and a price of 75 Shannon per gas, the total transaction cost in Ether will be 0.002625. In USD terms that is $0.0091875. In sum, the entire election would cost $0.1365 + $0.0091875 * 29,991,471 = &lt;strong&gt;$275,546.776&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;To compare, the current voting system is &lt;strong&gt;at least 46205% more expensive than a Blockchain based voting system&lt;/strong&gt;. Casting a vote in the current system costs &lt;strong&gt;$4.24, compared to $0.0091875&lt;/strong&gt; on the Ethereum based voting system.&lt;/p&gt;
-
-&lt;p&gt;Most importantly though apart from price, a Blockchain-based voting system would get rid off all of the issues which current systems have[5]. Issues such as not being able to vote due to technical difficulties is not acceptable in a democracy, where supposedly “every vote counts”.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;An Ethereum-based voting system offers a lot of benefits that current voting systems simply lack, or achieve at a very expensive price. &lt;strong&gt;Transparency, public verifiability, corruption-resistance and assurance that a vote has been cast comes at a price of $0.0091875 per vote&lt;/strong&gt;. Even though using such a voting system for the constant decision-making inside an organization may be too much of what is required, holding elections on the Blockchain makes a lot of sense.&lt;/p&gt;
-
-&lt;p&gt;I will continue to work on more applications that offer different usecases for voting on the Blockchain. Liquid democracy is up next as I think that smart contracts are the perfect solution to making such a system viable.&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;sources&quot;&gt;Sources&lt;/h1&gt;
-&lt;p&gt;[1] http://www.theguardian.com/technology/2009/sep/30/electronic-vote-counting&lt;br /&gt;
-[2] https://en.wikipedia.org/wiki/United_Kingdom_general_election,_2010&lt;br /&gt;
-[3] http://www.idea.int/vt/countryview.cfm?CountryCode=GB&lt;br /&gt;
-[4] http://www.bbc.com/news/uk-politics-24842147&lt;br /&gt;
-[5] https://en.wikipedia.org/wiki/United_Kingdom_general_election,_2010#Voting_problems&lt;/p&gt;
+        
+        
+          <description>&lt;p&gt;The main reason why I’ve created &lt;a href=&quot;http://publicvotes.org&quot;&gt;PublicVotes&lt;/a&gt; (apart from the intellectual challenge) is to determine the feasibility of utilizing Ethereum as a decision making tool for organizations. After a little under 2 weeks of operation I have acquired some data to draw early conclusions and answer the questions I had prior to this experiment. This will be an attempt at offering a more in-depth analysis so that current and future voting applications that utilize Ethereum or other Blockchains can benefit from it.&lt;/p&gt;
 </description>
+        
         <pubDate>Sat, 07 Nov 2015 12:34:14 +0100</pubDate>
-        <link>http://schiener.me/research/2015/11/07/voting-on-ethereum-analysis.html</link>
-        <guid isPermaLink="true">http://schiener.me/research/2015/11/07/voting-on-ethereum-analysis.html</guid>
-        
-        
-        <category>research</category>
-        
+        <link>http://schiener.me/2015/voting-on-ethereum-analysis/</link>
+        <guid isPermaLink="true">http://schiener.me/2015/voting-on-ethereum-analysis/</guid>
       </item>
     
       <item>
         <title>PublicVotes: Ethereum-based Voting Application</title>
-        <description>&lt;p&gt;As part of my research for Reposium, I have started working on a &lt;a href=&quot;http://publicvotes.org&quot;&gt;simple voting application&lt;/a&gt; built with Meteor that utilizes the Ethereum Blockchain to create a provably fair and transparent voting system. This is one of a few applications I want to create as part of my research (decentralized decision making or liquid democracy is most likely next). Before explaining the underlying structure of this application, let me explain which problems this application solves and which it doesn’t.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-this-is-and-isnt&quot;&gt;What this is and isn’t&lt;/h2&gt;
-
-&lt;p&gt;What PublicVotes essentially is, is an easy to use, provably fair voting application. All votes of participants are recorded (by proxy) into the Blockchain for the world to verify. The application is not fully decentralized, since my design goal from the beginning was to create an application that is easy to use for people outside the Ethereum space. People should be able to participate in the voting process without even knowing what the underlying protocols are — which has lead to some functionality moving to the server (i.e. centralization). I will gradually work on making this more trustless. Right now you should treat PublicVotes as an &lt;strong&gt;application “empowered by Ethereum”&lt;/strong&gt;, instead of a DApp powered by Ethereum.&lt;/p&gt;
-
-&lt;h1 id=&quot;how-it-works&quot;&gt;How it works&lt;/h1&gt;
-
-&lt;p&gt;The entire platform is built on Meteor, there is currently one smart contract coded in Solidity that is used for placing a poll into the Blockchain and for casting the votes. For display purposes on the website and making it easy to vote, I’m also storing poll information, votes and the related Ethereum accounts in MongoDB collections.&lt;br /&gt;
-There are basically 2 processes that make up the system. The first is the poll creation, the second is actual voting.&lt;/p&gt;
-
-&lt;h2 id=&quot;poll-creation&quot;&gt;Poll Creation&lt;/h2&gt;
-
-&lt;p&gt;Anyone with a small amount of Ether can create a poll. At PublicVotes, the creator of the poll pays for the creation of the poll and for all votes. This way anyone can vote by simply clicking their preferred option, without even knowing what the underlying technology (Ethereum) is.&lt;/p&gt;
-
-&lt;p&gt;A poll consists of the following information:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Title (required): Mostly a question that indicates what the users are voting about. Maxlength: 48 chars.&lt;/li&gt;
-  &lt;li&gt;Description (not required): A more comprehensive description that explains to the users what the vote is exactly about. Maxlength: 145 chars.&lt;/li&gt;
-  &lt;li&gt;Options (min 2 required): The actual voting options for your poll. Minimum is 2, max is 10 options. Maxlength: 20 chars.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Settings:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Public Poll: The user can choose if the poll should be public or not. If the poll is private, only people with the link can participate in the vote.&lt;/li&gt;
-  &lt;li&gt;Multioption (coming soon): Makes it possible for users to choose more than 1 poll option.&lt;/li&gt;
-  &lt;li&gt;Vote Limit: Limits the number of people that can participate in the poll. (not required).&lt;/li&gt;
-  &lt;li&gt;Time Limit: A timelimit for the poll. Right now this is a requirement as the account will eventually run out of Ether. But once we have setup a faucet I will remove the timelimit.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Once the creator has entered this information, he/she is required to send a specified amount (0.2 Ether to be exact) of Ether to an address. All of the accounts are generated on the client, thanks to silentcicero’s ethereumjs library. This account is then stored in a local MongoDB collection and will be used for all future votes.&lt;/p&gt;
-
-&lt;p&gt;Once the Ether have been received at the specified address, the poll is ready to go live and be deployed onto the Ethereum Blockchain. This is the smart contract that is deployed onto the Blockchain: &lt;a href=&quot;https://github.com/domschiener/publicvotes/blob/master/contracts/contract.sol&quot;&gt;Github Link&lt;/a&gt; . Once the contract has been mined, the poll will go live and people can start voting.&lt;/p&gt;
-
-&lt;h2 id=&quot;casting-a-vote&quot;&gt;Casting a Vote&lt;/h2&gt;
-
-&lt;p&gt;Anyone with a link can participate in the poll and cast their vote. Casting a vote is as simple as clicking a button. The application does most of the rest, such as preparing and signing the transaction which will be sent to the smart contract. Once a vote has been received, the smart contract will record the vote into the Blockchain’s event log.&lt;/p&gt;
-
-&lt;p&gt;After voting, the user is redirected to /voted where there are statistics about the poll and the people who have voted. The table at the bottom of the page has been purely generated through filters that get the event logs of the Ethereum Blockchain.&lt;/p&gt;
-
-&lt;h1 id=&quot;where-to-go-from-here&quot;&gt;Where to go from here&lt;/h1&gt;
-
-&lt;p&gt;This is a Minimum Viable Product and the system currently has many flaws. The major flaw being the IP-based redirect system. I will implement OAuth over the coming days so that users can participate in the voting process through social media accounts.&lt;/p&gt;
-
-&lt;p&gt;It would be very interesting to work on a sybil-attack resistant system, but it seems that so far there is no viable solution to the problem at hand that offers both security and ease of use.&lt;br /&gt;
-Overall though, I will work on more improvements over the coming weeks and also on a follow-up application that will take this voting application to the next level (mostly based on Liquid Democracy concepts).&lt;/p&gt;
+        
+        
+          <description>&lt;p&gt;As part of my research for Reposium, I have started working on a &lt;a href=&quot;http://publicvotes.org&quot;&gt;simple voting application&lt;/a&gt; built with Meteor that utilizes the Ethereum Blockchain to create a provably fair and transparent voting system. This is one of a few applications I want to create as part of my research (decentralized decision making or liquid democracy is most likely next). Before explaining the underlying structure of this application, let me explain which problems this application solves and which it doesn’t.&lt;/p&gt;
 </description>
+        
         <pubDate>Sat, 31 Oct 2015 20:34:14 +0100</pubDate>
-        <link>http://schiener.me/projects/2015/10/31/openvotes-voting.html</link>
-        <guid isPermaLink="true">http://schiener.me/projects/2015/10/31/openvotes-voting.html</guid>
-        
-        
-        <category>projects</category>
-        
+        <link>http://schiener.me/2015/openvotes-voting/</link>
+        <guid isPermaLink="true">http://schiener.me/2015/openvotes-voting/</guid>
       </item>
     
       <item>
         <title>Reposium: The future of Wikipedia as a DCO</title>
-        <description>&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;/h2&gt;
-
-&lt;p&gt;Through the emergence of new decentralization and automation-enabling technologies we are able to create completely decentralized, autonomous collaborative organisations and communities. By utilizing these technologies, combined with new incentivization, reputation and self-governance mechanisms we propose a DCO that is focused around the creation, moderation and maintenance of a decentralized knowledge base. With this we hope to establish a completely autonomous DCO that serves a large user base and further advances the research that is being done in regards to DCO’s and the future of collaboration, reputation and self-governance.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-a-decentralized-collaborative-organization-dco&quot;&gt;What is a Decentralized Collaborative Organization (DCO)?&lt;/h2&gt;
-
-&lt;p&gt;Unlike traditional organizations where a strict hierarchical structure is used for management and organization, in a DCO the organization itself is controlled and owned by those contributing to it. That means that participants have control and decisional voting power to influence the way the organization is run, and they have a clear incentive to further contribute to the organization.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/wikipedia-dco/org-vs-dco.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;knowledge-of-the-crowd&quot;&gt;1. Knowledge of the Crowd&lt;/h2&gt;
-
-&lt;p&gt;The desire for information is an inherent quality of our identity. Not only do we want to stay up to date with current world events, but we also want to acquire knowledge from the vast pool of wisdom shared by our ancestors. Websites like Wikipedia have largely shaped the way this information inquisition is happening digitally. Today it is possible to find information about pretty much anything and anyone online with a simple search query. This was only made possible through the large group of dedicated volunteers all around the globe which are behind the creation, maintenance and validation of content.&lt;/p&gt;
-
-&lt;p&gt;This crowd of people is a powerful mechanism to create and spread knowledge, which further lowers barriers of entry for education and prosperity. Therefore, the incentives to keep the group of dedicated and passionate people to actively contribute to the global knowledge database are high, but often these people are not incentivized properly to encourage them to contribute. This is largely based on the fact that there is no clear incentivization scheme that makes it clear what the reward for a contribution is (except for altruistic reasons). Additionally, the entry barriers for contributions are often too high and the majority of people are excluded from ever providing their input, even though they are skilled and perfectly suited to contribute to the knowledge pool.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-reposium-concept&quot;&gt;2. The Reposium Concept&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/wikipedia-dco/reposium-conept.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The goal of Reposium is it to create a self-governing, decentralized organization that provides the right incentives for contributors to create and manage a completely decentralized database of knowledge. The Reposium DCO itself will consist of independent and autonomous Decentralized Collaborative Communities for important subjects and categories.&lt;/p&gt;
-
-&lt;p&gt;These goals of decentralization and self-governance of communities will be achieved by utilizing Ethereum as the Smart Contract provider, IPFS for storing the knowledge database, Bitcoin for storing the outcomes of votes and contribution trees into the Blockchain, and a new reputation system for determining the value of contributions and creating a balanced organization.&lt;/p&gt;
-
-&lt;h3 id=&quot;dccs-inside-the-dco&quot;&gt;2.1. DCC’s inside the DCO&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/wikipedia-dco/reposium-dco.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The Reposium concept revolves around the notion that active contributors in a community know best how to run that specific community. Because of this, we give each community (also called a DCC — Decentralized Collaborative Community) the full autonomy to design, develop, manage and promote their community independently.&lt;/p&gt;
-
-&lt;p&gt;What this means concretely is that there is one main DAO which is concerned about the general management and development of the platform (see 4.), but there will be independent DCC’s which are responsible for operating, improving and developing their respective pages. For example, science related pages are run by the Science DCC, gaming related pages are run by the Gaming DCC, and so on. A DCC has the full authority to change the layout of pages (similar to Reddit Subreddits), they can add visualizations and special pages for the celebration of important figures or for a better display of the content. The DCC also has decisional power in determining what the generated revenues (see 3.3) are going to be used for.&lt;/p&gt;
-
-&lt;p&gt;The number of DCC’s is determined by the popularity of a specific subject and its respective pages. A DCC will only be created if a subject is increasing in popularity and more visitors are starting to visit the subjects related pages. The reason for this is that it enables DCC’s to be created if certain pages or categories become more popular than others, so that these categories get a more dedicated structure and allocation of resources. For example, there is a Science DCC consisting of all science related pages, including philosophy (because it is not so popular yet). As more content is added to philosophy and more visitors start appreciating the content, a new and independent DCC will spun out of the Science DCC, called Philosophy DCC. Now the Philosophy DCC gains more voting power and the full authority to determine how the philosophy related pages should be run.&lt;br /&gt;
-The perfect analogy for this concept is cell division in an organism. Cells grow and after reaching a certain size initiate a cell division process where the DNA is being replicated so that two identical cells can be created out of one. This is similar in a DCC, which grows in popularity and after some of its pages reach a certain popularity score the DCC will start a division process, creating a completely new DCC.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/wikipedia-dco/cell-division.gif&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;contributors&quot;&gt;3. Contributors&lt;/h2&gt;
-
-&lt;p&gt;Contributors are the driving force of the DCO. They not only control the DCO and the independent DCC’s through a democratic decision making and management process, but they are also responsible for the creation, modification and validation of content for the decentralized knowledge base (DKB), whose purpose it is to attract visitors with specific information inquiries.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/wikipedia-dco/dco-tasks.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Overall, contributors perform 6 basic tasks that assure that the organization is run properly and that content in the DKB is created, improved and validated.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Manage. Contributors are there to actively and collectively manage the DCC. They perform important tasks which include the maintenance and development of the platform and strategic and operational decisions about the direction of the DCC. An important factor in the way one can influence the management of the DCC is reputation, which is earned by creating content that gets appreciated by the community.&lt;/li&gt;
-  &lt;li&gt;Vote. A decentralized, transparent and public voting system enables for democratic votes to happen on important decision. The voting system is based on Ethereum and utilizes the Bitcoin Blockchain to timestamp voting information (such as description, outcome, etc.).&lt;/li&gt;
-  &lt;li&gt;Create. Contributors are there to create new content on a regular basis. This includes summaries of content, factoids, detailed descriptions and recent news updates. Creation of new content is key in keeping the organization live and attracting new visitors. That is why the content needs to be up to date (constantly improved) and validated for its accuracy.&lt;/li&gt;
-  &lt;li&gt;Promote. Since contributors have a direct stake in the success of the DCO, they have an incentive to actively promote the DCO’s platform.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;contribution-initiative&quot;&gt;3.1. Contribution Initiative&lt;/h3&gt;
-
-&lt;p&gt;The core principle of Reposium is it to avoid limits and allow anyone to become a contributor of a DCC. This means that anyone can submit content to the DKB (Decentralized Knowledge Base) and through increased work and continuous contributions earn influence in the DCC.&lt;/p&gt;
-
-&lt;p&gt;The two main ways one can contribute content is by creating new content or improving existing content, which includes edits and additions. Creating new content is a basic submission from a category in a DCC. For example, a new submission about a cryptographic cipher will be submitted to the cryptography category, which is managed by the Computer Science DCC. To combat spammers and rogue contributors, content that is submitted can be put down either by a vote in the DCC, or the visitors which downvote the content. If a content is downvoted or a vote against it was successful, it will be completely removed from the DKB. This is a self-healing process where the DCC (the organism) gets rid of unnecessary and inappropriate content in a democratic way, since the crowd is there to decide what happens with the content.&lt;/p&gt;
-
-&lt;p&gt;Improvements to existing content are basically soft-forks of the content, where 51% of the members in the contribution tree are required to accept the new content. This democratic voting process assures the integrity of the content and makes sure that the original creator of the content (i.e. the source) is in consent with the edition.&lt;/p&gt;
-
-&lt;h3 id=&quot;contribution-trees&quot;&gt;3.2. Contribution Trees&lt;/h3&gt;
-
-&lt;p&gt;It is important to create a fair environment where contributions can be mapped to its source and rewarded. For this we introduce the concept of contribution trees which are part of the metadata structure of every page inside the DKB.&lt;/p&gt;
-
-&lt;p&gt;A contribution tree consists of a root (the originator of the content) and branches which include the contributions of other contributors to the original content such as spell checks or additions to the content. In addition to the name of the contributor and the contribution, each node in the tree also includes a scale which is basically a number determining the importance of the contribution. This offers an objective way for rewarding contributors to content and making it possible for anyone to be rewarded properly for their contributions.&lt;/p&gt;
-
-&lt;p&gt;As pages are edited, the contribution trees are updated, which means that the “importance score” for each node in the tree is also changing, depending on how important and how appreciated the new content additions are. An example is a page describing Quantum Computing which was initiated by user XYZ and improved by several other independent contributors. After a while the page is slowly updating, but with a new breakthrough in Quantum Computing user ABC is able to add plenty of new content to the Quantum Computing page. With this user ABC has made an important contribution to the Quantum Computing community and should be rewarded accordingly by receiving a higher importance score in the contribution tree.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/wikipedia-dco/contribution-tree.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;These contribution trees play an important role in dividing reputation and donations of contributors on a page. If a user appreciates the content of a specific page and donates money to the creators of the content, this sign of appreciation is turned into reputation for the contributors in the contribution tree, and the money is distributed among the nodes in the contribution tree in relation to their importance score. The higher the importance of a node in the tree, the more reputation and the higher payout that node will receive.&lt;/p&gt;
-
-&lt;h3 id=&quot;contribution-incentives&quot;&gt;3.3. Contribution Incentives&lt;/h3&gt;
-
-&lt;p&gt;Attracting new and retaining existing contributors ensures that the DCO will grow and the content of the DKB increasing and improving. That’s why Reposium needs a good incentivization mechanism that provides a clear way to reward contributors through reputation scores and monetary compensations.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/wikipedia-dco/incentives.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Monetary compensations make it possible to reward dedicated and active contributors of the DCO. These will largely consist of donations and tips (microtransactions) given by visitors of the platform that appreciate content. Donations can be sent to a single page, a DCC or the overall DCO. If money is sent to a single page, it is distributed among the nodes in the contribution tree. If the donation is sent to the DCC the money is distributed proportionally among the most important pages and most important contributors in that community. If the money is sent to the overall DCO, it will be sent to a reserve waiting for the DCO contributors to vote what the money should be used for. In most cases, money sent to the DCO will be used for general maintenance, but it can also be distributed among the most active contributors of the entire platform. Tips are another way to create a unique way for visitors to appreciate content by directly tipping the content creators. These microtransactions can be easily faciliated by integrating an existing third-party service to Reposium.&lt;/p&gt;
-
-&lt;p&gt;Another way to generate money for the DCO is through grants by companies or governments. If such grants are successfully acquired by the DCO, they will be sent into the reserves waiting for the DCO members to collectively decide what the money should be used for.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-platform&quot;&gt;4. The Platform&lt;/h2&gt;
-
-&lt;p&gt;The most important part of the DCO is the decentralized knowledge base (DKB) which needs to be actively managed by adding, improving and validating content. The front of the DKB is a web- and mobile-platform (from now on known as “platform”) which makes it easy for visitors to access the DKB and get their desired content.&lt;/p&gt;
-
-&lt;p&gt;The goal of the platform is it to create a useful product that provides complementary information to the existing, detailed description of subjects delivered by Wikipedia. Through this the platform is able to leverage the existing knowledge base from Wikipedia and is able to add unique content on top of it, which creates a new system for users to contribute to the platform.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/wikipedia-dco/platform.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Initially users will be limited to only create short and concise summaries of the detailed descriptions of a subject (provided by Wikipedia) and Factoids about a subject. The reason for this limitation is it to determine the correct structure of the DCO, but our goal is it to allow users to create “soft-forks” of full-page content provided by Wikipedia, creating a newer, more accurate and informative knowledge base.&lt;/p&gt;
-
-&lt;p&gt;An example of a website that leverages the existing content provided by Wikipedia and creates a new product (instant search of content) is &lt;a href=&quot;https://github.com/reposium-dco/instant-wikipedia&quot;&gt;https://github.com/reposium-dco/instant-wikipedia&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;decentralized-knowledge-base-dkb&quot;&gt;4.2. Decentralized Knowledge Base (DKB)&lt;/h3&gt;
-
-&lt;p&gt;The decentralized knowledge base is at the core of the Reposium DCO. The majority of the work inside the DCO revolves around creating, updating and improving content for the DKB. As the name suggests, the DKB is completely decentralized, both in who can contribute, and how the entries in the DKB are stored. For storing the content entries we will utilize IPFS (https://ipfs.io).&lt;/p&gt;
-
-&lt;p&gt;During the early beta-phase of Reposium, we will regularly download the Wikipedia dumps and upload them to IPFS. The contributors will then be able to create additional content to the full page entries already provided by Wikipedia, namely summaries of content and factoids. In a later phase once the community is ready and the concept has been fully tested, we will enable users to edit full page entries.&lt;/p&gt;
-
-&lt;p&gt;By utilizing structured data (through DBPedia or WikiData), we can create a “semantic overlay” to the platform which offers a richer and more informative user experience when a user searches for a specific subject. We can for example change the way people get to their desired information by extending the way search queries can be made on the platform (http://dbpedia.org/use-cases/revolutionize-wikipedia-search-0), and we can also create “portable knowledge”. This means that website owners can utilize the provided API to make search queries to the DKB and get their desired content, semantically formatted and structured, making it more easy to display the content on a website.&lt;/p&gt;
-
-&lt;h2 id=&quot;reputation-and-influence&quot;&gt;5. Reputation and Influence&lt;/h2&gt;
-
-&lt;p&gt;Since anyone can contribute to the DCO, reputation plays an important role to instill order into the organization. Reputation determines the contributors influences in the DCO, since reputation itself is a certification that a users contribution is appreciated by the community. Therefore, the more appreciated the content of a contributor is, the higher the reputation and the more influence the contributor will have in the general guidance of the DCC and the DCO. Additionally, reputation plays a crucial role in determining the payout distribution from donations and tips, which means that there is a direct correlation between reputation and monetary compensation.&lt;/p&gt;
-
-&lt;p&gt;Designing a reputation system for an altruistic community is a difficult task, especially if we consider what is at stake (influence in the DCO). The reputation system needs to provide an objective judgement of contributions, which incentivizes honest participants to further contribute and disincentivizes dishonest ones. In Reposium the community are the judges of contributions, if they appreciate content (e.g. for its accuracy, quality or great explanations) they can like it, which increases the reputation of those in the contribution tree proportionally to the importance of their contributions (see 3.2. for information about contribution trees). Reputation is not proportional, that means an appreciation of one’s content does not mean an equal increase in reputation. The reputation system is designed to make it much more difficult to get a higher reputation score and thus, more influence in the DCO.&lt;/p&gt;
-
-&lt;p&gt;With an increased reputation score, contributors also gain additional abilities such as being able to edit content directly or punish users by downvoting content. These increased abilities are basically smart contracts that are associated with that specific contributor. If the user is being dishonest, the community can vote and revoke the smart contract access to the contributor, stripping away the increased abilities.&lt;br /&gt;
-An important aspect of the Reposium reputation system is that reputation can not only increase, but also decrease. Inactivity is punished by a decreasing reputation score, similarly, contributing low quality content will decrease a contributor’s reputation score. This is important in creating a balanced environment where only the most active contributors are able to influence the general management of the DCC and the DCO.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-voting-system&quot;&gt;6. The Voting System&lt;/h2&gt;
-
-&lt;p&gt;A democratic voting process ensures that the DCO is managed with the full consent of its users. Although it should be noted that our voting system is not designed to be fully democratic where 1 vote equals 1 contributor. In the DCO voting power is directly correlated with the reputation score of a user. This means that the most active contributors, whose content is appreciated the most by the community, have higher influence in the management of the DCC’s and the DCO.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/wikipedia-dco/voting.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The rationale behind this is that a high reputation means that the community appreciates the contributors content, which in turn means that the contributor (most likely) has a much better overview and insight into how the DCC and the DCO should be managed. Additionally, in such a system, users with no reputation have no influence and cannot change the outcome of a vote, thus making it impossible to spam or attack the voting system.&lt;/p&gt;
-
-&lt;h1 id=&quot;the-vision-of-reposium&quot;&gt;The Vision of Reposium&lt;/h1&gt;
-
-&lt;p&gt;With this project we hope to create a decentralized collaborative organization consisting of independent communities that collectively create, improve and manage a decentralized knowledge repository. Through this we want to even further lower the entry barrier for knowledge to be created and spread.&lt;/p&gt;
-
-&lt;p&gt;Reposium itself is a social experiment that furthers the research in the field of self-regulating and autonomous organizations. If the model is successful, we hope to replicate it across other sectors and create more DCO’s that help create content that users of the internet greatly appreciate.&lt;/p&gt;
-
-&lt;h2 id=&quot;where-to-go-from-here&quot;&gt;Where to go from here?&lt;/h2&gt;
-
-&lt;p&gt;This document is a first step in explaining the overall concept of Reposium. It leaves out some of the important details and there are still some unanswered questions, especially about content creation, reputation and voting. But these questions will be answered in more detailed papers/blog posts in the future. Reposium itself will have to undergo thorough research and I’m sure that it will require many iterations until we get it right and have created a system that is both balanced, fair and ensured that visitors and content creators are in symbiosis.&lt;/p&gt;
-
-&lt;p&gt;So far, Reposium is a one-man team (now you may wonder why I said “we” the whole time? Well, “fake it till you make it”.) but I’m looking to create a dedicated team to help realize this vision of Reposium.&lt;/p&gt;
-
-&lt;p&gt;What I am specifically looking for:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Node.js and Python Developers&lt;/li&gt;
-  &lt;li&gt;Smart contract developers for Ethereum&lt;/li&gt;
-  &lt;li&gt;Front-end Developers&lt;/li&gt;
-  &lt;li&gt;Designers and Graphic artists&lt;/li&gt;
-  &lt;li&gt;Great minds that think they can contribute greatly to this project&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If you are interested in this, here is my contact information:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Email: dom@fileyy.com&lt;/li&gt;
-  &lt;li&gt;Twitter: https://twitter.com/domschiener&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;updates&quot;&gt;Updates&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Update 30/10/2015:&lt;/strong&gt; As part of my research for Reposium I have created a voting application built on Ethereum: &lt;a href=&quot;http://publicvotes.org&quot;&gt;http://publicvotes.org&lt;/a&gt;&lt;/p&gt;
+        
+        
+          <description>&lt;h2&gt;Abstract&lt;/h2&gt;
 </description>
+        
         <pubDate>Sat, 31 Oct 2015 19:34:14 +0100</pubDate>
-        <link>http://schiener.me/projects/2015/10/31/the-future-of-wikipedia.html</link>
-        <guid isPermaLink="true">http://schiener.me/projects/2015/10/31/the-future-of-wikipedia.html</guid>
-        
-        
-        <category>projects</category>
-        
+        <link>http://schiener.me/2015/the-future-of-wikipedia/</link>
+        <guid isPermaLink="true">http://schiener.me/2015/the-future-of-wikipedia/</guid>
       </item>
     
       <item>
         <title>[Raspberry Pi] Smarter Plants Tutorial</title>
-        <description>&lt;p&gt;This is a small side project I’ve been working on in my free time. The main reason why I started working on this was to learn more Python and Javascript, but to also get better with hardware related projects with the Raspberry Pi. And what better way to learn is there, than actually doing it and creating a step-by-step guide on how it works? So here we are, with this tutorial about a Soil Moisture Control through your Raspberry Pi!&lt;/p&gt;
-
-&lt;p&gt;At the end of this tutorial you will have a working Raspberry Pi with Soil Moisture Sensors wired up that is able to take data from your plant, store it in a CSV file and visualize it on a nice dashboard online. In addition to that, you will also be able to control your plant via Twitter. That means your plant will be able to tell you if it needs to be watered via a Tweet.&lt;/p&gt;
-
-&lt;p&gt;Overall, this project is work in progress and I intend to add more features to it and improvise the existing code. Most importantly, adding an automatic irrigation system will be the right step in creating a completely autonomous plant. A plant that is able to automatically satisfy its needs, that sounds pretty cool, right? One step closer to AI (sort of).&lt;/p&gt;
-
-&lt;p&gt;I’m mostly still a beginner with Raspberry Pi related development, so I did take help from people that have already created similar projects and I would like to publicly acknowledge some of them here: Jeremy Blythe with his amazing tutorial on setting up the Pi with the moistures sensors, seempie who wrote a similar tutorial and the people who created some amazing D3.js visualizations (named later). This tutorial takes pieces from all of these tutorials and combines them with new ones to create a perfect tutorial for beginners to get started.&lt;/p&gt;
-
-&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
-
-&lt;p&gt;This tutorial is divided into 5 sections. First we are going to get the Pi’s GPIO properly wired up with the sensor on a breadboard, then we are going to write the Python script that takes the data and stores it in our CSV file, following with actually enabling the Pi to act as a Server (LAMP), then we will display the data on our website and visualize it through D3.js and lastly, we will add some tweaks through the Twitter integration.&lt;/p&gt;
-
-&lt;p&gt;This is what the final product will look like:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/c60yPD5.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;what-you-will-need&quot;&gt;What you will need&lt;/h3&gt;
-
-&lt;p&gt;In total, this setup has cost around $20 without the actual Raspberry Pi. You will obviously need all the prerequisites, which are a working Raspberry Pi, with a keyboard, mouse and a monitor. Here is a list of the other things you will need:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Soil Moisture Sensor: $4.50. I recommend getting this one from elecfreaks &lt;a href=&quot;http://www.elecfreaks.com/store/octopus-soil-moisture-sensor-brick-p-422.html&quot;&gt;http://www.elecfreaks.com/store/octopus-soil-moisture-sensor-brick-p-422.html&lt;/a&gt;. As they doesn’t ship globally, I’ve had to use a different Moisture Sensor &lt;a href=&quot;http://www.play-zone.ch/de/erd-feuchtigkeitssensor-mit-digital-und-analogausgang.html&quot;&gt;http://www.play-zone.ch/de/erd-feuchtigkeitssensor-mit-digital-und-analogausgang.html&lt;/a&gt;, but it works the same.&lt;/li&gt;
-  &lt;li&gt;MCP3008: $3.75 &lt;a href=&quot;http://www.adafruit.com/products/856&quot;&gt;http://www.adafruit.com/products/856&lt;/a&gt; This one is required to convert the analog signal to digital.&lt;/li&gt;
-  &lt;li&gt;Breadboard: $5&lt;/li&gt;
-  &lt;li&gt;Breakout Cable or around six female-to-male jumper wires. Cost: $5&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;step-1-wiring-the-sensor&quot;&gt;Step 1: Wiring the Sensor&lt;/h2&gt;
-
-&lt;p&gt;In order to interact with our sensor, we need to connect it to the Raspberry Pi’s GPIO (General Purpose Input Output). Here is a scheme that displays what each of the pins is used forward&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/rpi-smart-plant/Raspberry-Pi-GPIO-pinouts.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;First we will connect the respective GPIO pins to the breadboard. Connect Pin 1 (which is 3.3V) to the Power Rail and Pin 6 (Ground) to the Ground Rail. Then place the MCP3008 chip in the middle of the breadboard.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/rpi-smart-plant/mcp3008.gif&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now we need to connect the pins to the MCP3008.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;MCP3008 VDD -&amp;gt; 3.3V (red)&lt;/li&gt;
-  &lt;li&gt;MCP3008 VREF -&amp;gt; 3.3V (red)&lt;/li&gt;
-  &lt;li&gt;MCP3008 AGND -&amp;gt; GND (black)&lt;/li&gt;
-  &lt;li&gt;MCP3008 CLK -&amp;gt; pin 23 (orange)&lt;/li&gt;
-  &lt;li&gt;MCP3008 DOUT -&amp;gt; pin 21(yellow)&lt;/li&gt;
-  &lt;li&gt;MCP3008 DIN -&amp;gt; pin 19 (blue)&lt;/li&gt;
-  &lt;li&gt;MCP3008 CS -&amp;gt; pin 24 (violet)&lt;/li&gt;
-  &lt;li&gt;MCP3008 DGND -&amp;gt; GND (black)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In the end, it should look like this.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/rpi-smart-plant/20150804_181411.jpg&quot; alt=&quot;alt tag&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/rpi-smart-plant/20150804_181543.jpg&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now the only thing missing is to connect the actual moisture sensor to the MCP3008. Connect the analog output of the sensor (yellow jumper cable in my case) to &lt;code&gt;CH5&lt;/code&gt; on the MCP3008, then connect VCC (which is power) to the Power Rail and GND (which is Ground) to the Ground Rail. If all is fine, you should be ready to go! This is what it should look like:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/rpi-smart-plant/20150804_171514.jpg&quot; alt=&quot;alt tag&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/assets/rpi-smart-plant/20150804_171350.jpg&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;step-2-installing-apache-web-server&quot;&gt;Step 2: Installing Apache Web Server&lt;/h2&gt;
-
-&lt;p&gt;Apache is the most used web server software that helps server our HTTP requests. The setup for Apache is pretty straight forward:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ sudo apt-get install apache2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If it isn’t running already, type in&lt;br /&gt;
-&lt;code&gt;
-$ sudo service apache2 start
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Go to &lt;code&gt;127.0.0.1&lt;/code&gt; and check if it’s working, if not the installation may have been faulty and you have to do some troubleshooting by Googling.&lt;/p&gt;
-
-&lt;h3 id=&quot;enabling-python-for-apache&quot;&gt;Enabling Python for Apache&lt;/h3&gt;
-
-&lt;p&gt;Now for this tutorial all the code is in Python, so we need to prepare the web server to run Python. We basically have to enable CGI Programming, described by &lt;a href=&quot;http://www.tutorialspoint.com/python/python_cgi_programming.htm&quot;&gt;TutorialsPoint&lt;/a&gt; “Common Gateway Interface, or CGI, is a set of standards that define how information is exchanged between the web server and a custom script.”.&lt;/p&gt;
-
-&lt;p&gt;As Python is already fully installed on your Raspberry Pi, you have to install the &lt;code&gt;python-setuptools helper package&lt;/code&gt; and the &lt;code&gt;mod-wsgi&lt;/code&gt; Apache module to enable us to run Python applications on our Apache server.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ sudo apt-get install python-setuptools libapache2-mod-wsgi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now we need to edit the config file, so that the Apache server actually executes our .py files.&lt;br /&gt;
-Type in:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ sudo nano /etc/apache2/sites-available/default
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then change the current &lt;em&gt;&amp;lt;Directory /var/www/&amp;gt;&lt;/em&gt; to:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;&amp;lt;Directory /var/www/&amp;gt;
-	Options ExecCGI Indexes FollowSymLinks MultiViews
-	AllowOverride None
-	Order allow, deny
-	allow from all
-	AddHandler cgi-script.py
-&amp;lt;Directory&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now save and close the file. Then restart the server&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ sudo service apache2 restart
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now our Apache server should be able to run Python scripts. Lets make a small test just to be sure.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cd /var/www/
-$ sudo nano testpython.py
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then type in the following test code:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;
-#!/usr/bin/python
-
-print &quot;Content-type:text/html\r\n\r\n&quot;
-print “&amp;lt;html&amp;gt;”
-print “&amp;lt;body&amp;gt;”
-print “&amp;lt;h1&amp;gt;Lets see if our Python works!&amp;lt;/h1&amp;gt;”
-print “&amp;lt;br&amp;gt;”
-for i in range(6):
-    print “&amp;lt;h3&amp;gt;
-    print “Test: “ + str(i)
-    print “&amp;lt;/h3&amp;gt;”
-print “&amp;lt;/body&amp;gt;”
-print “&amp;lt;/html&amp;gt;”
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If all is well, you should see the following page, all working well and displaying the code as intended.&lt;br /&gt;
-&lt;img src=&quot;http://i.imgur.com/1xHUtm7.png&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;storing-data-with-csv&quot;&gt;Storing Data with CSV&lt;/h3&gt;
-
-&lt;p&gt;Now some of you may wonder why we are not completing the full LAMP setup by using MySQL to store the Data. The reason for that is because of D3.js, which we are using for visualizing the data. Since D3.js works with CSV, TSV or JSON formatted data, if we were to choose MySQL we would first have to enter the data into our MySQL table and then later convert the data into CSV/TSV/JSON, which is a cumbersome process and makes things complicated.&lt;/p&gt;
-
-&lt;p&gt;That’s why we instead write to a CSV file directly and retrieve the data later when we visualize it on the website (3 steps turned into 2). As for the reason why we chose CSV, this is mainly because with JSON we cannot append data to the existing file. We would first have to load the entire data into a local array, append our data to it and then save it back into our JSON file. Such a process will certainly slow down our program as we accumulate more data from our plant. That’s why we choose a CSV, where we can append the data at the end of the file without having to load the entire data in first.&lt;/p&gt;
-
-&lt;p&gt;For this you now simply have to create a data.csv file with the following header:&lt;br /&gt;
-&lt;code&gt;moisture,perc,date,time,weekday&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This is the description of the data we are retrieving and will make it possible for us to later make use of them in Javascript.&lt;/p&gt;
-
-&lt;h3 id=&quot;installing-spidev-and-python-dev&quot;&gt;Installing SpiDev and Python-Dev&lt;/h3&gt;
-
-&lt;p&gt;Since we are using the SPI (Serial Peripheral Interface) bus for this tutorial, we are going to use the SpiDev wrapper in order to interact with our sensor. Python-dev is another library we require.&lt;/p&gt;
-
-&lt;p&gt;Run the following command:&lt;br /&gt;
-&lt;code&gt;
-$ sudo apt-get install python-dev
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Now we need to enable the SPI communication on our Raspberry Pi, which is pretty straight forward. Just head to the following link and follow its steps: http://www.raspberrypi-spy.co.uk/2014/08/enabling-the-spi-interface-on-the-raspberry-pi/&lt;/p&gt;
-
-&lt;p&gt;Afterwards you have successfully restarted, type in:&lt;br /&gt;
-&lt;code&gt;
-$ cd ~
-$ git clone https://github.com/Gadgetoid/py-spidev
-$ cd py-spidev/
-$ sudo python setup.py install
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;With this in hand we should be read to go and can now finally test our sensor on a plant! Congratz on making it so far, you can be sure that your plant will appreciate it.&lt;/p&gt;
-
-&lt;h2 id=&quot;step-3-coding&quot;&gt;Step 3: Coding&lt;/h2&gt;
-
-&lt;p&gt;Now the simplest program for us is to display the data into the terminal window. This program is great for testing if all the wiring is correct and your sensor is actually getting, converting and displaying the right data. This code was written by seempie from Instructables.com and it works as a base for us to add features as we proceed.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;#! /usr/bin/python
-# python program to communicate with an MCP3008.
-# Base Code written by seempie from instructables.com
-
-# Import SpiDev wrapper and our sleep function
-import spidev
-from time import sleep
-
-# Establish SPI device on Bus 0,Device 0
-spi = spidev.SpiDev()
-spi.open(0,0)
-
-def getAdc(channel):
-    #check valid channel
-    if ((channel&amp;gt;7)or(channel&amp;lt;0)):
-        return -1
-
-    while True:
-        # Perform SPI transaction and store returned bits in &#39;r&#39;
-        r = spi.xfer([1, (8+channel) &amp;lt;&amp;lt; 4, 0])
-
-        #Filter data bits from retruned bits
-        adcOut = ((r[1]&amp;amp;3) &amp;lt;&amp;lt; 8) + r[2]
-        percent = int(round(adcOut/10.24))
-
-        #print out 0-1023 value and percentage
-        print &quot;ADC Output: {0:4d} Percentage: {1:3}%&quot;.format (adcOut,percent)
-        sleep(10)
-
-if __name__ == &#39;__main__&#39;:
-    getAdc(0)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This should display the moisture of our plant and the percentage of it relative to the maxium (which happens to be 1024). Now before we actually get to more coding, we need to start collecting more data to be able to better understand it.&lt;/p&gt;
-
-&lt;h3 id=&quot;preparing-the-data&quot;&gt;Preparing the Data&lt;/h3&gt;
-
-&lt;p&gt;Now the data here will vary depending on which sensor you have. What I highly suggest is that you run a few tests and determine what the upper bound and lower bound of the data is, meaning when the plant is completely wet or completely dry and what the average is. This way we can more better determine what the data should be and how we should properly visualize it on our website later on.&lt;/p&gt;
-
-&lt;p&gt;For determining the upper bound, meaning when the plant is completely dry, we simply place the sensor outside (not in the plant) and then run a few tests. In my case, the upper bound limit happens to be 1024.&lt;br /&gt;
-The lower bound is determined by placing the sensor in a glass of water, where I got around 300. For detecting the average we simply place the sensor in the plant when we think it is in a “normal” state (normal defined that it wasn’t watered just recently and is also not too dry). Here the data can vary quite dramatically, and I have gotten between 600 - 850 depending on where in the pot I inserted the sensor.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/FkEJxza.jpg&quot; alt=&quot;alt tag&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;With the data we gathered we can now more easily characterize the data we got and actually understand what it means.&lt;/p&gt;
-
-&lt;h3 id=&quot;fixing-permissions&quot;&gt;Fixing Permissions&lt;/h3&gt;
-
-&lt;p&gt;Now we need to fix the permissions so that we have access from our /www folder directly to the SPI:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo adduser www-data spi
-sudo adduser &amp;lt;username&amp;gt; www-data
-sudo chown -R :www-data /var/www
-sudo chmod -R g+rw /var/www
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Replace &lt;username&gt; with your username.&lt;/username&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;getting-the-code&quot;&gt;Getting the Code&lt;/h3&gt;
-
-&lt;p&gt;For this tutorial I have prepared all the code already for you. You can check out the repo here: &lt;a href=&quot;https://github.com/domschiener/smart-plant-raspberry&quot;&gt;https://github.com/domschiener/smart-plant-raspberry&lt;/a&gt; So all you have to do is clone the repo and change a few settings to be fully operational.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/domschiener/smart-plant-raspberry.git
-$ cd smart-plant-raspberry
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Feel free to look around and learn more how everything’s works together!&lt;/p&gt;
-
-&lt;h2 id=&quot;final-step-enabling-automated-twitter-messaging&quot;&gt;Final Step: Enabling automated Twitter messaging&lt;/h2&gt;
-
-&lt;p&gt;First of all we will need to create a new Twitter account for our plant. Since you actually care about your plant (else you wouldn’t follow this tutorial), take a profile picture for it as well and add some details (you can check out my plant over here: &lt;a href=&quot;https://twitter.com/domsplant&quot;&gt;https://twitter.com/domsplant&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Once that is done, we will need to setup an application so that our plant (or rather the Raspberry Pi) can login to the Twitter account and communicate through it with OAuth.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/tweepy/tweepy.git
-$ cd tweepy
-$ python setup.py install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If you see an SSL error, run&lt;br /&gt;
-&lt;code&gt;
-$ sudo pip install requests[security]
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Now you need to go to the &lt;strong&gt;twitter.py&lt;/strong&gt; file and add your consumer key, consumer secret, as well as access token and access token secret which was provided to you by Twitter.&lt;/p&gt;
-
-&lt;h1 id=&quot;running-the-application&quot;&gt;Running the Application&lt;/h1&gt;
-
-&lt;p&gt;Now everything should be ready to function and we can start testing it all. Simply run:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ sudo python main.py
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This in turn will run twitter.py and getdata.py in the background. You can now go to &lt;em&gt;http://localhost&lt;/em&gt; and everything should be operational :)&lt;/p&gt;
+        
+        
+          <description>&lt;p&gt;This is a small side project I’ve been working on in my free time. The main reason why I started working on this was to learn more Python and Javascript, but to also get better with hardware related projects with the Raspberry Pi. And what better way to learn is there, than actually doing it and creating a step-by-step guide on how it works? So here we are, with this tutorial about a Soil Moisture Control through your Raspberry Pi!&lt;/p&gt;
 </description>
+        
         <pubDate>Wed, 21 Oct 2015 20:34:14 +0200</pubDate>
-        <link>http://schiener.me/projects/2015/10/21/raspberry-pi-smart-plant.html</link>
-        <guid isPermaLink="true">http://schiener.me/projects/2015/10/21/raspberry-pi-smart-plant.html</guid>
-        
-        
-        <category>projects</category>
-        
+        <link>http://schiener.me/2015/raspberry-pi-smart-plant/</link>
+        <guid isPermaLink="true">http://schiener.me/2015/raspberry-pi-smart-plant/</guid>
       </item>
     
       <item>
         <title>Prosperity for the neglected, ignored and forgotten</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/seeds-growing.jpeg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The World is Flat. Pythagoras assumption that the world is spherical is erroneous, Eratosthenes calculation of the Earth’s circumference is based on a methodological fallacy and Magellan’s trip around the globe was orchestrated by the Spanish crown in order to retain its upper hand over the archrival Portugal&lt;/p&gt;
-
-&lt;p&gt;…well, not quite. Our world, of course, is spherical, Eratosthenes calculations are only 16% off the real measures and conspiracy theorists will be silenced after looking at the factual proof of Magellan’s voyage around the globe in 1520.&lt;/p&gt;
-
-&lt;p&gt;What is implied with the argument “our world is flat” is the fact that barriers, limitations and restrictions have been erased in order to permit a more frictionless interactivity, connectivity and transportation between humans. This flattening is the output of the symbiosis between the great flattening forces (economical, technological and cultural). Humans have progressed, or lets say evolved, phenomenally since our modest beginnings as hunters and gatherers with sticks and stones. Today we live in a society where communication and connectivity goes beyond our exosphere, where information is able to flow freely to (nearly) everyone and where opportunities are only limited to ones imagination. In short, it’s an amazing time to be human, and it’s only getting better with more technological and medical innovations.&lt;/p&gt;
-
-&lt;p&gt;But sadly, the majority of people don’t have access to this progress and the opportunities it brings within yet. Nearly 1 billion people still struggle to survive on $1.25 per day, 2.5 billion people still lack access to adequate sanitation and education is still a largely unsolved problem in developing countries. So much for global connectivity when not even the basic needs are covered for the majority of our species.&lt;/p&gt;
-
-&lt;p&gt;Even though the numbers of the poor are still absurdly high - they have actually been on a consistent decline for the past few decades. The poor are better off today than they were ever before - all thanks to the great flattening forces.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;the-history-and-effects-of-flattening&quot;&gt;The History and Effects of Flattening&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-Barriers shut off light that is vital for growth, progress and prosperity. They drastically restrict us in nearly every aspect and only serve to protect the pride, intentions and the privileged positions of a few who are in power. Humans have been building and eradicating barriers for millennias - and sadly, we are sometimes diligently building.&lt;/p&gt;
-
-&lt;p&gt;The two most important paradigm shifts of our society were our progress from hunter and gatherer to agricultural to industrial societies and the invention of money. The former enabled creativity by freeing up human resources; the latter allowed us to trade, invest and save - thus, create wealth. Both of these developments progressed our distinction from animals, but far more important: they made specialization (division of labor) possible.&lt;/p&gt;
-
-&lt;p&gt;Specialization is the fundament on which creativity, innovation and human progress are based on. It frees up humans of unnecessary tasks and permits them to focus on those tasks that are to their liking and of their skillset. By making it possible for humans to specialize in their respective domain we get experts who, through collaboration with other experts, can pool their resources and knowledge to create fascinating new inventions that benefit the others. Division of labor was, and still is, one of the most effective forces in eradicating barriers to flatten our world.&lt;/p&gt;
-
-&lt;p&gt;The most known form of division of labor in today’s time is outsourcing. Delegating work to other teams, who possess distinctive advantages over ones own capabilities, enables more variety, higher quality, faster production and cheaper prices for products and services - which greatly benefits consumers. This delegation provides work to those who were previously suppressed in their economic and personal freedom by imperialists and to those who were neglected during the Industrial Revolution.&lt;/p&gt;
-
-&lt;p&gt;In order for division of labor to succeed we need unified systems, standards, protocols and agreements that greatly eradicate barriers between countries, cultures and groups and thus enable a more frictionless flow of information, communication, collaboration and trade. By making it possible for anyone to collaborate with anyone and for anyone to acquire any publicly available information (especially educational material) we greatly reduce the gap between developed and developing countries. Flattening creates new opportunities that are able to be seized by (nearly) anyone.&lt;/p&gt;
-
-&lt;p&gt;TCP/IP is the most important protocol invented in the past decades as it enabled us a crucial aspect for the connectivity of our modern society: the frictionless flow of data (and thus, information). This not only made global communication possible, it also allowed us to share information and more notably, knowledge with anyone. The barrier for education was drastically lowered. Today anyone with internet access can acquire accurate and plenty of information on various subjects and teach themselves anything. We are still at an early stage in this new “knowledge for anyone” development, but with the establishment of more, free online educational platforms we truly empower individuals and open up new opportunities to participate in our global economy.&lt;/p&gt;
-
-&lt;p&gt;Outsourcing combined with protocols and trade agreements permits one of the most important effects of flattening: prosperity*.&lt;/p&gt;
-
-&lt;p&gt;For one, flattening makes it cheaper for consumers to purchase goods and services, which in turn provides them with a surplus of money (which they can then save, invest or use to purchase more goods). The Flat World effects (such as outsourcing) of course also mean more work opportunities for those who didn’t have them before. This has lead to the rise of Mexico, China and India who today are strong and powerful economies thanks to their past (and present) as the “backoffice” and “workbench” of the Western World.&lt;/p&gt;
-
-&lt;p&gt;One of the most recent developments in flattening, and likely the most significant one, was the flattening of innovation. The dotcom haze required young Startups to raise money in the dozens of millions in order to just get started. Money was required for expensive proprietary software, for server infrastructures, for development and for advertising. Today, a fraction of the money in the 90’s is required to launch a Startup. With new innovations in terms of communication, connectivity, development and publications we have made it easy, fast and cheap for innovation to happen and for entrepreneurship to be pursued. The flattening of innovation is still in its early stages, but once it’s running at full steam we will see a drastic improvement both in terms of quality and speed of release of new inventions. Flattening is a cascade&lt;/p&gt;
-
-&lt;p&gt;In short, a flat world enables people to create and accumulate wealth, it opens many new more opportunities in countries that have never had such before and it helps in creating a more equal and interconnected world.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;the-next-step-in-flattening-the-world&quot;&gt;The next Step in Flattening the World&lt;/h2&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-The gap between rich and poor, privileged and disadvantaged and the educated and uneducated has been greatly reduced on a global scale (though in some cases, the gap sadly increased). In the past few decades we have seen the flattening of education, of communication and connectivity, of work and collaboration and most importantly, of innovation. Even though we have made huge leaps forward in the century, we do still have barriers to eradicate in order to achieve that one true goal of an equal and fair environment for everyone.&lt;/p&gt;
-
-&lt;p&gt;The one sector that is long overdue to innovational progress is the finance sector. No sector has more importance on human development, yet is so reluctant to innovation, than our finance sector. The sad truth is that most of our finance behemoths are too busy playing the zero-sum game of trading with ever increasing (both in quantity and complexity) financial instruments against themselves, and those they are supposed to serve.&lt;/p&gt;
-
-&lt;p&gt;Innovation in today’s finance sector is the invention of a new, complex trading instrument that is able to bypass the laws and regulations of the SEC in order to sell dogshit disguised as gold. Such behavior is greatly rewarded by the industry and if things go wrong, the thieves are rescued and put back in their position to craft new “solutions” that succeed in deceiving and stealing from others to fill their own pocket.&lt;/p&gt;
-
-&lt;p&gt;This leaves us to no surprise that more than half of our entire population is underbanked or unbanked. With no access to capital, with no way to save, to invest, to borrow, to accumulate wealth we completely ignore a very powerful equalizer force and destroy the dreams of wealth, prosperity and growth of economies we classify as “developing” and “least developed”. One may ask if the pursuit of economic and social growth from developing to developed economy is damned for eternity?&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Where is the innovation? Where is the progress? Where is the change?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It is apparent to all of us that the majority of the current banking sector shows no interest to build solutions that help the unbanked. In many cases they actively fight and suppress innovation in order to retain their power over our finances (a prime example being M-Pesa in Kenya, which the existing banks actively fought in legal battles). Who doesn’t want to fight the inevitability of becoming obsolete?&lt;/p&gt;
-
-&lt;p&gt;A new, disruptive and unstoppable solution needs to emerge. A protocol that will unify us all in the way we conduct trade, store and transmit value, in the way we invest, accumulate wealth and prosper. It will be one of the last equalizer forces needed in order to fully empower individuals and to give everyone the power and the opportunities they need to pursue and realize their dreams.&lt;/p&gt;
-
-&lt;p&gt;Luckily we no longer have to wait for such a solution to emerge - blockchain-based technologies (most notably Bitcoin) are already here and even though still in its infancy, it holds promise to create a globally unified, fully transparent and accessible finance system. More about this development in my next blog post.&lt;/p&gt;
-
-&lt;h6 id=&quot;a-reader-may-ask-now-has-globalization-significantly-improved-the-situation-between-rich-and-poor-the-answer-is-a-bit-complicated-on-one-end-globalization-has-united-us-on-many-levels-and-allowed-us-to-collaborate-in-order-to-create-amazing-new-products---which-provided-work-and-new-opportunities-to-people-that-have-never-had-them-before-but-on-the-other-end-globalization-has-also-quite-largely-increased-the-gap-between-the-rich-and-the-poor-globalization-created-free-capital-which-i-will-discuss-in-later-blog-posts-which-made-it-possible-for-capital-to-pursue-the-highest-roi-opportunities-available-as-the-name-says-the-capital-is-free-to-pursue-whichever-opportunity-they-deem-as-profitable-this-is-why-weve-seen-corporates-creating-thousands-of-jobs-in-low-income-countries-in-a-short-time-span-but-as-new-opportunities-were-opened-these-people-were-quickly-fired-and-replaced-by-other-cheaper-workers-in-different-countries-this-is-one-of-the-worst-side-effects-of-globalization&quot;&gt;* A reader may ask now “Has globalization significantly improved the situation between rich and poor?” The answer is a bit complicated. On one end, globalization has united us on many levels and allowed us to collaborate in order to create amazing new products - which provided work and new opportunities to people that have never had them before. But on the other end globalization has also quite largely increased the gap between the rich and the poor. Globalization created Free Capital (which I will discuss in later blog posts) which made it possible for capital to pursue the highest ROI opportunities available. As the name says, the capital is free to pursue whichever opportunity they deem as profitable. This is why we’ve seen corporates creating thousands of jobs in low-income countries in a short time span, but as new opportunities were opened, these people were quickly fired and replaced by other cheaper workers in different countries. This is one of the worst side effects of globalization.&lt;/h6&gt;
+        
+        
+          <description>&lt;p&gt;&lt;img src=&quot;/assets/images/seeds-growing.jpeg&quot; alt=&quot;Alt text&quot;&gt;&lt;/p&gt;
 </description>
+        
         <pubDate>Wed, 21 Oct 2015 15:34:14 +0200</pubDate>
-        <link>http://schiener.me/future/2015/10/21/prosperity-for-the-neglected.html</link>
-        <guid isPermaLink="true">http://schiener.me/future/2015/10/21/prosperity-for-the-neglected.html</guid>
-        
-        
-        <category>future</category>
-        
+        <link>http://schiener.me/2015/prosperity-for-the-neglected/</link>
+        <guid isPermaLink="true">http://schiener.me/2015/prosperity-for-the-neglected/</guid>
       </item>
     
   </channel>

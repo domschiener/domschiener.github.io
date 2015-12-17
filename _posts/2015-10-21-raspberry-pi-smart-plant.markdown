@@ -37,11 +37,11 @@ In total, this setup has cost around $20 without the actual Raspberry Pi. You wi
 
 In order to interact with our sensor, we need to connect it to the Raspberry Pi's GPIO (General Purpose Input Output). Here is a scheme that displays what each of the pins is used forward
 
-![alt tag](/assets/rpi-smart-plant/Raspberry-Pi-GPIO-pinouts.png)
+![alt tag](/assets/images/rpi-smart-plant/Raspberry-Pi-GPIO-pinouts.png)
 
 First we will connect the respective GPIO pins to the breadboard. Connect Pin 1 (which is 3.3V) to the Power Rail and Pin 6 (Ground) to the Ground Rail. Then place the MCP3008 chip in the middle of the breadboard.
 
-![alt tag](/assets/rpi-smart-plant/mcp3008.gif)
+![alt tag](/assets/images/rpi-smart-plant/mcp3008.gif)
 
 Now we need to connect the pins to the MCP3008.
 
@@ -56,13 +56,13 @@ Now we need to connect the pins to the MCP3008.
 
 In the end, it should look like this.
 
-![alt tag](/assets/rpi-smart-plant/20150804_181411.jpg)
-![alt tag](/assets/rpi-smart-plant/20150804_181543.jpg)
+![alt tag](/assets/images/rpi-smart-plant/20150804_181411.jpg)
+![alt tag](/assets/images/rpi-smart-plant/20150804_181543.jpg)
 
 Now the only thing missing is to connect the actual moisture sensor to the MCP3008. Connect the analog output of the sensor (yellow jumper cable in my case) to `CH5` on the MCP3008, then connect VCC (which is power) to the Power Rail and GND (which is Ground) to the Ground Rail. If all is fine, you should be ready to go! This is what it should look like:
 
-![alt tag](/assets/rpi-smart-plant/20150804_171514.jpg)
-![alt tag](/assets/rpi-smart-plant/20150804_171350.jpg)
+![alt tag](/assets/images/rpi-smart-plant/20150804_171514.jpg)
+![alt tag](/assets/images/rpi-smart-plant/20150804_171350.jpg)
 
 ## Step 2: Installing Apache Web Server
 

@@ -1,14 +1,42 @@
-# Site settings
-title: Dominik Schiener
-email: dom (at) fileyy.com
-description: > # this means to ignore newlines until "baseurl:"
-  Personal Blog of Dominik Schiener. Mostly about Entrepreneurship, Technology and Research I'm working on.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://schiener.me" # the base hostname & protocol for your site
-twitter_username: domschiener
-github_username:  domschiener
+name: Dominik Schiener - Personal Blog
+description: Pesonal Blog discussing Entrepreneurship, Blockchain and Collective Intelligence
+meta_description: "Personal Blog of Dominik Schiener discussing Entrepreneurship, Blockchain and Collective Intelligence"
 
-# Build settings
-markdown: kramdown
-kramdown:
-  input: GFM
+aboutPage: true
+
+markdown: redcarpet
+highlighter: pygments
+
+paginate: 20
+baseurl: /
+domain_name: 'http://schiener.me'
+google_analytics: 'UA-XXXXXXXX-X'
+disqus: false
+disqus_shortname: 'your-disqus-shortname'
+
+# Details for the RSS feed generator
+url:            'http://schiener.me'
+author:         'Dominik Schiener'
+authorTwitter:  'domschiener'
+
+permalink:       /:year/:title/
+
+defaults:
+    -
+        scope:
+            path: "" # empty string for all files
+            type: pages
+        values:
+            layout: default
+    -
+        scope:
+            path: "" # empty string for all files
+            type: posts
+        values:
+            layout: post
+    -
+        scope:
+            path: ""
+            type: drafts
+        values:
+            layout: post
