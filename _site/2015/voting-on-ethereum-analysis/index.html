@@ -38,11 +38,11 @@
         <p>The main reason why I’ve created <a href="http://publicvotes.org">PublicVotes</a> (apart from the intellectual challenge) is to determine the feasibility of utilizing Ethereum as a decision making tool for organizations. After a little under 2 weeks of operation I have acquired some data to draw early conclusions and answer the questions I had prior to this experiment. This will be an attempt at offering a more in-depth analysis so that current and future voting applications that utilize Ethereum or other Blockchains can benefit from it.</p>
 
 <p><strong>TL;DR:</strong> Using Ethereum as a decision making tool costs money and all entries are public. I do not think that Ethereum should be used as a platform (or rather a tool) for the constant decision-making inside organizations, mainly because the advantages offered are not what organizations require. BUT, for decision-making that requires trust and a publicly verifiable and transparent system (such as elections of any kind), using Ethereum makes a lot of sense.  The 2010 General Election in the UK cost some $127Million. In a hypothetical scenario on Ethereum, it would cost $275,546.776 to register the same amount of votes. At the present time, on PublicVotes it costs about $2.4 to cast some 1368 votes (including polls). On average, it costs $0.0015 to cast a vote and $0.024 to create a poll.
-<br></p>
+<br /></p>
 
-<h1>What actually costs money?</h1>
+<h1 id="what-actually-costs-money">What actually costs money?</h1>
 
-<p>For many outsiders that have not used or heard of Ethereum before (this poll shows it’s quite a few <a href="http://publicvotes.org/vote/PuwexrCddeyTWh2Q2">&quot;Have you heard of Ethereum?&quot;</a>), the question of <em>“Why charge money for voting online?”</em> comes up quite quickly. After all, voting is simply adding a new field into a database, that doesn’t cost money right? Therefore the only reason why PublicVotes costs money is because Dominik is a greedy developer.</p>
+<p>For many outsiders that have not used or heard of Ethereum before (this poll shows it’s quite a few <a href="http://publicvotes.org/vote/PuwexrCddeyTWh2Q2">“Have you heard of Ethereum?”</a>), the question of <em>“Why charge money for voting online?”</em> comes up quite quickly. After all, voting is simply adding a new field into a database, that doesn’t cost money right? Therefore the only reason why PublicVotes costs money is because Dominik is a greedy developer.</p>
 
 <p>Well not quite (I’m not that greedy). To understand what PublicVotes is actually doing, we need to move away from this notion of having a single computer holding a database and entering new entries, to an entire Peer-to-Peer Network of computers collectively holding a database and validating the entries that are written to it.</p>
 
@@ -50,11 +50,10 @@
 
 <p>Obviously this requires computer power, because after all, this network ensures the integrity of the Blockchain by securing it so that no adversary can alter entries. These computers need to be incentivized to do all of this incredibly important work, which leads us back to the question of this paragraph <em>“What actually costs money?”</em>. So now you should know what costs money: whenever you create a poll or you vote, you are sending Ether to the Ethereum network that collectively verifies your vote/poll and inserts it into this globally shared Blockchain.</p>
 
-<hr>
+<hr />
+<p><br /></p>
 
-<p><br></p>
-
-<h2>The Analysis</h2>
+<h2 id="the-analysis">The Analysis</h2>
 
 <p>The two major processes to analyse with PublicVotes are for one the <em>poll creation</em> and for another the actual <em>voting</em> on a poll. Both of these processes cost money since we are writing directly to the Blockchain.</p>
 
@@ -63,44 +62,43 @@
 <p>Since this analysis involves getting quite a lot of data, I wrote a simple program in Python that contacts several API’s from service providers to get the required data (such as specific transaction details, total transaction cost, Ethereum USD price and so on). You can check out the program here <a href="https://github.com/domschiener/ethereum-tx-details">Github Link</a></p>
 
 <p>Lastly, I have published all of the data on Google Drive as Spreadsheets. Therefore, feel free to create your own analysis with the data :) <a href="https://docs.google.com/spreadsheets/d/1NLhTspcIsfIcKJpfJcvrbDZs3809q_o8VuiP58YUVAs/edit?usp=sharing">Link to individual poll analysis</a> and <a href="https://docs.google.com/spreadsheets/d/1ig_4-Xkuf2hAM7gXE84Br-6r4e4oZwmIDEF2s3wSo_8/edit?usp=sharing">Link to general analysis</a>
-<br></p>
+<br /></p>
 
-<h2>Poll Creation: Cost Specifics</h2>
+<h2 id="poll-creation-cost-specifics">Poll Creation: Cost Specifics</h2>
 
 <p>Creating a poll on PublicVotes means deploying a smart contract to the Ethereum network and writing information (provided by the client) about the poll to the contracts internal storage. More specifically, we are storing the following information to a public variable p of type Poll (basically a struct):</p>
 
 <ul>
-<li><strong>p.owner.</strong> This is the address (20 bytes) of the creator of the poll</li>
-<li><strong>p.options.</strong> This is all of the poll options concatenated to a single string. The maximum length here is 200 chars</li>
-<li><strong>p.title</strong> The title of the poll, stored as a string with max length of 48chars</li>
-<li><strong>p.votelimit</strong> The vote limit stored as an unsigned integer.</li>
-<li><strong>p.deadline</strong> This is the deadline of the poll, which is a UNIX formatted date, also stored as an unsigned integer.</li>
-<li><strong>p.status</strong> Simple boolean value of the poll, on instantiation it is set to true.</li>
-<li><strong>p.numVotes</strong> And lastly, we set the number of votes to 0</li>
+  <li><strong>p.owner.</strong> This is the address (20 bytes) of the creator of the poll</li>
+  <li><strong>p.options.</strong> This is all of the poll options concatenated to a single string. The maximum length here is 200 chars</li>
+  <li><strong>p.title</strong> The title of the poll, stored as a string with max length of 48chars</li>
+  <li><strong>p.votelimit</strong> The vote limit stored as an unsigned integer.</li>
+  <li><strong>p.deadline</strong> This is the deadline of the poll, which is a UNIX formatted date, also stored as an unsigned integer.</li>
+  <li><strong>p.status</strong> Simple boolean value of the poll, on instantiation it is set to true.</li>
+  <li><strong>p.numVotes</strong> And lastly, we set the number of votes to 0</li>
 </ul>
 
 <p>As you can see, we do quite a lot when we start a poll and this comes at a cost. On average, it cost about <strong>$0.024399</strong>. The highest cost for just creating a poll was <strong>$0.0295448</strong>. In the following diagram you can see that the cost for creating a poll vary a lot and are dependant on the respective Ether price.</p>
 
-<p><img src="/assets/images/eth_analysis/1.png" alt="alt tag"></p>
+<p><img src="/assets/images/eth_analysis/1.png" alt="alt tag" /></p>
 
 <p>Speaking strictly in Ether terms, the gas which the contracts required for deployment also fluctuated a lot. The most expensive contract (<strong>590955 gas</strong> was required) costing about 20% more than the least expensive (<strong>491295 gas</strong> was required) one. At a price of 50 shannon (which was the same for all contracts that were deployed), we can see the cost difference here.</p>
 
-<p><img src="/assets/images/eth_analysis/2.png" alt="alt tag"></p>
+<p><img src="/assets/images/eth_analysis/2.png" alt="alt tag" /></p>
 
 <p>As you can see, the creation of a polls varies quite a bit. But this is to be expected since the information which a poll stores into the contracts storage can differ greatly in size.
-<br></p>
+<br /></p>
 
-<h1>Ether Price Development vs. Poll Creation</h1>
+<h1 id="ether-price-development-vs-poll-creation">Ether Price Development vs. Poll Creation</h1>
 
 <p>As you may realize by now, the cost for starting a poll is not only dependant on the size of what gets stored, but also on the price of Ether at the time of the contract’s deployment. Therefore, the higher the Ether price, the more expensive it is to actually create a poll. The below diagram shows this in more detail. It clearly shows how the price of Ether dictates the cost for deploying a contract.</p>
 
-<p><img src="/assets/images/eth_analysis/3.png" alt="alt tag"></p>
+<p><img src="/assets/images/eth_analysis/3.png" alt="alt tag" /></p>
 
-<hr>
+<hr />
+<p><br /></p>
 
-<p><br></p>
-
-<h2>Voting: Cost Specifics</h2>
+<h2 id="voting-cost-specifics">Voting: Cost Specifics</h2>
 
 <p>Now as for voting costs, we no longer need to actually deploy the contract to the network. Instead when someone votes we do two things: For one, we actually <em>write to the contracts storage</em> by increasing p.numVotes by 1. And for another, <em>we create an event</em>, which is basically storing information into the Blockchains client log and making it available for the outside world to read (which is exactly what we need for voting). We also have some logic implemented, namely checking if the sender is the owner and if a votecount is equal than the votelimit, but for this analysis this is not relevant.</p>
 
@@ -108,45 +106,43 @@
 
 <p>To jump right in, overall, it cost about <strong>$2.05 to cast 1350 votes</strong>. On average it cost <strong>$0.001519</strong>, with a high of <strong>$0.00261</strong> and a low of <strong>$0.001049</strong>, to cast votes. As you can see, these numbers differ a lot. To visualize this, here is the diagram:</p>
 
-<p><img src="/assets/images/eth_analysis/4.png" alt="alt tag"></p>
+<p><img src="/assets/images/eth_analysis/4.png" alt="alt tag" /></p>
 
 <p>To put the price in perspective:</p>
 
-<p><img src="/assets/images/eth_analysis/5.png" alt="alt tag"></p>
+<p><img src="/assets/images/eth_analysis/5.png" alt="alt tag" /></p>
 
 <p>As you can see, there is a clear correlation between the Ether price and the cost of voting (who would have thought?). To get a better picture as to how much voting actually costs, we need to leave the Ether&lt;-&gt;USD market out of the picture and instead focus on gas usage and price.</p>
 
 <p>On average, voting requires <strong>30000 gas</strong>, with a <strong>high of 45485 gas and a low of 21000</strong>. What is interesting is that the price of gas fluctuated during the time the data was collected. Usually the price of gas is at a constant of <strong>50 Shannon</strong>, but it reached a <strong>max of 57 Shannon</strong> on one instance. This is because the demand of computation increased, thus the computational power itself became scarcer, which meant that the price of the gas increased. Market dynamics at its best. If we multiply the gas used with the gas price, we get the following diagram:</p>
 
-<p><img src="/assets/images/eth_analysis/6.png" alt="alt tag"></p>
+<p><img src="/assets/images/eth_analysis/6.png" alt="alt tag" /></p>
 
 <p>As you can see, overall the costs were relatively stable, only on few instances the costs were abnormally high or low. This is a combination of high gas costs, high gas spending and mostly because it was the first vote in a poll (which is more expensive, which we are going to discuss soon).</p>
 
-<hr>
+<hr />
+<p><br /></p>
 
-<p><br></p>
-
-<h2>Interesting Insights into specific polls</h2>
+<h2 id="interesting-insights-into-specific-polls">Interesting Insights into specific polls</h2>
 
 <p>There were some interesting insights that were revealed while collecting all of the data from PublicVotes. First of all, it is very interesting that the first vote that is being cast is nearly always in the range of 45000 gas spent, which is a lot more than all subsequent votes. This is  unexpected behavior and there is no  good explanation yet as to why the first vote that is being cast is more expensive than the others. So if someone reading this can explain this in more detail, please let me know.</p>
 
-<h3>Here are some interesting polls:</h3>
+<h3 id="here-are-some-interesting-polls">Here are some interesting polls:</h3>
 
-<p><img src="/assets/images/eth_analysis/7.png" alt="alt tag">
-<img src="/assets/images/eth_analysis/8.png" alt="alt tag">
-<img src="/assets/images/eth_analysis/9.png" alt="alt tag">
-<img src="/assets/images/eth_analysis/10.png" alt="alt tag">
-<img src="/assets/images/eth_analysis/11.png" alt="alt tag">
-<img src="/assets/images/eth_analysis/12.png" alt="alt tag">
-<br></p>
+<p><img src="/assets/images/eth_analysis/7.png" alt="alt tag" />
+<img src="/assets/images/eth_analysis/8.png" alt="alt tag" />
+<img src="/assets/images/eth_analysis/9.png" alt="alt tag" />
+<img src="/assets/images/eth_analysis/10.png" alt="alt tag" />
+<img src="/assets/images/eth_analysis/11.png" alt="alt tag" />
+<img src="/assets/images/eth_analysis/12.png" alt="alt tag" />
+<br /></p>
 
 <p>As you can see, the recent sudden increase of the Ether price had a major impact in the overall costs of voting.</p>
 
-<hr>
+<hr />
+<p><br /></p>
 
-<p><br></p>
-
-<h2>Ethereum-based Voting for Decision-Making?</h2>
+<h2 id="ethereum-based-voting-for-decision-making">Ethereum-based Voting for Decision-Making?</h2>
 
 <p>As the intention of this analysis was to offer to the reader a definitive answer to the question whether Ethereum should be used for decision-making inside organizations, here is the definitive answer: <strong>yes and no</strong>. (exactly the definitive answer you wanted)</p>
 
@@ -155,20 +151,20 @@
 <p><strong>BUT,</strong> I do think for decisions, that require trust and a publicly verifiable system, that Ethereum-based voting is very powerful. It basically ensures the integrity of the poll (nobody can alter votes once they have been cast), it is incorruptible, publicly verifiable and transparent (everyone can see all votes on the Blockchain) and a voter can be ensured that her/his vote has been counted. This means that such a voting system is <strong>perfect for elections inside organizations, but also for governments, where trust is of utmost importance.</strong></p>
 
 <p>Since this is a such a huge topic, let’s dive deeper into a cost comparison with current voting systems for elections.
-<br></p>
+<br /></p>
 
-<h2>Comparison with current voting systems for elections</h2>
+<h2 id="comparison-with-current-voting-systems-for-elections">Comparison with current voting systems for elections</h2>
 
 <p>To compare Ethereum-based voting systems to the current voting system that is used for national and state elections, we first need to describe how this voting system even works. For this specific example I’m using the UK as an example since they had published some useful numbers to base our comparison on.</p>
 
 <p>As you may have guessed, <strong>holding elections today is expensive, tedious and slow</strong>. The system is still based off of physical booths, paper ballots and requiring humans to count the ballots. (in some cases there are machines counting the ballots, but these machines are even more expensive than humans on a per voter cost basis.[1])</p>
 
-<p>For the <em>2010 General Elections in the UK</em>[2], the vote turnout was at 65.1%. Out of 45,597,461 registered voters, some 29,991,471 actually voted[3]. Mark Harper, the Cabinet Office minister, estimated the costs of the general election to be <strong>£113,255,271</strong>[4]. This figure consists of £28,655,271 for the cost of distributing candidates&#39; mailings and a further £84.6 million for the conduct of the poll. That means on average, <strong>it cost about £3.77 to register and count a vote</strong>. If we only take the costs for conducting the poll (£84.6 million), it would cost £2.82 to cast a single vote.</p>
+<p>For the <em>2010 General Elections in the UK</em>[2], the vote turnout was at 65.1%. Out of 45,597,461 registered voters, some 29,991,471 actually voted[3]. Mark Harper, the Cabinet Office minister, estimated the costs of the general election to be <strong>£113,255,271</strong>[4]. This figure consists of £28,655,271 for the cost of distributing candidates’ mailings and a further £84.6 million for the conduct of the poll. That means on average, <strong>it cost about £3.77 to register and count a vote</strong>. If we only take the costs for conducting the poll (£84.6 million), it would cost £2.82 to cast a single vote.</p>
 
 <p>To draw a comparison with Ethereum based voting, remember that on average, <strong>it costs $0.0015 to cast a vote</strong> and <strong>$0.024 to create a poll</strong>. Therefore, for holding the 2010 General Election on the Blockchain it would cost $0.024 (to create the poll) and $0.0015 * 29,991,471 = <strong>$44,987.23</strong>. Now this number is not completely correct, because it presumes that the price of Ether will stay the same (around $0.90) and the price of Gas will also stay at 50 Shannon. To get a more exact figure, we need to more accurately describe a hypothetical scenario in the future where a government holds elections on the Ethereum Blockchain.
-<br></p>
+<br /></p>
 
-<h2>Creating a hypothetical scenario</h2>
+<h2 id="creating-a-hypothetical-scenario">Creating a hypothetical scenario</h2>
 
 <p>First of all, the most important assumption of all is that the Ethereum network can even handle the amount of transaction volume an election will bring. At the current gas limit of 3,141,592, at the cost of 30000 gas per vote, we could only register some <strong>104 votes every 12 seconds</strong>. That is about 748800 in a day. Therefore, holding the General Elections on the Ethereum Blockchain would take some <strong>40 days</strong> until it’s finished. That of course is not acceptable. We therefore assume that the Ethereum Network has no such gas limit at the time the election is being held.</p>
 
@@ -182,28 +178,26 @@
 
 <p>Most importantly though apart from price, a Blockchain-based voting system would get rid off all of the issues which current systems have[5]. Issues such as not being able to vote due to technical difficulties is not acceptable in a democracy, where supposedly “every vote counts”.</p>
 
-<hr>
+<hr />
+<p><br /></p>
 
-<p><br></p>
-
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>An Ethereum-based voting system offers a lot of benefits that current voting systems simply lack, or achieve at a very expensive price. <strong>Transparency, public verifiability, corruption-resistance and assurance that a vote has been cast comes at a price of $0.0091875 per vote</strong>. Even though using such a voting system for the constant decision-making inside an organization may be too much of what is required, holding elections on the Blockchain makes a lot of sense.</p>
 
 <p>I will continue to work on more applications that offer different usecases for voting on the Blockchain. Liquid democracy is up next as I think that smart contracts are the perfect solution to making such a system viable.
-<br></p>
+<br /></p>
 
-<h1>Sources</h1>
-
+<h1 id="sources">Sources</h1>
 <p>[1] http://www.theguardian.com/technology/2009/sep/30/electronic-vote-counting</p>
 
-<p>[2] https://en.wikipedia.org/wiki/United<em>Kingdom</em>general<em>election,</em>2010</p>
+<p>[2] https://en.wikipedia.org/wiki/United_Kingdom_general_election,_2010</p>
 
 <p>[3] http://www.idea.int/vt/countryview.cfm?CountryCode=GB</p>
 
 <p>[4] http://www.bbc.com/news/uk-politics-24842147</p>
 
-<p>[5] https://en.wikipedia.org/wiki/United<em>Kingdom</em>general<em>election,</em>2010#Voting_problems</p>
+<p>[5] https://en.wikipedia.org/wiki/United_Kingdom_general_election,_2010#Voting_problems</p>
 
     </section>
 </article>
@@ -233,39 +227,6 @@
 
 
 <!-- Archive post list -->
-
-    <ul id="post-list" class="archive readmore">
-        <h3>Read more</h3>
-        
-            <li>
-                <a href="/2015/treatise-on-identity/">Treatise on Identity: Problems with the Status Quo<aside class="dates">Dec 17</aside></a>
-            </li>
-        
-            <li>
-                <a href="/2015/liquid-democracy/">Liquid Democracy: True Democracy for the 21st Century<aside class="dates">Nov 23</aside></a>
-            </li>
-        
-            <li>
-                <a href="/2015/voting-on-ethereum-analysis/">Voting on the Ethereum Blockchain: An Analysis<aside class="dates">Nov 07</aside></a>
-            </li>
-        
-            <li>
-                <a href="/2015/openvotes-voting/">PublicVotes: Ethereum-based Voting Application<aside class="dates">Oct 31</aside></a>
-            </li>
-        
-            <li>
-                <a href="/2015/the-future-of-wikipedia/">Reposium: The future of Wikipedia as a DCO<aside class="dates">Oct 31</aside></a>
-            </li>
-        
-            <li>
-                <a href="/2015/raspberry-pi-smart-plant/">[Raspberry Pi] Smarter Plants Tutorial<aside class="dates">Oct 21</aside></a>
-            </li>
-        
-            <li>
-                <a href="/2015/prosperity-for-the-neglected/">Prosperity for the neglected, ignored and forgotten<aside class="dates">Oct 21</aside></a>
-            </li>
-        
-    </ul>
 
 
   </section>

@@ -7,10 +7,24 @@
     <atom:link href="http://schiener.me/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>[Presentation] Democracy powered by the Blockchain</title>
+        
+        
+          <description>&lt;p&gt;This is the presentation that I gave at the MIT Bitcoin Expo (http://mitbitcoinexpo.org) today.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 07 Mar 2016 01:01:14 +0100</pubDate>
+        <link>http://schiener.me/2016/democracy-blockchain/</link>
+        <guid isPermaLink="true">http://schiener.me/2016/democracy-blockchain/</guid>
+      </item>
+    
+      <item>
         <title>Treatise on Identity: Problems with the Status Quo</title>
         
         
           <description>&lt;p&gt;Who are you? You are a member of a nation, a community and a family. You are a son or a daughter, perhaps a father or a mother. You are a professional, the fuel for the economic combustion engine. You engage in social activities with friends and family, perhaps you are part of a club or organization that shares similar interests. You like sharing, blogging and tweeting, you express your thoughts and share your most precious moments on social media with those closest to you. In this very moment you represent a 32-bit IP address in a huge cluster of other global identifiers.&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 17 Dec 2015 11:01:14 +0100</pubDate>
@@ -23,6 +37,7 @@
         
         
           <description>&lt;p&gt;Liquid Democracy, also called Delegative Democracy, is a powerful voting model for collective decision making in large communities. Liquid Democracy combines the advantages of Direct Democracy and Representative Democracy and creates a truly democratic voting system that empowers voters to either vote on issues directly, or to delegate ones voting power to a trusted party.&lt;/p&gt;
+
 </description>
         
         <pubDate>Mon, 23 Nov 2015 23:34:14 +0100</pubDate>
@@ -35,6 +50,7 @@
         
         
           <description>&lt;p&gt;The main reason why I’ve created &lt;a href=&quot;http://publicvotes.org&quot;&gt;PublicVotes&lt;/a&gt; (apart from the intellectual challenge) is to determine the feasibility of utilizing Ethereum as a decision making tool for organizations. After a little under 2 weeks of operation I have acquired some data to draw early conclusions and answer the questions I had prior to this experiment. This will be an attempt at offering a more in-depth analysis so that current and future voting applications that utilize Ethereum or other Blockchains can benefit from it.&lt;/p&gt;
+
 </description>
         
         <pubDate>Sat, 07 Nov 2015 12:34:14 +0100</pubDate>
@@ -47,6 +63,7 @@
         
         
           <description>&lt;p&gt;As part of my research for Reposium, I have started working on a &lt;a href=&quot;http://publicvotes.org&quot;&gt;simple voting application&lt;/a&gt; built with Meteor that utilizes the Ethereum Blockchain to create a provably fair and transparent voting system. This is one of a few applications I want to create as part of my research (decentralized decision making or liquid democracy is most likely next). Before explaining the underlying structure of this application, let me explain which problems this application solves and which it doesn’t.&lt;/p&gt;
+
 </description>
         
         <pubDate>Sat, 31 Oct 2015 20:34:14 +0100</pubDate>
@@ -58,7 +75,8 @@
         <title>Reposium: The future of Wikipedia as a DCO</title>
         
         
-          <description>&lt;h2&gt;Abstract&lt;/h2&gt;
+          <description>&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;/h2&gt;
+
 </description>
         
         <pubDate>Sat, 31 Oct 2015 19:34:14 +0100</pubDate>
@@ -71,6 +89,7 @@
         
         
           <description>&lt;p&gt;This is a small side project I’ve been working on in my free time. The main reason why I started working on this was to learn more Python and Javascript, but to also get better with hardware related projects with the Raspberry Pi. And what better way to learn is there, than actually doing it and creating a step-by-step guide on how it works? So here we are, with this tutorial about a Soil Moisture Control through your Raspberry Pi!&lt;/p&gt;
+
 </description>
         
         <pubDate>Wed, 21 Oct 2015 20:34:14 +0200</pubDate>
@@ -82,7 +101,8 @@
         <title>Prosperity for the neglected, ignored and forgotten</title>
         
         
-          <description>&lt;p&gt;&lt;img src=&quot;/assets/images/seeds-growing.jpeg&quot; alt=&quot;Alt text&quot;&gt;&lt;/p&gt;
+          <description>&lt;p&gt;&lt;img src=&quot;/assets/images/seeds-growing.jpeg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
 </description>
         
         <pubDate>Wed, 21 Oct 2015 15:34:14 +0200</pubDate>

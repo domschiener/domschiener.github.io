@@ -4,10 +4,13 @@ meta_description: "Personal Blog of Dominik Schiener discussing Entrepreneurship
 
 aboutPage: true
 
-markdown: redcarpet
+kramdown:
+  input: GFM
 highlighter: pygments
 
+gems: [jekyll-paginate]
 paginate: 20
+paginate_path: "page:num"
 baseurl: /
 domain_name: 'http://schiener.me'
 google_analytics: 'UA-XXXXXXXX-X'
