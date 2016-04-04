@@ -161,6 +161,7 @@ This is the description of the data we are retrieving and will make it possible 
 Since we are using the SPI (Serial Peripheral Interface) bus for this tutorial, we are going to use the SpiDev wrapper in order to interact with our sensor. Python-dev is another library we require.
 
 Run the following command:
+
 ```
 $ sudo apt-get install python-dev
 ```
@@ -168,6 +169,7 @@ $ sudo apt-get install python-dev
 Now we need to enable the SPI communication on our Raspberry Pi, which is pretty straight forward. Just head to the following link and follow its steps: http://www.raspberrypi-spy.co.uk/2014/08/enabling-the-spi-interface-on-the-raspberry-pi/
 
 Afterwards you have successfully restarted, type in:
+
 ```
 $ cd ~
 $ git clone https://github.com/Gadgetoid/py-spidev
