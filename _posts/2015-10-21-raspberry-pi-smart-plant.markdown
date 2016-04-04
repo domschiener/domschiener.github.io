@@ -151,6 +151,7 @@ Now some of you may wonder why we are not completing the full LAMP setup by usin
 That’s why we instead write to a CSV file directly and retrieve the data later when we visualize it on the website (3 steps turned into 2). As for the reason why we chose CSV, this is mainly because with JSON we cannot append data to the existing file. We would first have to load the entire data into a local array, append our data to it and then save it back into our JSON file. Such a process will certainly slow down our program as we accumulate more data from our plant. That’s why we choose a CSV, where we can append the data at the end of the file without having to load the entire data in first.
 
 For this you now simply have to create a data.csv file with the following header:
+
 `moisture,perc,date,time,weekday`
 
 This is the description of the data we are retrieving and will make it possible for us to later make use of them in Javascript.

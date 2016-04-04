@@ -90,7 +90,7 @@
 <p><img src="/assets/images/rpi-smart-plant/20150804_181411.jpg" alt="alt tag" />
 <img src="/assets/images/rpi-smart-plant/20150804_181543.jpg" alt="alt tag" /></p>
 
-<p>Now the only thing missing is to connect the actual moisture sensor to the MCP3008. Connect the analog output of the sensor (yellow jumper cable in my case) to <code>CH5</code> on the MCP3008, then connect VCC (which is power) to the Power Rail and GND (which is Ground) to the Ground Rail. If all is fine, you should be ready to go! This is what it should look like:</p>
+<p>Now the only thing missing is to connect the actual moisture sensor to the MCP3008. Connect the analog output of the sensor (yellow jumper cable in my case) to <code class="highlighter-rouge">CH5</code> on the MCP3008, then connect VCC (which is power) to the Power Rail and GND (which is Ground) to the Ground Rail. If all is fine, you should be ready to go! This is what it should look like:</p>
 
 <p><img src="/assets/images/rpi-smart-plant/20150804_171514.jpg" alt="alt tag" />
 <img src="/assets/images/rpi-smart-plant/20150804_171350.jpg" alt="alt tag" /></p>
@@ -99,70 +99,77 @@
 
 <p>Apache is the most used web server software that helps server our HTTP requests. The setup for Apache is pretty straight forward:</p>
 
-<pre><code>$ sudo apt-get install apache2
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo apt-get install apache2
 </code></pre>
+</div>
 
 <p>If it isn’t running already, type in
-<code>
+<code class="highlighter-rouge">
 $ sudo service apache2 start
 </code></p>
 
-<p>Go to <code>127.0.0.1</code> and check if it’s working, if not the installation may have been faulty and you have to do some troubleshooting by Googling.</p>
+<p>Go to <code class="highlighter-rouge">127.0.0.1</code> and check if it’s working, if not the installation may have been faulty and you have to do some troubleshooting by Googling.</p>
 
 <h3 id="enabling-python-for-apache">Enabling Python for Apache</h3>
 
 <p>Now for this tutorial all the code is in Python, so we need to prepare the web server to run Python. We basically have to enable CGI Programming, described by <a href="http://www.tutorialspoint.com/python/python_cgi_programming.htm">TutorialsPoint</a> “Common Gateway Interface, or CGI, is a set of standards that define how information is exchanged between the web server and a custom script.”.</p>
 
-<p>As Python is already fully installed on your Raspberry Pi, you have to install the <code>python-setuptools helper package</code> and the <code>mod-wsgi</code> Apache module to enable us to run Python applications on our Apache server.</p>
+<p>As Python is already fully installed on your Raspberry Pi, you have to install the <code class="highlighter-rouge">python-setuptools helper package</code> and the <code class="highlighter-rouge">mod-wsgi</code> Apache module to enable us to run Python applications on our Apache server.</p>
 
-<pre><code>$ sudo apt-get install python-setuptools libapache2-mod-wsgi
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo apt-get install python-setuptools libapache2-mod-wsgi
 </code></pre>
+</div>
 
 <p>Now we need to edit the config file, so that the Apache server actually executes our .py files.
 Type in:</p>
 
-<pre><code>$ sudo nano /etc/apache2/sites-available/default
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo nano /etc/apache2/sites-available/default
 </code></pre>
+</div>
 
 <p>Then change the current <em>&lt;Directory /var/www/&gt;</em> to:</p>
 
-<pre><code class="language-javascript">&lt;Directory /var/www/&gt;
-	Options ExecCGI Indexes FollowSymLinks MultiViews
-	AllowOverride None
-	Order allow, deny
-	allow from all
-	AddHandler cgi-script.py
-&lt;Directory&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">Directory</span> <span class="o">/</span><span class="kd">var</span><span class="sr">/www/</span><span class="o">&gt;</span>
+	<span class="nx">Options</span> <span class="nx">ExecCGI</span> <span class="nx">Indexes</span> <span class="nx">FollowSymLinks</span> <span class="nx">MultiViews</span>
+	<span class="nx">AllowOverride</span> <span class="nx">None</span>
+	<span class="nx">Order</span> <span class="nx">allow</span><span class="p">,</span> <span class="nx">deny</span>
+	<span class="nx">allow</span> <span class="nx">from</span> <span class="nx">all</span>
+	<span class="nx">AddHandler</span> <span class="nx">cgi</span><span class="o">-</span><span class="nx">script</span><span class="p">.</span><span class="nx">py</span>
+<span class="o">&lt;</span><span class="nx">Directory</span><span class="o">&gt;</span>
 </code></pre>
+</div>
 
 <p>Now save and close the file. Then restart the server</p>
 
-<pre><code>$ sudo service apache2 restart
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo service apache2 restart
 </code></pre>
+</div>
 
 <p>Now our Apache server should be able to run Python scripts. Lets make a small test just to be sure.</p>
 
-<pre><code>$ cd /var/www/
+<div class="highlighter-rouge"><pre class="highlight"><code>$ cd /var/www/
 $ sudo nano testpython.py
 </code></pre>
+</div>
 
 <p>Then type in the following test code:</p>
 
-<pre><code class="language-python">
-#!/usr/bin/python
+<div class="highlighter-rouge"><pre class="highlight"><code>
+<span class="c">#!/usr/bin/python</span>
 
-print "Content-type:text/html\r\n\r\n"
-print “&lt;html&gt;”
-print “&lt;body&gt;”
-print “&lt;h1&gt;Lets see if our Python works!&lt;/h1&gt;”
-print “&lt;br&gt;”
-for i in range(6):
-    print “&lt;h3&gt;
-    print “Test: “ + str(i)
-    print “&lt;/h3&gt;”
-print “&lt;/body&gt;”
-print “&lt;/html&gt;”
+<span class="k">print</span> <span class="s">"Content-type:text/html</span><span class="se">\r\n\r\n</span><span class="s">"</span>
+<span class="k">print</span> <span class="err">“</span><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span><span class="err">”</span>
+<span class="k">print</span> <span class="err">“</span><span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span><span class="err">”</span>
+<span class="k">print</span> <span class="err">“</span><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Lets</span> <span class="n">see</span> <span class="k">if</span> <span class="n">our</span> <span class="n">Python</span> <span class="n">works</span><span class="err">!</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span><span class="err">”</span>
+<span class="k">print</span> <span class="err">“</span><span class="o">&lt;</span><span class="n">br</span><span class="o">&gt;</span><span class="err">”</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    <span class="k">print</span> <span class="err">“</span><span class="o">&lt;</span><span class="n">h3</span><span class="o">&gt;</span>
+    <span class="k">print</span> <span class="err">“</span><span class="n">Test</span><span class="p">:</span> <span class="err">“</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">print</span> <span class="err">“</span><span class="o">&lt;/</span><span class="n">h3</span><span class="o">&gt;</span><span class="err">”</span>
+<span class="k">print</span> <span class="err">“</span><span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span><span class="err">”</span>
+<span class="k">print</span> <span class="err">“</span><span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span><span class="err">”</span>
 </code></pre>
+</div>
 
 <p>If all is well, you should see the following page, all working well and displaying the code as intended.
 <img src="http://i.imgur.com/1xHUtm7.png" alt="alt tag" /></p>
@@ -173,8 +180,9 @@ print “&lt;/html&gt;”
 
 <p>That’s why we instead write to a CSV file directly and retrieve the data later when we visualize it on the website (3 steps turned into 2). As for the reason why we chose CSV, this is mainly because with JSON we cannot append data to the existing file. We would first have to load the entire data into a local array, append our data to it and then save it back into our JSON file. Such a process will certainly slow down our program as we accumulate more data from our plant. That’s why we choose a CSV, where we can append the data at the end of the file without having to load the entire data in first.</p>
 
-<p>For this you now simply have to create a data.csv file with the following header:
-<code>moisture,perc,date,time,weekday</code></p>
+<p>For this you now simply have to create a data.csv file with the following header:</p>
+
+<p><code class="highlighter-rouge">moisture,perc,date,time,weekday</code></p>
 
 <p>This is the description of the data we are retrieving and will make it possible for us to later make use of them in Javascript.</p>
 
@@ -182,20 +190,22 @@ print “&lt;/html&gt;”
 
 <p>Since we are using the SPI (Serial Peripheral Interface) bus for this tutorial, we are going to use the SpiDev wrapper in order to interact with our sensor. Python-dev is another library we require.</p>
 
-<p>Run the following command:
-<code>
-$ sudo apt-get install python-dev
-</code></p>
+<p>Run the following command:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo apt-get install python-dev
+</code></pre>
+</div>
 
 <p>Now we need to enable the SPI communication on our Raspberry Pi, which is pretty straight forward. Just head to the following link and follow its steps: http://www.raspberrypi-spy.co.uk/2014/08/enabling-the-spi-interface-on-the-raspberry-pi/</p>
 
-<p>Afterwards you have successfully restarted, type in:
-<code>
-$ cd ~
+<p>Afterwards you have successfully restarted, type in:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ cd ~
 $ git clone https://github.com/Gadgetoid/py-spidev
 $ cd py-spidev/
 $ sudo python setup.py install
-</code></p>
+</code></pre>
+</div>
 
 <p>With this in hand we should be read to go and can now finally test our sensor on a plant! Congratz on making it so far, you can be sure that your plant will appreciate it.</p>
 
@@ -203,38 +213,39 @@ $ sudo python setup.py install
 
 <p>Now the simplest program for us is to display the data into the terminal window. This program is great for testing if all the wiring is correct and your sensor is actually getting, converting and displaying the right data. This code was written by seempie from Instructables.com and it works as a base for us to add features as we proceed.</p>
 
-<pre><code class="language-python">#! /usr/bin/python
-# python program to communicate with an MCP3008.
-# Base Code written by seempie from instructables.com
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c">#! /usr/bin/python</span>
+<span class="c"># python program to communicate with an MCP3008.</span>
+<span class="c"># Base Code written by seempie from instructables.com</span>
 
-# Import SpiDev wrapper and our sleep function
-import spidev
-from time import sleep
+<span class="c"># Import SpiDev wrapper and our sleep function</span>
+<span class="kn">import</span> <span class="nn">spidev</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
 
-# Establish SPI device on Bus 0,Device 0
-spi = spidev.SpiDev()
-spi.open(0,0)
+<span class="c"># Establish SPI device on Bus 0,Device 0</span>
+<span class="n">spi</span> <span class="o">=</span> <span class="n">spidev</span><span class="o">.</span><span class="n">SpiDev</span><span class="p">()</span>
+<span class="n">spi</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 
-def getAdc(channel):
-    #check valid channel
-    if ((channel&gt;7)or(channel&lt;0)):
-        return -1
+<span class="k">def</span> <span class="nf">getAdc</span><span class="p">(</span><span class="n">channel</span><span class="p">):</span>
+    <span class="c">#check valid channel</span>
+    <span class="k">if</span> <span class="p">((</span><span class="n">channel</span><span class="o">&gt;</span><span class="mi">7</span><span class="p">)</span><span class="ow">or</span><span class="p">(</span><span class="n">channel</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)):</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
 
-    while True:
-        # Perform SPI transaction and store returned bits in 'r'
-        r = spi.xfer([1, (8+channel) &lt;&lt; 4, 0])
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="c"># Perform SPI transaction and store returned bits in 'r'</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">spi</span><span class="o">.</span><span class="n">xfer</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">8</span><span class="o">+</span><span class="n">channel</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 
-        #Filter data bits from retruned bits
-        adcOut = ((r[1]&amp;3) &lt;&lt; 8) + r[2]
-        percent = int(round(adcOut/10.24))
+        <span class="c">#Filter data bits from retruned bits</span>
+        <span class="n">adcOut</span> <span class="o">=</span> <span class="p">((</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&amp;</span><span class="mi">3</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">+</span> <span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">percent</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">adcOut</span><span class="o">/</span><span class="mf">10.24</span><span class="p">))</span>
 
-        #print out 0-1023 value and percentage
-        print "ADC Output: {0:4d} Percentage: {1:3}%".format (adcOut,percent)
-        sleep(10)
+        <span class="c">#print out 0-1023 value and percentage</span>
+        <span class="k">print</span> <span class="s">"ADC Output: {0:4d} Percentage: {1:3}</span><span class="si">%</span><span class="s">"</span><span class="o">.</span><span class="n">format</span> <span class="p">(</span><span class="n">adcOut</span><span class="p">,</span><span class="n">percent</span><span class="p">)</span>
+        <span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
-if __name__ == '__main__':
-    getAdc(0)
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">getAdc</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </code></pre>
+</div>
 
 <p>This should display the moisture of our plant and the percentage of it relative to the maxium (which happens to be 1024). Now before we actually get to more coding, we need to start collecting more data to be able to better understand it.</p>
 
@@ -253,11 +264,12 @@ The lower bound is determined by placing the sensor in a glass of water, where I
 
 <p>Now we need to fix the permissions so that we have access from our /www folder directly to the SPI:</p>
 
-<pre><code>sudo adduser www-data spi
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo adduser www-data spi
 sudo adduser &lt;username&gt; www-data
 sudo chown -R :www-data /var/www
 sudo chmod -R g+rw /var/www
 </code></pre>
+</div>
 
 <p>Replace <username> with your username.</username></p>
 
@@ -265,9 +277,10 @@ sudo chmod -R g+rw /var/www
 
 <p>For this tutorial I have prepared all the code already for you. You can check out the repo here: <a href="https://github.com/domschiener/smart-plant-raspberry">https://github.com/domschiener/smart-plant-raspberry</a> So all you have to do is clone the repo and change a few settings to be fully operational.</p>
 
-<pre><code>$ git clone https://github.com/domschiener/smart-plant-raspberry.git
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git clone https://github.com/domschiener/smart-plant-raspberry.git
 $ cd smart-plant-raspberry
 </code></pre>
+</div>
 
 <p>Feel free to look around and learn more how everything’s works together!</p>
 
@@ -277,13 +290,14 @@ $ cd smart-plant-raspberry
 
 <p>Once that is done, we will need to setup an application so that our plant (or rather the Raspberry Pi) can login to the Twitter account and communicate through it with OAuth.</p>
 
-<pre><code>$ git clone https://github.com/tweepy/tweepy.git
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git clone https://github.com/tweepy/tweepy.git
 $ cd tweepy
 $ python setup.py install
 </code></pre>
+</div>
 
 <p>If you see an SSL error, run
-<code>
+<code class="highlighter-rouge">
 $ sudo pip install requests[security]
 </code></p>
 
@@ -293,8 +307,9 @@ $ sudo pip install requests[security]
 
 <p>Now everything should be ready to function and we can start testing it all. Simply run:</p>
 
-<pre><code>$ sudo python main.py
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo python main.py
 </code></pre>
+</div>
 
 <p>This in turn will run twitter.py and getdata.py in the background. You can now go to <em>http://localhost</em> and everything should be operational :)</p>
 
