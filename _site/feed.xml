@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Dominik Schiener - Personal Blog</title>
-    <description>Pesonal Blog discussing Entrepreneurship, Blockchain and Collective Intelligence</description>
+    <description>Personal Blog discussing Entrepreneurship, Blockchain and Collective Intelligence</description>
     <link>http://schiener.me</link>
     <atom:link href="http://schiener.me/feed.xml" rel="self" type="application/rss+xml" />
     
